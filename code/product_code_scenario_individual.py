@@ -24,7 +24,7 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-data_folder = os.getcwd()
+data_folder = os.path.dirname(os.getcwd())
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -316,57 +316,61 @@ m.optimize()
 m.ObjVal
 
 
-for c in scen_xi.columns:
-    print('----', c, '----')
-    print(scen_xi[c].value_counts(normalize = True).sort_index())
+# =============================================================================
+# for c in scen_xi.columns:
+#     print('----', c, '----')
+#     print(scen_xi[c].value_counts(normalize = True).sort_index())
+# =============================================================================
 ### extract optimal solutions
 # sol_df = pd.DataFrame()
 # sol_df.index = pd.Index(q.keys())
 q_sol = pd.Series(q.values(), index = q.keys())
+print(q_sol)
+
 x_sol = pd.Series(x.values(), index = x.keys())
+print(x_sol)
+
 
 y_sol = pd.Series(y.values(), index = y.keys())
 y_nz_ind = [True if row.X != 0 else False for row in y_sol]
-y_sol[y_nz_ind]
+print(y_sol[y_nz_ind])
 
 beta_sol = pd.Series(beta.values(), index = beta.keys())
 beta_nz_ind = [True if row.X != 0 else False for row in beta_sol]
-beta_sol[beta_nz_ind]
+print(beta_sol[beta_nz_ind])
 
 z_a_sol = pd.Series(z_a.values(), index = z_a.keys())
 z_a_nz_ind = [True if row.X != 0 else False for row in z_a_sol]
-z_a_sol[z_a_nz_ind]
+print(z_a_sol[z_a_nz_ind])
 
 z_r_sol = pd.Series(z_r.values(), index = z_r.keys())
 z_r_nz_ind = [True if row.X != 0 else False for row in z_r_sol]
-z_r_sol[z_r_nz_ind]
+print(z_r_sol[z_r_nz_ind])
 
-f_a
+print(f_a)
 
-f_r
+print(f_r)
 
 z_tilde_sol = pd.Series(z_tilde.values(), index = z_tilde.keys())
 z_tilde_nz_ind = [True if row.X != 0 else False for row in z_tilde_sol]
-z_tilde_sol[z_tilde_nz_ind]
+print(z_tilde_sol[z_tilde_nz_ind])
 
 gamma_sol = pd.Series(gamma.values(), index = gamma.keys())
 gamma_nz_ind = [True if row.X != 0 else False for row in gamma_sol]
-gamma_sol[gamma_nz_ind]
+print(gamma_sol[gamma_nz_ind])
 
 psi_a_sol = pd.Series(psi_a.values(), index = psi_a.keys())
 psi_a_nz_ind = [True if row.X != 0 else False for row in psi_a_sol]
-psi_a_sol[psi_a_nz_ind]
+print(psi_a_sol[psi_a_nz_ind])
 
 psi_r_sol = pd.Series(psi_r.values(), index = psi_r.keys())
 psi_r_nz_ind = [True if row.X != 0 else False for row in psi_r_sol]
-psi_r_sol[psi_r_nz_ind]
-
-
+print(psi_r_sol[psi_r_nz_ind])
 
 phi_sol = pd.Series(phi.values(), index = phi.keys())
 phi_nz_ind = [True if row.X != 0 else False for row in phi_sol]
-phi_sol[phi_nz_ind]
+print(phi_sol[phi_nz_ind])
 
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
-v_sol[v_nz_ind]
+print(v_sol[v_nz_ind])
