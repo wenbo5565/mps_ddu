@@ -9,6 +9,7 @@ import re
 import gurobipy as gp
 from gurobipy import GRB
 import gurobipy_pandas as gppd
+import os
 
 ### define helper functions
 def return_omega_index(node, q_thresh):
@@ -23,11 +24,11 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-data_folder = r'D:\Dropbox\Dropbox\MPS Decision Dependent Probability\Code\Case33_v2_2024'
-scen_xi = pd.read_csv(data_folder + r'\xi_info_v3.csv')
-scen_eta = pd.read_csv(data_folder + r'\eta_info_v3.csv')
-scen_sub = pd.read_csv(data_folder + r'\SubNet_Info_v3.csv')
-other_params = pd.read_csv(data_folder + r'\Deter_param_v2_formatted.csv')
+data_folder = os.getcwd()
+scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
+scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
+scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
+other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
 
 num_nodes = 33
 num_lines = 32
