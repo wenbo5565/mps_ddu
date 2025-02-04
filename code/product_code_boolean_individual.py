@@ -94,9 +94,9 @@ def return_cum_p_d(scen_xi, Omega_up_ind, Omega_down_ind, C_B, tau, epsilon_ind)
 ########## import data
 
 data_folder = r'D:\Dropbox\Dropbox\MPS Decision Dependent Probability\Code\Case33_v2_2024'
-scen_xi = pd.read_csv(data_folder + r'\xi_info_v3.csv')
-scen_eta = pd.read_csv(data_folder + r'\eta_info_v3.csv')
-scen_sub = pd.read_csv(data_folder + r'\SubNet_Info_v3.csv')
+scen_xi = pd.read_csv(data_folder + r'\xi_info_v6.csv')
+scen_eta = pd.read_csv(data_folder + r'\eta_info_v6.csv')
+scen_sub = pd.read_csv(data_folder + r'\SubNet_Info_v6.csv')
 other_params = pd.read_csv(data_folder + r'\Deter_param_v2_formatted.csv')
 
 num_nodes = 33
@@ -188,7 +188,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0.05 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -316,6 +316,8 @@ tau = m.addVars(I_mps, epsilon_ind, vtype = GRB.CONTINUOUS, name = 'tau', ub = 1
 z_B = m.addVars(z_B_ind, vtype = GRB.BINARY, name = 'z_B')
 q = m.addVars(I, vtype = GRB.CONTINUOUS, name = 'q')
 
+# q[30].ub = 800
+# q[30].lb = 800
 ### define optimization constraints
 
 # deterministic constraints
