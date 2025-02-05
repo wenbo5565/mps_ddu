@@ -8,7 +8,7 @@ import itertools
 import re
 import gurobipy as gp
 from gurobipy import GRB
-import gurobipy_pandas as gppd
+# import gurobipy_pandas as gppd
 
 ########## define helper functions
 def return_omega_index(node, q_thresh):
