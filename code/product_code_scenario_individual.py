@@ -162,7 +162,7 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 0.1 * 3600)
+m.setParam(GRB.Param.TimeLimit, 4 * 3600)
 m.setParam(GRB.Param.Threads, 1) # this is not for computational test
 m.setParam(GRB.Param.LogFile, model_name)
 
