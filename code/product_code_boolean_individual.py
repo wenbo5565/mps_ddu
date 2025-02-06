@@ -94,8 +94,8 @@ def return_cum_p_d(scen_xi, Omega_up_ind, Omega_down_ind, C_B, tau, epsilon_ind)
 
 ########## import data
 
-# data_folder = r'D:\Dropbox\Dropbox\MPS Decision Dependent Probability\Code\Case33_v2_2024'
-data_folder = os.path.dirname(os.getcwd())
+data_folder = r'D:\Research\gw_ddu_mps'
+# data_folder = os.path.dirname(os.getcwd())
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -183,7 +183,7 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.9 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
+alpha = pd.Series(0.85 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
 phi_ub = b + num_mps
 phi_lb = 0
 gamma_ub = 1
@@ -400,14 +400,109 @@ m.addConstrs((q[j] >= C_B[j][1] - sum(z_B[j, k + 1] * A_B[j, k] for k in N_B[j] 
 ### setting objective functions
 m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
 
+### testing
+x[2].lb = 1
+x[5].lb = 1
+x[6].lb = 1
+
+y[1, 28].lb = 1
+y[2, 25].lb = 1
+y[3, 11].lb = 1
+y[4, 28].lb = 1
+y[5, 25].lb = 1
+y[6, 25].lb = 1
+
+beta[1,26,'u'].lb = 1.0
+beta[1,27,'u'].lb = 1.0
+beta[1,29,'u'].lb = 1.0
+beta[1,30,'u'].lb = 1.0
+beta[2,23,'r'].lb = 1.0
+beta[2,24,'r'].lb = 1.0
+beta[2,25,'r'].lb = 1.0
+beta[3,11,'u'].lb = 1.0
+beta[3,12,'u'].lb = 1.0
+beta[3,13,'u'].lb = 1.0
+beta[3,14,'u'].lb = 1.0
+beta[4,26,'u'].lb = 1.0
+beta[4,27,'u'].lb = 1.0
+beta[4,28,'u'].lb = 1.0
+beta[4,29,'u'].lb = 1.0
+beta[4,30,'u'].lb = 1.0
+beta[5,23,'r'].lb = 1.0
+beta[5,24,'r'].lb = 1.0
+beta[5,25,'r'].lb = 1.0
+beta[6,23,'r'].lb = 1.0
+beta[6,24,'r'].lb = 1.0
+beta[6,25,'r'].lb = 1.0
+# =============================================================================
+# 1  28  26    <gurobi.Var z_a[1,28,26] (value 26.29885057471...
+#        27               <gurobi.Var z_a[1,28,27] (value 59.0)>
+#        29              <gurobi.Var z_a[1,28,29] (value 119.0)>
+#        30              <gurobi.Var z_a[1,28,30] (value 199.0)>
+# 2  25  23                <gurobi.Var z_a[2,25,23] (value 1.0)>
+#        24              <gurobi.Var z_a[2,25,24] (value 408.0)>
+#        25               <gurobi.Var z_a[2,25,25] (value 91.0)>
+# 3  11  11               <gurobi.Var z_a[3,11,11] (value 45.0)>
+#        12    <gurobi.Var z_a[3,11,12] (value 53.09734513273...
+#        13               <gurobi.Var z_a[3,11,13] (value 60.0)>
+#        14              <gurobi.Var z_a[3,11,14] (value 120.0)>
+# 4  28  26                <gurobi.Var z_a[4,28,26] (value 1.0)>
+#        27                <gurobi.Var z_a[4,28,27] (value 1.0)>
+#        28               <gurobi.Var z_a[4,28,28] (value 60.0)>
+#        29                <gurobi.Var z_a[4,28,29] (value 1.0)>
+#        30                <gurobi.Var z_a[4,28,30] (value 1.0)>
+# 5  25  23                <gurobi.Var z_a[5,25,23] (value 1.0)>
+#        24                <gurobi.Var z_a[5,25,24] (value 1.0)>
+#        25                <gurobi.Var z_a[5,25,25] (value 1.0)>
+# 6  25  23               <gurobi.Var z_a[6,25,23] (value 88.0)>
+#        24                <gurobi.Var z_a[6,25,24] (value 1.0)>
+#        25    <gurobi.Var z_a[6,25,25] (value 231.5649546827...
+# =============================================================================
+gamma[11].lb = 1.0
+gamma[11].ub = 1.0
+
+gamma[12].lb = 0.8849557522123332
+gamma[12].ub = 0.8849557522123332
+
+gamma[13].lb = 1.0
+gamma[13].ub = 1.0
+
+gamma[14].lb = 1.0
+gamma[14].ub = 1.0
+
+gamma[23].lb = 1.0
+gamma[23].ub = 1.0
+
+gamma[24].lb = 0.9761904761904762
+gamma[24].ub = 0.9761904761904762
+
+gamma[25].lb = 0.7703927492446796
+gamma[25].ub = 0.7703927492446796
+
+gamma[26].lb = 0.4549808429118758
+gamma[26].ub = 0.4549808429118758
+
+gamma[27].lb = 1.0
+gamma[27].ub = 1.0
+
+gamma[28].lb = 1.0
+gamma[28].ub = 1.0
+
+gamma[29].lb = 1.0
+gamma[29].ub = 1.0
+
+gamma[30].lb = 1.0
+gamma[30].ub = 1.0
+
+q[30].lb = 800
+q[30].ub = 800
+
+###
 ### solving the model
 m.optimize()
 m.ObjVal
 
 
-for c in scen_xi.columns:
-    print('----', c, '----')
-    print(scen_xi[c].value_counts(normalize = True).sort_index())
 ### extract optimal solutions
 # sol_df = pd.DataFrame()
 # sol_df.index = pd.Index(q.keys())

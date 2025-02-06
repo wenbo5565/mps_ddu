@@ -24,7 +24,8 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-data_folder = os.path.dirname(os.getcwd())
+# data_folder = os.path.dirname(os.getcwd())
+data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -96,7 +97,7 @@ sub_network = {1: [3, 4, 5],
 ### parameters for mobile power sources
 num_mps = 6
 b = 3 # maximal MPS pre-disposed at rural locations
-N_ind = np.arange(1, num_mps + b + 1) # index for ???
+N_ind = np.arange(0, num_mps + b + 1) # index for ???
 mps_cap_a = 500 # active power capacity for mps
 mps_cap_r = 500 # reactive power capacity for mps
 
@@ -161,7 +162,7 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 1 * 3600)
+m.setParam(GRB.Param.TimeLimit, 0.1 * 3600)
 m.setParam(GRB.Param.Threads, 1) # this is not for computational test
 m.setParam(GRB.Param.LogFile, model_name)
 
@@ -310,6 +311,26 @@ m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
 
 # m.setObjective(sum(z_a[m, i, j] for m in M for i in I_c for j in I if j in I_i[i] ), GRB.MAXIMIZE)
 
+### testing
+q[30].lb = 800
+q[30].ub = 800
+
+
+j = 30
+temp_expr_1 = Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_up_ind[j])) 
+temp_expr_1.getValue()
+
+temp_expr_2 = (1 - sum(p_b[k] for k in K if k in Omega_0_ind[j])) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
+temp_expr_2.getValue()
+
+temp_expr_3 = sum(p_b[k] for k in K if k in Omega_up_ind[j]) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
+temp_expr_3.getValue()
+
+temp_expr_4 = sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_down_ind[j])
+temp_expr_4.getValue()                  
+
+###
+
 
 ### solving the model
 m.optimize()
@@ -370,6 +391,10 @@ print(psi_r_sol[psi_r_nz_ind])
 phi_sol = pd.Series(phi.values(), index = phi.keys())
 phi_nz_ind = [True if row.X != 0 else False for row in phi_sol]
 print(phi_sol[phi_nz_ind])
+
+pi_sol = pd.Series(pi.values(), index = pi.keys())
+pi_nz_ind = [True if row.X != 0 else False for row in pi_sol]
+print(pi_sol[pi_nz_ind])
 
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
