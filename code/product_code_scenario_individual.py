@@ -290,12 +290,14 @@ m.addConstrs((Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in 
 
 m.addConstrs((phi[j] == sum(n * epsilon[j, n] for n in epsilon_ind) for j in I_mps), name = 'phi=sum_n*epsilon')
 m.addConstrs((sum(epsilon[j, n] for n in epsilon_ind) == 1 for j in I_mps), name = 'sum_epsilon=1')
+
 m.addConstrs((h[j, k] >= gamma_lb * z_tilde[j, k] for j, k in h_ind), name = 'mc_h_1')
-m.addConstrs((h[j, k] >= gamma_ub * (z_tilde[j, k] - 1) for j, k in h_ind), name = 'mc_h_2')
+m.addConstrs((h[j, k] >= gamma_ub * (z_tilde[j, k] - 1) + gamma[j] for j, k in h_ind), name = 'mc_h_2')
 m.addConstrs((h[j, k] <= gamma_ub * z_tilde[j, k] for j, k in h_ind), name = 'mc_h_3')
 m.addConstrs((h[j, k] <= gamma_lb * (z_tilde[j, k] - 1) + gamma[j] for j, k in h_ind), name = 'mc_h_4')
+
 m.addConstrs((pi[j, k, n] >= h_lb * epsilon[j, n] for j, k, n in pi_ind), name = 'mc_pi_1')
-m.addConstrs((pi[j, k, n] >= h_ub * (epsilon[j, n] - 1) for j, k, n in pi_ind), name = 'mc_pi_2')
+m.addConstrs((pi[j, k, n] >= h_ub * (epsilon[j, n] - 1) + h[j, k] for j, k, n in pi_ind), name = 'mc_pi_2')
 m.addConstrs((pi[j, k, n] <= h_ub * epsilon[j, n] for j, k, n in pi_ind), name = 'mc_pi_3')
 m.addConstrs((pi[j, k, n] <= h_lb * (epsilon[j, n] - 1) + h[j, k] for j, k, n in pi_ind), name = 'mc_pi_4')
 
@@ -316,18 +318,20 @@ q[30].lb = 800
 q[30].ub = 800
 
 
-j = 30
-temp_expr_1 = Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_up_ind[j])) 
-temp_expr_1.getValue()
-
-temp_expr_2 = (1 - sum(p_b[k] for k in K if k in Omega_0_ind[j])) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
-temp_expr_2.getValue()
-
-temp_expr_3 = sum(p_b[k] for k in K if k in Omega_up_ind[j]) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
-temp_expr_3.getValue()
-
-temp_expr_4 = sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_down_ind[j])
-temp_expr_4.getValue()                  
+# =============================================================================
+# j = 30
+# temp_expr_1 = Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_up_ind[j])) 
+# temp_expr_1.getValue()
+# 
+# temp_expr_2 = (1 - sum(p_b[k] for k in K if k in Omega_0_ind[j])) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
+# temp_expr_2.getValue()
+# 
+# temp_expr_3 = sum(p_b[k] for k in K if k in Omega_up_ind[j]) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j]) 
+# temp_expr_3.getValue()
+# 
+# temp_expr_4 = sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_down_ind[j])
+# temp_expr_4.getValue()                  
+# =============================================================================
 
 ###
 
@@ -395,6 +399,7 @@ print(phi_sol[phi_nz_ind])
 pi_sol = pd.Series(pi.values(), index = pi.keys())
 pi_nz_ind = [True if row.X != 0 else False for row in pi_sol]
 print(pi_sol[pi_nz_ind])
+print(pi_sol[pi_nz_ind][30])
 
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
