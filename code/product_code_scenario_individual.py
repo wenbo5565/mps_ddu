@@ -24,8 +24,8 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-# data_folder = os.path.dirname(os.getcwd())
-data_folder = r'D:\Research\gw_ddu_mps'
+data_folder = os.path.dirname(os.getcwd())
+# data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
