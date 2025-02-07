@@ -24,8 +24,8 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-data_folder = os.path.dirname(os.getcwd())
-# data_folder = r'D:\Research\gw_ddu_mps'
+# data_folder = os.path.dirname(os.getcwd())
+data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -162,7 +162,7 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 4 * 3600)
+m.setParam(GRB.Param.TimeLimit, 14 * 3600)
 m.setParam(GRB.Param.Threads, 1) # this is not for computational test
 m.setParam(GRB.Param.LogFile, model_name)
 
@@ -399,7 +399,7 @@ print(phi_sol[phi_nz_ind])
 pi_sol = pd.Series(pi.values(), index = pi.keys())
 pi_nz_ind = [True if row.X != 0 else False for row in pi_sol]
 print(pi_sol[pi_nz_ind])
-print(pi_sol[pi_nz_ind][30])
+# print(pi_sol[pi_nz_ind][30])
 
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
