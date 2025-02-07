@@ -54,6 +54,9 @@ def return_p_sufficient_ind(zero_ind, up_ind, down_ind, sample,
         else:    
             up_cnt = len(up_ind[col])
             down_cnt = len(down_ind[col])
+            if 1 - p_0 * zero_cnt - p_up * up_cnt < 0:
+                print(f'node {col} has negative distorted prob')
+                p_up = (1 - p_0 * zero_cnt) / up_cnt
             p_down = (1 - p_0 * zero_cnt - p_up * up_cnt) / down_cnt
             new_prob_dist = sample[col].to_frame().copy()
             new_prob_dist['prob'] = p_0
@@ -61,7 +64,9 @@ def return_p_sufficient_ind(zero_ind, up_ind, down_ind, sample,
             new_prob_dist.loc[down_ind[col], 'prob'] = p_down
             new_prob_dist.sort_values(col, inplace = True)
             new_prob_dist['cum_prob'] = new_prob_dist['prob'].cumsum()
-            C_B[col] = new_prob_dist.loc[new_prob_dist.cum_prob >= alpha_j, col].values
+            lowest_p_suffi = np.min(new_prob_dist.loc[new_prob_dist.cum_prob >= alpha_j, col].values)
+            C_B[col] = new_prob_dist.loc[new_prob_dist[col] >= lowest_p_suffi, col].values
+            
     return C_B     
 
 def return_cum_p_d(scen_xi, Omega_up_ind, Omega_down_ind, C_B, tau, epsilon_ind):
@@ -87,15 +92,19 @@ def return_cum_p_d(scen_xi, Omega_up_ind, Omega_down_ind, C_B, tau, epsilon_ind)
         C_B_j = pd.DataFrame(C_B[j], index = np.arange(1, len(C_B[j]) + 1))
         C_B_j.columns = ['scen']
         C_B_j_prod_d = pd.merge(C_B_j, prob_d, left_on = 'scen', right_index = True)
-        C_B_j_prod_d['cum_prod_d'] = C_B_j_prod_d['prob_d'].cumsum()
-        C_B_j_prod_d['cum_prod_d'] = C_B_j_prod_d['cum_prod_d'] + cum_p_insuffi
-        C_B_prod[j] = C_B_j_prod_d[['scen', 'cum_prod_d']]
+        
+        # calculate cumulative distorted probability for each scenario
+        C_B_j_prod_d_by_scen = C_B_j_prod_d.groupby('scen')['prob_d'].sum().to_frame() # probability by scenario; 
+        C_B_j_prod_d_by_scen['cum_prob_d'] = C_B_j_prod_d_by_scen['prob_d'].cumsum() + cum_p_insuffi
+        C_B_j_prod_d = pd.merge(C_B_j, C_B_j_prod_d_by_scen, how = 'inner', left_on = 'scen', right_index = True)
+        C_B_prod[j] = C_B_j_prod_d[['scen', 'cum_prob_d']]
+        
     return C_B_prod
 
 ########## import data
 
-data_folder = r'D:\Research\gw_ddu_mps'
-# data_folder = os.path.dirname(os.getcwd())
+# data_folder = r'D:\Research\gw_ddu_mps'
+data_folder = os.path.dirname(os.getcwd())
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -167,7 +176,7 @@ sub_network = {1: [3, 4, 5],
 ### parameters for mobile power sources
 num_mps = 6
 b = 3 # maximal MPS pre-disposed at rural locations
-N_ind = np.arange(1, num_mps + b + 1) # index for ???
+# N_ind = np.arange(1, num_mps + b + 1) # index for ???
 mps_cap_a = 500 # active power capacity for mps
 mps_cap_r = 500 # reactive power capacity for mps
 
@@ -183,7 +192,7 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.85 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
+alpha = pd.Series(0.9 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
 phi_ub = b + num_mps
 phi_lb = 0
 gamma_ub = 1
@@ -278,7 +287,7 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 9 * 3600)
+m.setParam(GRB.Param.TimeLimit, 0.2 * 3600)
 m.setParam(GRB.Param.Threads, 1) # this is not for computational test
 m.setParam(GRB.Param.LogFile, model_name)
 
@@ -384,7 +393,7 @@ C_B_cum_prob = return_cum_p_d(scen_xi = scen_xi, Omega_up_ind = Omega_up_ind, Om
 # constraints
 m.addConstrs((z_B[j, k - 1] >= z_B[j, k] for j in I_mps for k in N_B[j] if k >= 2), name = 'z_B_k-1>k')
 
-m.addConstrs((C_B_cum_prob[j].loc[k, 'cum_prod_d'] >= alpha[j] * z_B[j, k] for j in I_mps for k in np.arange(1, len(C_B[j]) + 1)), name = 'F>alpha_z')
+m.addConstrs((C_B_cum_prob[j].loc[k, 'cum_prob_d'] >= alpha[j] * z_B[j, k] for j in I_mps for k in np.arange(1, len(C_B[j]) + 1)), name = 'F>alpha_z')
 
 m.addConstrs((phi[j] == sum(n * epsilon[j, n] for n in epsilon_ind) for j in I_mps), name = 'phi=sum_n*epsilon')
 
@@ -401,105 +410,34 @@ m.addConstrs((q[j] >= C_B[j][1] - sum(z_B[j, k + 1] * A_B[j, k] for k in N_B[j] 
 m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
 
 ### testing
-x[2].lb = 1
-x[5].lb = 1
-x[6].lb = 1
-
-y[1, 28].lb = 1
-y[2, 25].lb = 1
-y[3, 11].lb = 1
-y[4, 28].lb = 1
-y[5, 25].lb = 1
-y[6, 25].lb = 1
-
-beta[1,26,'u'].lb = 1.0
-beta[1,27,'u'].lb = 1.0
-beta[1,29,'u'].lb = 1.0
-beta[1,30,'u'].lb = 1.0
-beta[2,23,'r'].lb = 1.0
-beta[2,24,'r'].lb = 1.0
-beta[2,25,'r'].lb = 1.0
-beta[3,11,'u'].lb = 1.0
-beta[3,12,'u'].lb = 1.0
-beta[3,13,'u'].lb = 1.0
-beta[3,14,'u'].lb = 1.0
-beta[4,26,'u'].lb = 1.0
-beta[4,27,'u'].lb = 1.0
-beta[4,28,'u'].lb = 1.0
-beta[4,29,'u'].lb = 1.0
-beta[4,30,'u'].lb = 1.0
-beta[5,23,'r'].lb = 1.0
-beta[5,24,'r'].lb = 1.0
-beta[5,25,'r'].lb = 1.0
-beta[6,23,'r'].lb = 1.0
-beta[6,24,'r'].lb = 1.0
-beta[6,25,'r'].lb = 1.0
 # =============================================================================
-# 1  28  26    <gurobi.Var z_a[1,28,26] (value 26.29885057471...
-#        27               <gurobi.Var z_a[1,28,27] (value 59.0)>
-#        29              <gurobi.Var z_a[1,28,29] (value 119.0)>
-#        30              <gurobi.Var z_a[1,28,30] (value 199.0)>
-# 2  25  23                <gurobi.Var z_a[2,25,23] (value 1.0)>
-#        24              <gurobi.Var z_a[2,25,24] (value 408.0)>
-#        25               <gurobi.Var z_a[2,25,25] (value 91.0)>
-# 3  11  11               <gurobi.Var z_a[3,11,11] (value 45.0)>
-#        12    <gurobi.Var z_a[3,11,12] (value 53.09734513273...
-#        13               <gurobi.Var z_a[3,11,13] (value 60.0)>
-#        14              <gurobi.Var z_a[3,11,14] (value 120.0)>
-# 4  28  26                <gurobi.Var z_a[4,28,26] (value 1.0)>
-#        27                <gurobi.Var z_a[4,28,27] (value 1.0)>
-#        28               <gurobi.Var z_a[4,28,28] (value 60.0)>
-#        29                <gurobi.Var z_a[4,28,29] (value 1.0)>
-#        30                <gurobi.Var z_a[4,28,30] (value 1.0)>
-# 5  25  23                <gurobi.Var z_a[5,25,23] (value 1.0)>
-#        24                <gurobi.Var z_a[5,25,24] (value 1.0)>
-#        25                <gurobi.Var z_a[5,25,25] (value 1.0)>
-# 6  25  23               <gurobi.Var z_a[6,25,23] (value 88.0)>
-#        24                <gurobi.Var z_a[6,25,24] (value 1.0)>
-#        25    <gurobi.Var z_a[6,25,25] (value 231.5649546827...
+# gamma[30].lb = 1.0
+# gamma[30].ub = 1.0
+# 
 # =============================================================================
-gamma[11].lb = 1.0
-gamma[11].ub = 1.0
-
-gamma[12].lb = 0.8849557522123332
-gamma[12].ub = 0.8849557522123332
-
-gamma[13].lb = 1.0
-gamma[13].ub = 1.0
-
-gamma[14].lb = 1.0
-gamma[14].ub = 1.0
-
-gamma[23].lb = 1.0
-gamma[23].ub = 1.0
-
-gamma[24].lb = 0.9761904761904762
-gamma[24].ub = 0.9761904761904762
-
-gamma[25].lb = 0.7703927492446796
-gamma[25].ub = 0.7703927492446796
-
-gamma[26].lb = 0.4549808429118758
-gamma[26].ub = 0.4549808429118758
-
-gamma[27].lb = 1.0
-gamma[27].ub = 1.0
-
-gamma[28].lb = 1.0
-gamma[28].ub = 1.0
-
-gamma[29].lb = 1.0
-gamma[29].ub = 1.0
-
-gamma[30].lb = 1.0
-gamma[30].ub = 1.0
-
-q[30].lb = 800
-q[30].ub = 800
-
+# =============================================================================
+# q[30].lb = 800
+# q[30].ub = 800
+# 
+# gamma[30].lb = 0.9891
+# gamma[30].ub = 0.9891
+# 
+# phi[30].lb = 3
+# phi[30].ub = 3
+# 
+# =============================================================================
 ###
 ### solving the model
 m.optimize()
+
+# =============================================================================
+# m.computeIIS()
+# 
+# for constr in m.getConstrs():
+#     if constr.IISConstr:
+#         print(f"Violated Constraint: {constr.constrName}")
+# =============================================================================
+
 m.ObjVal
 
 
@@ -507,27 +445,32 @@ m.ObjVal
 # sol_df = pd.DataFrame()
 # sol_df.index = pd.Index(q.keys())
 q_sol = pd.Series(q.values(), index = q.keys())
+print(q_sol)
 x_sol = pd.Series(x.values(), index = x.keys())
+print(x_sol)
 
 y_sol = pd.Series(y.values(), index = y.keys())
 y_nz_ind = [True if row.X != 0 else False for row in y_sol]
-y_sol[y_nz_ind]
+print(y_sol[y_nz_ind])
 
 beta_sol = pd.Series(beta.values(), index = beta.keys())
 beta_nz_ind = [True if row.X != 0 else False for row in beta_sol]
-beta_sol[beta_nz_ind]
+print(beta_sol[beta_nz_ind])
 
 z_a_sol = pd.Series(z_a.values(), index = z_a.keys())
 z_a_nz_ind = [True if row.X != 0 else False for row in z_a_sol]
-z_a_sol[z_a_nz_ind]
+print(z_a_sol[z_a_nz_ind])
+
 
 z_r_sol = pd.Series(z_r.values(), index = z_r.keys())
 z_r_nz_ind = [True if row.X != 0 else False for row in z_r_sol]
-z_r_sol[z_r_nz_ind]
+print(z_r_sol[z_r_nz_ind])
 
-f_a
+print('this variable starts with index 0; so f_a[0] is f_a[1] in our model')
+print([var for var in f_a if var.X != 0])
 
-f_r
+print('this variable starts with index 0; so f_a[0] is f_a[1] in our model')
+print([var for var in f_r if var.X != 0])
 
 # =============================================================================
 # z_tilde_sol = pd.Series(z_tilde.values(), index = z_tilde.keys())
@@ -537,20 +480,22 @@ f_r
 
 gamma_sol = pd.Series(gamma.values(), index = gamma.keys())
 gamma_nz_ind = [True if row.X != 0 else False for row in gamma_sol]
-gamma_sol[gamma_nz_ind]
+print(gamma_sol[gamma_nz_ind])
 
 psi_a_sol = pd.Series(psi_a.values(), index = psi_a.keys())
 psi_a_nz_ind = [True if row.X != 0 else False for row in psi_a_sol]
-psi_a_sol[psi_a_nz_ind]
+print(psi_a_sol[psi_a_nz_ind])
 
 psi_r_sol = pd.Series(psi_r.values(), index = psi_r.keys())
+psi_r_nz_ind = [True if row.X != 0 else False for row in psi_r_sol]
+print(psi_r_sol[psi_r_nz_ind])
 
 phi_sol = pd.Series(phi.values(), index = phi.keys())
 phi_nz_ind = [True if row.X != 0 else False for row in phi_sol]
-phi_sol[phi_nz_ind]
+print(phi_sol[phi_nz_ind])
 
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
-v_sol[v_nz_ind]
+print(v_sol[v_nz_ind])
 
 
