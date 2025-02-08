@@ -24,19 +24,20 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-# data_folder = os.path.dirname(os.getcwd())
-data_folder = r'D:\Research\gw_ddu_mps'
+data_folder = os.path.dirname(os.getcwd())
+# data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
 other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
+
 
 other_params.isnull().sum(axis = 0)
 other_params.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 0.25
+frac = 0.5
 
 print('===============================')
 print(f'number of scenarios is {frac * 1000}')
@@ -65,6 +66,10 @@ for rnd in random_state:
 
     scen_xi_sampled.columns = np.arange(1, num_nodes + 1)
     xi = {(scen, node): scen_xi_sampled.loc[scen, node] for scen, node in itertools.product(scen_xi_sampled.index, scen_xi_sampled.columns)}
+    
+
+    
+    
     
     for c in scen_xi_sampled.columns:
         print('----', c, '----')

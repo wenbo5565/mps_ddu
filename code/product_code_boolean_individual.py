@@ -110,16 +110,13 @@ scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
 other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
 
-num_nodes = 33
-num_lines = 32
-num_scen = scen_eta.shape[0]
-
 other_params.isnull().sum(axis = 0)
 other_params.index += 1
 
 ########## re-sample scenario for computational efficiency test
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 0.25
+frac = 1.5
+
 for rnd in random_state:
     print('==========================================')
     print(f'result for random state {rnd}')
@@ -134,18 +131,15 @@ for rnd in random_state:
     if (scen_xi_sampled.index != scen_eta_sampled.index).any():
         print('sample index for node and line are not the same...')
     
-    # scen_xi_sampled.reset_index(inplace = True, drop = True)
-    # scen_eta_sampled.reset_index(inplace = True, drop = True)
-    
-    
     scen_xi_sampled.isnull().sum(axis = 0)
     scen_eta_sampled.isnull().sum(axis = 0)
-    # scen_sub.isnull().sum(axis = 0)
     
-
     scen_xi_sampled.index += 1
     scen_eta_sampled.index += 1
-    # scen_sub.index += 1
+    
+    num_nodes = 33
+    num_lines = 32
+    num_scen = scen_eta_sampled.shape[0]
     
     scen_xi_sampled.columns = np.arange(1, num_nodes + 1)
     xi = {(scen, node): scen_xi_sampled.loc[scen, node] for scen, node in itertools.product(scen_xi_sampled.index, scen_xi_sampled.columns)}
