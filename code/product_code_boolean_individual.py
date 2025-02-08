@@ -119,7 +119,7 @@ other_params.index += 1
 
 ########## re-sample scenario for computational efficiency test
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 1
+frac = 0.5
 for rnd in random_state:
     print('==========================================')
     print(f'result for random state {rnd}')
