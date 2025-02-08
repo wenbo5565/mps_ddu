@@ -1,0 +1,2660 @@
+nohup: ignoring input
+==========================================
+result for random state 2010
+==========================================
+---- 1 ----
+1
+0    1.0
+Name: proportion, dtype: float64
+---- 2 ----
+2
+0    1.0
+Name: proportion, dtype: float64
+---- 3 ----
+3
+0      0.296
+108    0.240
+315    0.328
+450    0.136
+Name: proportion, dtype: float64
+---- 4 ----
+4
+0      0.296
+144    0.244
+420    0.340
+600    0.120
+Name: proportion, dtype: float64
+---- 5 ----
+5
+0      0.296
+72     0.256
+210    0.312
+300    0.136
+Name: proportion, dtype: float64
+---- 6 ----
+6
+0      0.136
+90     0.324
+240    0.380
+300    0.160
+Name: proportion, dtype: float64
+---- 7 ----
+7
+0       0.136
+300     0.332
+800     0.352
+1000    0.180
+Name: proportion, dtype: float64
+---- 8 ----
+8
+0       0.136
+300     0.248
+800     0.432
+1000    0.184
+Name: proportion, dtype: float64
+---- 9 ----
+9
+0      0.136
+90     0.356
+240    0.368
+300    0.140
+Name: proportion, dtype: float64
+---- 10 ----
+10
+0      0.040
+120    0.352
+210    0.364
+300    0.244
+Name: proportion, dtype: float64
+---- 11 ----
+11
+0.0      0.040
+90.0     0.328
+157.5    0.468
+225.0    0.164
+Name: proportion, dtype: float64
+---- 12 ----
+12
+0      0.04
+120    0.36
+210    0.44
+300    0.16
+Name: proportion, dtype: float64
+---- 13 ----
+13
+0      0.040
+120    0.360
+210    0.424
+300    0.176
+Name: proportion, dtype: float64
+---- 14 ----
+14
+0      0.040
+240    0.348
+420    0.416
+600    0.196
+Name: proportion, dtype: float64
+---- 15 ----
+15
+0      0.020
+120    0.288
+210    0.472
+300    0.220
+Name: proportion, dtype: float64
+---- 16 ----
+16
+0      0.020
+120    0.348
+210    0.460
+300    0.172
+Name: proportion, dtype: float64
+---- 17 ----
+17
+0      0.020
+120    0.320
+210    0.504
+300    0.156
+Name: proportion, dtype: float64
+---- 18 ----
+18
+0      0.020
+180    0.340
+315    0.448
+450    0.192
+Name: proportion, dtype: float64
+---- 19 ----
+19
+0      0.380
+108    0.208
+315    0.284
+450    0.128
+Name: proportion, dtype: float64
+---- 20 ----
+20
+0      0.380
+108    0.232
+315    0.276
+450    0.112
+Name: proportion, dtype: float64
+---- 21 ----
+21
+0      0.380
+108    0.244
+315    0.260
+450    0.116
+Name: proportion, dtype: float64
+---- 22 ----
+22
+0      0.380
+108    0.244
+315    0.264
+450    0.112
+Name: proportion, dtype: float64
+---- 23 ----
+23
+0      0.100
+108    0.332
+405    0.364
+450    0.204
+Name: proportion, dtype: float64
+---- 24 ----
+24
+0       0.100
+504     0.312
+1890    0.380
+2100    0.208
+Name: proportion, dtype: float64
+---- 25 ----
+25
+0       0.100
+504     0.332
+1890    0.376
+2100    0.192
+Name: proportion, dtype: float64
+---- 26 ----
+26
+0      0.056
+90     0.356
+210    0.408
+300    0.180
+Name: proportion, dtype: float64
+---- 27 ----
+27
+0      0.056
+90     0.396
+210    0.364
+300    0.184
+Name: proportion, dtype: float64
+---- 28 ----
+28
+0      0.056
+90     0.300
+210    0.440
+300    0.204
+Name: proportion, dtype: float64
+---- 29 ----
+29
+0      0.056
+180    0.336
+480    0.408
+600    0.200
+Name: proportion, dtype: float64
+---- 30 ----
+30
+0       0.056
+300     0.364
+800     0.384
+1000    0.196
+Name: proportion, dtype: float64
+---- 31 ----
+31
+0      0.040
+300    0.316
+600    0.404
+750    0.240
+Name: proportion, dtype: float64
+---- 32 ----
+32
+0       0.040
+420     0.344
+840     0.428
+1050    0.188
+Name: proportion, dtype: float64
+---- 33 ----
+33
+0      0.040
+120    0.348
+240    0.452
+300    0.160
+Name: proportion, dtype: float64
+node 1: all scenarios are 0
+node 2: all scenarios are 0
+node 3 has negative distorted prob
+node 4 has negative distorted prob
+node 5 has negative distorted prob
+node 6 has negative distorted prob
+node 7 has negative distorted prob
+node 8 has negative distorted prob
+node 9 has negative distorted prob
+node 10 has negative distorted prob
+node 11 has negative distorted prob
+node 12 has negative distorted prob
+node 13 has negative distorted prob
+node 14 has negative distorted prob
+node 15 has negative distorted prob
+node 16 has negative distorted prob
+node 17 has negative distorted prob
+node 18 has negative distorted prob
+node 19 has negative distorted prob
+node 20 has negative distorted prob
+node 21 has negative distorted prob
+node 22 has negative distorted prob
+node 23 has negative distorted prob
+node 24 has negative distorted prob
+node 25 has negative distorted prob
+node 26 has negative distorted prob
+node 27 has negative distorted prob
+node 28 has negative distorted prob
+node 29 has negative distorted prob
+node 30 has negative distorted prob
+node 31 has negative distorted prob
+node 32 has negative distorted prob
+node 33 has negative distorted prob
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-12-28
+Set parameter TimeLimit to value 720
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 17212 rows, 8558 columns and 78753 nonzeros
+Model fingerprint: 0x00cc92be
+Variable types: 972 continuous, 7586 integer (7555 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-01, 5e+03]
+Found heuristic solution: objective 18075.000000
+Presolve removed 14712 rows and 6974 columns
+Presolve time: 0.10s
+Presolved: 2500 rows, 1584 columns, 8665 nonzeros
+Variable types: 817 continuous, 767 integer (767 binary)
+
+Root relaxation: objective 1.116363e+04, 1937 iterations, 0.04 seconds (0.05 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11163.6287    0  124 18075.0000 11163.6287  38.2%     -    0s
+H    0     0                    17805.000000 11163.6287  37.3%     -    0s
+     0     0 11955.9348    0  135 17805.0000 11955.9348  32.9%     -    0s
+H    0     0                    16479.000000 11955.9348  27.4%     -    0s
+     0     0 11985.7149    0  117 16479.0000 11985.7149  27.3%     -    0s
+     0     0 12684.3010    0  109 16479.0000 12684.3010  23.0%     -    0s
+H    0     0                    14271.000000 12690.5672  11.1%     -    0s
+     0     0 12701.6476    0   90 14271.0000 12701.6476  11.0%     -    0s
+     0     0 12706.8142    0  113 14271.0000 12706.8142  11.0%     -    0s
+     0     0 12707.1736    0  149 14271.0000 12707.1736  11.0%     -    0s
+     0     0 12737.9039    0  111 14271.0000 12737.9039  10.7%     -    0s
+     0     0 12779.0616    0   68 14271.0000 12779.0616  10.5%     -    0s
+     0     0 12788.0249    0  114 14271.0000 12788.0249  10.4%     -    0s
+     0     0 12788.5117    0  117 14271.0000 12788.5117  10.4%     -    0s
+     0     0 12855.1871    0   88 14271.0000 12855.1871  9.92%     -    0s
+H    0     0                    14136.000000 12855.1871  9.06%     -    0s
+     0     0 12855.1871    0   86 14136.0000 12855.1871  9.06%     -    0s
+     0     0 12913.4565    0  105 14136.0000 12913.4565  8.65%     -    0s
+     0     0 12930.2500    0  107 14136.0000 12930.2500  8.53%     -    0s
+     0     0 12930.2500    0   95 14136.0000 12930.2500  8.53%     -    0s
+     0     0 12930.2500    0   95 14136.0000 12930.2500  8.53%     -    0s
+     0     0 13051.6418    0  194 14136.0000 13051.6418  7.67%     -    0s
+H    0     0                    14046.000000 13061.7545  7.01%     -    0s
+     0     0 13062.6160    0  164 14046.0000 13062.6160  7.00%     -    0s
+     0     0 13062.6160    0  153 14046.0000 13062.6160  7.00%     -    0s
+     0     0 13094.6217    0  154 14046.0000 13094.6217  6.77%     -    0s
+     0     0 13106.3452    0  155 14046.0000 13106.3452  6.69%     -    0s
+     0     0 13106.3452    0  159 14046.0000 13106.3452  6.69%     -    0s
+H    0     0                    13866.000000 13109.1180  5.46%     -    0s
+     0     0 13109.1180    0  159 13866.0000 13109.1180  5.46%     -    0s
+     0     0 13109.1180    0  165 13866.0000 13109.1180  5.46%     -    0s
+     0     0 13118.3013    0  158 13866.0000 13118.3013  5.39%     -    0s
+     0     0 13118.3013    0  160 13866.0000 13118.3013  5.39%     -    0s
+     0     0 13118.3013    0  141 13866.0000 13118.3013  5.39%     -    0s
+H    0     0                    13731.000000 13118.3013  4.46%     -    0s
+     0     2 13118.3013    0  137 13731.0000 13118.3013  4.46%     -    0s
+
+Cutting planes:
+  Gomory: 12
+  Cover: 50
+  Implied bound: 1
+  MIR: 14
+  Flow cover: 27
+  GUB cover: 47
+  Zero half: 167
+  RLT: 15
+  Relax-and-lift: 1
+  BQP: 3
+
+Explored 142 nodes (12511 simplex iterations) in 1.30 seconds (1.55 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 8: 13731 13866 14046 ... 18075
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.373100000000e+04, best bound 1.373100000000e+04, gap 0.0000%
+=======================================
+running time is 1.3050920963287354
+=======================================
+solution
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 315.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 210.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8      <gurobi.Var q[8] (value 1000.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 315.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 315.0)>
+23     <gurobi.Var q[23] (value 108.0)>
+24     <gurobi.Var q[24] (value 504.0)>
+25     <gurobi.Var q[25] (value 504.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 300.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+1     <gurobi.Var x[1] (value 1.0)>
+2     <gurobi.Var x[2] (value 1.0)>
+3    <gurobi.Var x[3] (value -0.0)>
+4     <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value -0.0)>
+6    <gurobi.Var x[6] (value -0.0)>
+dtype: object
+1  25    <gurobi.Var y[1,25] (value 1.0)>
+2  25    <gurobi.Var y[2,25] (value 1.0)>
+3  20    <gurobi.Var y[3,20] (value 1.0)>
+4  25    <gurobi.Var y[4,25] (value 1.0)>
+5  3      <gurobi.Var y[5,3] (value 1.0)>
+6  3      <gurobi.Var y[6,3] (value 1.0)>
+dtype: object
+1  23  r    <gurobi.Var beta[1,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[1,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[1,25,r] (value 1.0)>
+2  23  r    <gurobi.Var beta[2,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[2,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[2,25,r] (value 1.0)>
+3  20  u    <gurobi.Var beta[3,20,u] (value 1.0)>
+   21  u    <gurobi.Var beta[3,21,u] (value 1.0)>
+   22  u    <gurobi.Var beta[3,22,u] (value 1.0)>
+4  23  r    <gurobi.Var beta[4,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[4,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[4,25,r] (value 1.0)>
+5  3   u     <gurobi.Var beta[5,3,u] (value 1.0)>
+   4   u     <gurobi.Var beta[5,4,u] (value 1.0)>
+   5   u     <gurobi.Var beta[5,5,u] (value 1.0)>
+6  3   u     <gurobi.Var beta[6,3,u] (value 1.0)>
+   4   u     <gurobi.Var beta[6,4,u] (value 1.0)>
+   5   u     <gurobi.Var beta[6,5,u] (value 1.0)>
+dtype: object
+1  25  23                <gurobi.Var z_a[1,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[1,25,24] (value 1.0)>
+       25                <gurobi.Var z_a[1,25,25] (value 1.0)>
+2  25  23    <gurobi.Var z_a[2,25,23] (value 68.48192771084...
+       24    <gurobi.Var z_a[2,25,24] (value 362.9572649572...
+       25    <gurobi.Var z_a[2,25,25] (value 68.56080733189...
+3  20  20    <gurobi.Var z_a[3,20,20] (value 53.75615763546...
+       21    <gurobi.Var z_a[3,20,21] (value 63.76483889202...
+       22    <gurobi.Var z_a[3,20,22] (value 49.53161592505...
+4  25  23                <gurobi.Var z_a[4,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[4,25,24] (value 1.0)>
+       25    <gurobi.Var z_a[4,25,25] (value 259.3548553187...
+5  3   3     <gurobi.Var z_a[5,3,3] (value 75.76470588235182)>
+       4     <gurobi.Var z_a[5,3,4] (value 61.84153005464295)>
+       5      <gurobi.Var z_a[5,3,5] (value 45.3235294117644)>
+6  3   3                   <gurobi.Var z_a[6,3,3] (value 1.0)>
+       4                   <gurobi.Var z_a[6,3,4] (value 1.0)>
+       5                   <gurobi.Var z_a[6,3,5] (value 1.0)>
+dtype: object
+1  25  24                <gurobi.Var z_r[1,25,24] (value 0.9)>
+2  25  24              <gurobi.Var z_r[2,25,24] (value 150.0)>
+3  20  19    <gurobi.Var z_r[3,20,19] (value 10.11578373576...
+       20               <gurobi.Var z_r[3,20,20] (value 40.0)>
+4  25  24    <gurobi.Var z_r[4,25,24] (value 78.40645659560...
+5  3   3                  <gurobi.Var z_r[5,3,3] (value 40.0)>
+       4     <gurobi.Var z_r[5,3,4] (value 14.87892960462775)>
+6  3   3                   <gurobi.Var z_r[6,3,3] (value 0.9)>
+dtype: object
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_a[2] (value 109.16505946640734)>), <MVar ()>
+array(<gurobi.Var f_a[3] (value 46.3235294117644)>), <MVar ()>
+array(<gurobi.Var f_a[19] (value 113.29645481708343)>), <MVar ()>
+array(<gurobi.Var f_a[20] (value 49.53161592505624)>), <MVar ()>
+array(<gurobi.Var f_a[22] (value -70.48192771084337)>), <MVar ()>
+array(<gurobi.Var f_a[23] (value -435.4391926680987)>)]
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_r[2] (value 14.87892960462775)>), <MVar ()>
+array(<gurobi.Var f_r[18] (value -10.115783735765035)>), <MVar ()>
+array(<gurobi.Var f_r[23] (value -229.3064565956093)>)]
+3      <gurobi.Var gamma[3] (value 0.8529411764705758)>
+4      <gurobi.Var gamma[4] (value 0.5236794171220246)>
+5      <gurobi.Var gamma[5] (value 0.7720588235294066)>
+20    <gurobi.Var gamma[20] (value 0.5972906403940609)>
+21    <gurobi.Var gamma[21] (value 0.7084982099114132)>
+22    <gurobi.Var gamma[22] (value 0.5503512880561804)>
+23    <gurobi.Var gamma[23] (value 0.7831325301204818)>
+24    <gurobi.Var gamma[24] (value 0.8689458689458465)>
+25    <gurobi.Var gamma[25] (value 0.7831325301204739)>
+dtype: object
+1  25                 <gurobi.Var psi_a[1,25] (value 3.0)>
+2  25               <gurobi.Var psi_a[2,25] (value 500.0)>
+3  20    <gurobi.Var psi_a[3,20] (value 167.05261245254...
+4  25    <gurobi.Var psi_a[4,25] (value 261.35485531869...
+5  3     <gurobi.Var psi_a[5,3] (value 182.929765348759...
+6  3                   <gurobi.Var psi_a[6,3] (value 3.0)>
+dtype: object
+1  25                 <gurobi.Var psi_r[1,25] (value 0.9)>
+2  25               <gurobi.Var psi_r[2,25] (value 150.0)>
+3  20    <gurobi.Var psi_r[3,20] (value 50.115783735764...
+4  25    <gurobi.Var psi_r[4,25] (value 78.406456595609...
+5  3     <gurobi.Var psi_r[5,3] (value 54.87892960462775)>
+6  3                   <gurobi.Var psi_r[6,3] (value 0.9)>
+dtype: object
+3      <gurobi.Var phi[3] (value 2.0)>
+4      <gurobi.Var phi[4] (value 2.0)>
+5      <gurobi.Var phi[5] (value 2.0)>
+20    <gurobi.Var phi[20] (value 1.0)>
+21    <gurobi.Var phi[21] (value 1.0)>
+22    <gurobi.Var phi[22] (value 1.0)>
+23    <gurobi.Var phi[23] (value 6.0)>
+24    <gurobi.Var phi[24] (value 6.0)>
+25    <gurobi.Var phi[25] (value 6.0)>
+dtype: object
+1      <gurobi.Var v[1] (value 144.85321919527485)>
+2      <gurobi.Var v[2] (value 144.85321919527485)>
+3      <gurobi.Var v[3] (value 144.85321919527485)>
+4      <gurobi.Var v[4] (value 144.68403679411765)>
+5              <gurobi.Var v[5] (value 144.648729)>
+6              <gurobi.Var v[6] (value 144.648729)>
+7              <gurobi.Var v[7] (value 144.648729)>
+8              <gurobi.Var v[8] (value 144.648729)>
+9              <gurobi.Var v[9] (value 144.648729)>
+10            <gurobi.Var v[10] (value 144.648729)>
+11            <gurobi.Var v[11] (value 144.648729)>
+12            <gurobi.Var v[12] (value 144.648729)>
+13            <gurobi.Var v[13] (value 144.648729)>
+14            <gurobi.Var v[14] (value 144.648729)>
+15            <gurobi.Var v[15] (value 144.648729)>
+16            <gurobi.Var v[16] (value 144.648729)>
+17            <gurobi.Var v[17] (value 144.648729)>
+18            <gurobi.Var v[18] (value 144.648729)>
+19    <gurobi.Var v[19] (value 144.85321919527485)>
+20    <gurobi.Var v[20] (value 145.23761897723392)>
+21    <gurobi.Var v[21] (value 145.14482918073872)>
+22     <gurobi.Var v[22] (value 145.0746032556802)>
+23    <gurobi.Var v[23] (value 144.85321919527485)>
+24    <gurobi.Var v[24] (value 144.97980473744352)>
+25      <gurobi.Var v[25] (value 156.766821687294)>
+26            <gurobi.Var v[26] (value 144.648729)>
+27            <gurobi.Var v[27] (value 144.648729)>
+28            <gurobi.Var v[28] (value 144.648729)>
+29            <gurobi.Var v[29] (value 144.648729)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+==========================================
+result for random state 2020
+==========================================
+---- 1 ----
+1
+0    1.0
+Name: proportion, dtype: float64
+---- 2 ----
+2
+0    1.0
+Name: proportion, dtype: float64
+---- 3 ----
+3
+0      0.308
+108    0.264
+315    0.280
+450    0.148
+Name: proportion, dtype: float64
+---- 4 ----
+4
+0      0.308
+144    0.244
+420    0.336
+600    0.112
+Name: proportion, dtype: float64
+---- 5 ----
+5
+0      0.308
+72     0.224
+210    0.368
+300    0.100
+Name: proportion, dtype: float64
+---- 6 ----
+6
+0      0.132
+90     0.288
+240    0.376
+300    0.204
+Name: proportion, dtype: float64
+---- 7 ----
+7
+0       0.132
+300     0.252
+800     0.404
+1000    0.212
+Name: proportion, dtype: float64
+---- 8 ----
+8
+0       0.132
+300     0.316
+800     0.412
+1000    0.140
+Name: proportion, dtype: float64
+---- 9 ----
+9
+0      0.132
+90     0.372
+240    0.340
+300    0.156
+Name: proportion, dtype: float64
+---- 10 ----
+10
+0      0.060
+120    0.320
+210    0.416
+300    0.204
+Name: proportion, dtype: float64
+---- 11 ----
+11
+0.0      0.060
+90.0     0.364
+157.5    0.412
+225.0    0.164
+Name: proportion, dtype: float64
+---- 12 ----
+12
+0      0.060
+120    0.388
+210    0.384
+300    0.168
+Name: proportion, dtype: float64
+---- 13 ----
+13
+0      0.060
+120    0.368
+210    0.368
+300    0.204
+Name: proportion, dtype: float64
+---- 14 ----
+14
+0      0.060
+240    0.356
+420    0.396
+600    0.188
+Name: proportion, dtype: float64
+---- 15 ----
+15
+0      0.048
+120    0.348
+210    0.428
+300    0.176
+Name: proportion, dtype: float64
+---- 16 ----
+16
+0      0.048
+120    0.352
+210    0.428
+300    0.172
+Name: proportion, dtype: float64
+---- 17 ----
+17
+0      0.048
+120    0.280
+210    0.472
+300    0.200
+Name: proportion, dtype: float64
+---- 18 ----
+18
+0      0.048
+180    0.344
+315    0.436
+450    0.172
+Name: proportion, dtype: float64
+---- 19 ----
+19
+0      0.368
+108    0.240
+315    0.256
+450    0.136
+Name: proportion, dtype: float64
+---- 20 ----
+20
+0      0.368
+108    0.228
+315    0.276
+450    0.128
+Name: proportion, dtype: float64
+---- 21 ----
+21
+0      0.368
+108    0.228
+315    0.300
+450    0.104
+Name: proportion, dtype: float64
+---- 22 ----
+22
+0      0.368
+108    0.244
+315    0.248
+450    0.140
+Name: proportion, dtype: float64
+---- 23 ----
+23
+0      0.096
+108    0.320
+405    0.416
+450    0.168
+Name: proportion, dtype: float64
+---- 24 ----
+24
+0       0.096
+504     0.296
+1890    0.344
+2100    0.264
+Name: proportion, dtype: float64
+---- 25 ----
+25
+0       0.096
+504     0.328
+1890    0.384
+2100    0.192
+Name: proportion, dtype: float64
+---- 26 ----
+26
+0      0.036
+90     0.392
+210    0.344
+300    0.228
+Name: proportion, dtype: float64
+---- 27 ----
+27
+0      0.036
+90     0.400
+210    0.396
+300    0.168
+Name: proportion, dtype: float64
+---- 28 ----
+28
+0      0.036
+90     0.364
+210    0.404
+300    0.196
+Name: proportion, dtype: float64
+---- 29 ----
+29
+0      0.036
+180    0.344
+480    0.440
+600    0.180
+Name: proportion, dtype: float64
+---- 30 ----
+30
+0       0.036
+300     0.324
+800     0.440
+1000    0.200
+Name: proportion, dtype: float64
+---- 31 ----
+31
+0      0.024
+300    0.348
+600    0.476
+750    0.152
+Name: proportion, dtype: float64
+---- 32 ----
+32
+0       0.024
+420     0.340
+840     0.432
+1050    0.204
+Name: proportion, dtype: float64
+---- 33 ----
+33
+0      0.024
+120    0.332
+240    0.424
+300    0.220
+Name: proportion, dtype: float64
+node 1: all scenarios are 0
+node 2: all scenarios are 0
+node 3 has negative distorted prob
+node 4 has negative distorted prob
+node 5 has negative distorted prob
+node 6 has negative distorted prob
+node 7 has negative distorted prob
+node 8 has negative distorted prob
+node 9 has negative distorted prob
+node 10 has negative distorted prob
+node 11 has negative distorted prob
+node 12 has negative distorted prob
+node 13 has negative distorted prob
+node 14 has negative distorted prob
+node 15 has negative distorted prob
+node 16 has negative distorted prob
+node 17 has negative distorted prob
+node 18 has negative distorted prob
+node 19 has negative distorted prob
+node 20 has negative distorted prob
+node 21 has negative distorted prob
+node 22 has negative distorted prob
+node 23 has negative distorted prob
+node 24 has negative distorted prob
+node 25 has negative distorted prob
+node 26 has negative distorted prob
+node 27 has negative distorted prob
+node 28 has negative distorted prob
+node 29 has negative distorted prob
+node 30 has negative distorted prob
+node 31 has negative distorted prob
+node 32 has negative distorted prob
+node 33 has negative distorted prob
+Set parameter TimeLimit to value 720
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 17200 rows, 8552 columns and 78591 nonzeros
+Model fingerprint: 0xfcdb5aa8
+Variable types: 972 continuous, 7580 integer (7549 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-01, 5e+03]
+Found heuristic solution: objective 18075.000000
+Presolve removed 14702 rows and 6969 columns
+Presolve time: 0.10s
+Presolved: 2498 rows, 1583 columns, 8653 nonzeros
+Found heuristic solution: objective 17985.000000
+Variable types: 817 continuous, 766 integer (766 binary)
+
+Root relaxation: objective 1.134200e+04, 2244 iterations, 0.05 seconds (0.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11341.9965    0  159 17985.0000 11341.9965  36.9%     -    0s
+H    0     0                    17647.500000 11341.9965  35.7%     -    0s
+     0     0 12283.6243    0  140 17647.5000 12283.6243  30.4%     -    0s
+H    0     0                    14451.000000 12283.6243  15.0%     -    0s
+     0     0 12328.5895    0   99 14451.0000 12328.5895  14.7%     -    0s
+     0     0 12328.5895    0  109 14451.0000 12328.5895  14.7%     -    0s
+     0     0 12619.7301    0  142 14451.0000 12619.7301  12.7%     -    0s
+H    0     0                    14316.000000 12621.3414  11.8%     -    0s
+     0     0 12621.3414    0  118 14316.0000 12621.3414  11.8%     -    0s
+     0     0 12715.4153    0   90 14316.0000 12715.4153  11.2%     -    0s
+     0     0 12731.8453    0   97 14316.0000 12731.8453  11.1%     -    0s
+     0     0 12731.8453    0  106 14316.0000 12731.8453  11.1%     -    0s
+     0     0 12781.9706    0  121 14316.0000 12781.9706  10.7%     -    0s
+H    0     0                    14046.000000 12807.1064  8.82%     -    0s
+     0     0 12807.1064    0  130 14046.0000 12807.1064  8.82%     -    0s
+     0     0 12812.6666    0  122 14046.0000 12812.6666  8.78%     -    0s
+     0     0 12816.1416    0  135 14046.0000 12816.1416  8.76%     -    0s
+     0     0 12816.1416    0  135 14046.0000 12816.1416  8.76%     -    0s
+     0     0 12979.1066    0  134 14046.0000 12979.1066  7.60%     -    0s
+     0     0 12983.4780    0  123 14046.0000 12983.4780  7.56%     -    0s
+     0     0 12983.4780    0  123 14046.0000 12983.4780  7.56%     -    0s
+     0     0 13023.4443    0  142 14046.0000 13023.4443  7.28%     -    0s
+     0     0 13026.3617    0  194 14046.0000 13026.3617  7.26%     -    0s
+     0     0 13026.3925    0  196 14046.0000 13026.3925  7.26%     -    0s
+     0     0 13074.8570    0  136 14046.0000 13074.8570  6.91%     -    0s
+     0     0 13079.1841    0  182 14046.0000 13079.1841  6.88%     -    0s
+     0     0 13079.1841    0  163 14046.0000 13079.1841  6.88%     -    0s
+     0     0 13082.2951    0  143 14046.0000 13082.2951  6.86%     -    0s
+H    0     0                    13911.000000 13085.7328  5.93%     -    0s
+     0     0 13105.0370    0   79 13911.0000 13105.0370  5.79%     -    0s
+     0     0 13116.1320    0  130 13911.0000 13116.1320  5.71%     -    0s
+     0     0 13118.9145    0   88 13911.0000 13118.9145  5.69%     -    0s
+     0     0 13122.4443    0   92 13911.0000 13122.4443  5.67%     -    0s
+     0     0 13124.1015    0   81 13911.0000 13124.1015  5.66%     -    0s
+     0     0 13124.2515    0   83 13911.0000 13124.2515  5.66%     -    0s
+     0     0 13198.6839    0  141 13911.0000 13198.6839  5.12%     -    0s
+H    0     0                    13866.000000 13216.2542  4.69%     -    0s
+     0     0 13230.4196    0  200 13866.0000 13230.4196  4.58%     -    0s
+     0     0 13233.3419    0   94 13866.0000 13233.3419  4.56%     -    0s
+     0     0 13233.4426    0  217 13866.0000 13233.4426  4.56%     -    0s
+     0     0 13314.4589    0  121 13866.0000 13314.4589  3.98%     -    0s
+H    0     0                    13731.000000 13325.3917  2.95%     -    0s
+     0     0 13325.3917    0  145 13731.0000 13325.3917  2.95%     -    0s
+     0     0 13335.2820    0  140 13731.0000 13335.2820  2.88%     -    0s
+     0     0 13335.9682    0  157 13731.0000 13335.9682  2.88%     -    0s
+     0     0 13348.7273    0  100 13731.0000 13348.7273  2.78%     -    0s
+     0     0 13370.0000    0  108 13731.0000 13370.0000  2.63%     -    0s
+     0     0 13370.0000    0  111 13731.0000 13370.0000  2.63%     -    0s
+     0     0 13370.0000    0  149 13731.0000 13370.0000  2.63%     -    0s
+     0     0 13370.0000    0  106 13731.0000 13370.0000  2.63%     -    0s
+     0     0 13388.1818    0  121 13731.0000 13388.1818  2.50%     -    0s
+     0     0 13401.1636    0  133 13731.0000 13401.1636  2.40%     -    0s
+     0     0 13401.1636    0  151 13731.0000 13401.1636  2.40%     -    0s
+     0     0 13427.3750    0   76 13731.0000 13427.3750  2.21%     -    0s
+     0     0 13445.3750    0   96 13731.0000 13445.3750  2.08%     -    0s
+     0     0 13445.3750    0   77 13731.0000 13445.3750  2.08%     -    0s
+     0     0 13468.5000    0   64 13731.0000 13468.5000  1.91%     -    0s
+     0     0 13468.5000    0   94 13731.0000 13468.5000  1.91%     -    0s
+     0     0 13468.5000    0   92 13731.0000 13468.5000  1.91%     -    1s
+     0     0 13476.1588    0  113 13731.0000 13476.1588  1.86%     -    1s
+     0     0 13481.4611    0  113 13731.0000 13481.4611  1.82%     -    1s
+     0     1 13488.7000    0   86 13731.0000 13488.7000  1.76%     -    1s
+
+Cutting planes:
+  Gomory: 15
+  Cover: 20
+  MIR: 12
+  Flow cover: 21
+  GUB cover: 53
+  Zero half: 177
+  RLT: 10
+  BQP: 1
+
+Explored 29 nodes (10129 simplex iterations) in 1.32 seconds (1.51 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 9: 13731 13866 13911 ... 18075
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.373100000000e+04, best bound 1.373100000000e+04, gap 0.0000%
+=======================================
+running time is 1.3202950954437256
+=======================================
+solution
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 210.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8      <gurobi.Var q[8] (value 1000.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 315.0)>
+20     <gurobi.Var q[20] (value 315.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 315.0)>
+23     <gurobi.Var q[23] (value 108.0)>
+24     <gurobi.Var q[24] (value 504.0)>
+25     <gurobi.Var q[25] (value 504.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 300.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+1    <gurobi.Var x[1] (value -0.0)>
+2     <gurobi.Var x[2] (value 1.0)>
+3     <gurobi.Var x[3] (value 1.0)>
+4     <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value -0.0)>
+6    <gurobi.Var x[6] (value -0.0)>
+dtype: object
+1  20    <gurobi.Var y[1,20] (value 1.0)>
+2  25    <gurobi.Var y[2,25] (value 1.0)>
+3  25    <gurobi.Var y[3,25] (value 1.0)>
+4  25    <gurobi.Var y[4,25] (value 1.0)>
+5  20    <gurobi.Var y[5,20] (value 1.0)>
+6  3      <gurobi.Var y[6,3] (value 1.0)>
+dtype: object
+1  19  u    <gurobi.Var beta[1,19,u] (value 1.0)>
+   20  u    <gurobi.Var beta[1,20,u] (value 1.0)>
+   21  u    <gurobi.Var beta[1,21,u] (value 1.0)>
+   22  u    <gurobi.Var beta[1,22,u] (value 1.0)>
+2  23  r    <gurobi.Var beta[2,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[2,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[2,25,r] (value 1.0)>
+3  23  r    <gurobi.Var beta[3,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[3,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[3,25,r] (value 1.0)>
+4  23  r    <gurobi.Var beta[4,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[4,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[4,25,r] (value 1.0)>
+5  19  u    <gurobi.Var beta[5,19,u] (value 1.0)>
+   20  u    <gurobi.Var beta[5,20,u] (value 1.0)>
+   21  u    <gurobi.Var beta[5,21,u] (value 1.0)>
+   22  u    <gurobi.Var beta[5,22,u] (value 1.0)>
+6  4   u     <gurobi.Var beta[6,4,u] (value 1.0)>
+dtype: object
+1  20  19    <gurobi.Var z_a[1,20,19] (value 63.85294117646...
+       20    <gurobi.Var z_a[1,20,20] (value 57.14144736841...
+       21    <gurobi.Var z_a[1,20,21] (value 9.222672064775...
+       22    <gurobi.Var z_a[1,20,22] (value 67.14988290398...
+2  25  23                <gurobi.Var z_a[2,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[2,25,24] (value 1.0)>
+       25                <gurobi.Var z_a[2,25,25] (value 1.0)>
+3  25  23    <gurobi.Var z_a[3,25,23] (value 73.62500000000...
+       24    <gurobi.Var z_a[3,25,24] (value 398.4504504504...
+       25    <gurobi.Var z_a[3,25,25] (value 27.92454954954...
+4  25  23                <gurobi.Var z_a[4,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[4,25,24] (value 1.0)>
+       25    <gurobi.Var z_a[4,25,25] (value 309.6933366293...
+5  20  19                <gurobi.Var z_a[5,20,19] (value 1.0)>
+       20                <gurobi.Var z_a[5,20,20] (value 1.0)>
+       21                <gurobi.Var z_a[5,20,21] (value 1.0)>
+       22                <gurobi.Var z_a[5,20,22] (value 1.0)>
+6  3   4     <gurobi.Var z_a[6,3,4] (value 78.68852459016173)>
+dtype: object
+1  20  19    <gurobi.Var z_r[1,20,19] (value 19.21008305409...
+       20               <gurobi.Var z_r[1,20,20] (value 40.0)>
+2  25  24                <gurobi.Var z_r[2,25,24] (value 0.9)>
+3  25  24              <gurobi.Var z_r[3,25,24] (value 150.0)>
+4  25  24    <gurobi.Var z_r[4,25,24] (value 93.50800098879...
+5  20  19                <gurobi.Var z_r[5,20,19] (value 1.2)>
+6  3   4     <gurobi.Var z_r[6,3,4] (value 23.6065573770485...
+dtype: object
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_a[2] (value 78.68852459016173)>), <MVar ()>
+array(<gurobi.Var f_a[18] (value -64.8529411764694)>), <MVar ()>
+array(<gurobi.Var f_a[19] (value 78.37255496875588)>), <MVar ()>
+array(<gurobi.Var f_a[20] (value 68.14988290398026)>), <MVar ()>
+array(<gurobi.Var f_a[22] (value -75.625)>), <MVar ()>
+array(<gurobi.Var f_a[23] (value -476.0754504504498)>)]
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_r[2] (value 23.606557377048503)>), <MVar ()>
+array(<gurobi.Var f_r[18] (value -20.41008305409332)>), <MVar ()>
+array(<gurobi.Var f_r[23] (value -244.40800098879205)>)]
+4      <gurobi.Var gamma[4] (value 0.6557377049180144)>
+19    <gurobi.Var gamma[19] (value 0.7205882352941044)>
+20    <gurobi.Var gamma[20] (value 0.6460160818713307)>
+21    <gurobi.Var gamma[21] (value 0.113585245164173...
+22    <gurobi.Var gamma[22] (value 0.7572209211553362)>
+23    <gurobi.Var gamma[23] (value 0.8402777777777778)>
+24    <gurobi.Var gamma[24] (value 0.9534534534534519)>
+25    <gurobi.Var gamma[25] (value 0.8062330623306135)>
+dtype: object
+1  20    <gurobi.Var psi_a[1,20] (value 197.36694351364...
+2  25                 <gurobi.Var psi_a[2,25] (value 3.0)>
+3  25               <gurobi.Var psi_a[3,25] (value 500.0)>
+4  25    <gurobi.Var psi_a[4,25] (value 311.69333662930...
+5  20                 <gurobi.Var psi_a[5,20] (value 4.0)>
+6  3     <gurobi.Var psi_a[6,3] (value 78.68852459016173)>
+dtype: object
+1  20    <gurobi.Var psi_r[1,20] (value 59.2100830540935)>
+2  25                 <gurobi.Var psi_r[2,25] (value 0.9)>
+3  25               <gurobi.Var psi_r[3,25] (value 150.0)>
+4  25    <gurobi.Var psi_r[4,25] (value 93.508000988792...
+5  20                 <gurobi.Var psi_r[5,20] (value 1.2)>
+6  3     <gurobi.Var psi_r[6,3] (value 23.6065573770485...
+dtype: object
+4      <gurobi.Var phi[4] (value 1.0)>
+19    <gurobi.Var phi[19] (value 2.0)>
+20    <gurobi.Var phi[20] (value 2.0)>
+21    <gurobi.Var phi[21] (value 2.0)>
+22    <gurobi.Var phi[22] (value 2.0)>
+23    <gurobi.Var phi[23] (value 6.0)>
+24    <gurobi.Var phi[24] (value 6.0)>
+25    <gurobi.Var phi[25] (value 6.0)>
+dtype: object
+1       <gurobi.Var v[1] (value 144.8479683442623)>
+2       <gurobi.Var v[2] (value 144.8479683442623)>
+3       <gurobi.Var v[3] (value 144.8479683442623)>
+4              <gurobi.Var v[4] (value 144.648729)>
+5              <gurobi.Var v[5] (value 144.648729)>
+6              <gurobi.Var v[6] (value 144.648729)>
+7              <gurobi.Var v[7] (value 144.648729)>
+8              <gurobi.Var v[8] (value 144.648729)>
+9              <gurobi.Var v[9] (value 144.648729)>
+10            <gurobi.Var v[10] (value 144.648729)>
+11            <gurobi.Var v[11] (value 144.648729)>
+12            <gurobi.Var v[12] (value 144.648729)>
+13            <gurobi.Var v[13] (value 144.648729)>
+14            <gurobi.Var v[14] (value 144.648729)>
+15            <gurobi.Var v[15] (value 144.648729)>
+16            <gurobi.Var v[16] (value 144.648729)>
+17            <gurobi.Var v[17] (value 144.648729)>
+18            <gurobi.Var v[18] (value 144.648729)>
+19     <gurobi.Var v[19] (value 144.8479683442623)>
+20    <gurobi.Var v[20] (value 145.81865508855316)>
+21    <gurobi.Var v[21] (value 145.75446796603376)>
+22     <gurobi.Var v[22] (value 145.6578450620525)>
+23     <gurobi.Var v[23] (value 144.8479683442623)>
+24     <gurobi.Var v[24] (value 144.9837908442623)>
+25     <gurobi.Var v[25] (value 157.5685020989315)>
+26            <gurobi.Var v[26] (value 144.648729)>
+27            <gurobi.Var v[27] (value 144.648729)>
+28            <gurobi.Var v[28] (value 144.648729)>
+29            <gurobi.Var v[29] (value 144.648729)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+==========================================
+result for random state 2030
+==========================================
+---- 1 ----
+1
+0    1.0
+Name: proportion, dtype: float64
+---- 2 ----
+2
+0    1.0
+Name: proportion, dtype: float64
+---- 3 ----
+3
+0      0.268
+108    0.236
+315    0.348
+450    0.148
+Name: proportion, dtype: float64
+---- 4 ----
+4
+0      0.268
+144    0.288
+420    0.300
+600    0.144
+Name: proportion, dtype: float64
+---- 5 ----
+5
+0      0.268
+72     0.296
+210    0.296
+300    0.140
+Name: proportion, dtype: float64
+---- 6 ----
+6
+0      0.124
+90     0.296
+240    0.388
+300    0.192
+Name: proportion, dtype: float64
+---- 7 ----
+7
+0       0.124
+300     0.384
+800     0.336
+1000    0.156
+Name: proportion, dtype: float64
+---- 8 ----
+8
+0       0.124
+300     0.332
+800     0.376
+1000    0.168
+Name: proportion, dtype: float64
+---- 9 ----
+9
+0      0.124
+90     0.320
+240    0.412
+300    0.144
+Name: proportion, dtype: float64
+---- 10 ----
+10
+0      0.052
+120    0.312
+210    0.432
+300    0.204
+Name: proportion, dtype: float64
+---- 11 ----
+11
+0.0      0.052
+90.0     0.300
+157.5    0.472
+225.0    0.176
+Name: proportion, dtype: float64
+---- 12 ----
+12
+0      0.052
+120    0.296
+210    0.412
+300    0.240
+Name: proportion, dtype: float64
+---- 13 ----
+13
+0      0.052
+120    0.348
+210    0.404
+300    0.196
+Name: proportion, dtype: float64
+---- 14 ----
+14
+0      0.052
+240    0.364
+420    0.372
+600    0.212
+Name: proportion, dtype: float64
+---- 15 ----
+15
+0      0.028
+120    0.360
+210    0.456
+300    0.156
+Name: proportion, dtype: float64
+---- 16 ----
+16
+0      0.028
+120    0.336
+210    0.428
+300    0.208
+Name: proportion, dtype: float64
+---- 17 ----
+17
+0      0.028
+120    0.344
+210    0.436
+300    0.192
+Name: proportion, dtype: float64
+---- 18 ----
+18
+0      0.028
+180    0.348
+315    0.448
+450    0.176
+Name: proportion, dtype: float64
+---- 19 ----
+19
+0      0.356
+108    0.208
+315    0.284
+450    0.152
+Name: proportion, dtype: float64
+---- 20 ----
+20
+0      0.356
+108    0.232
+315    0.264
+450    0.148
+Name: proportion, dtype: float64
+---- 21 ----
+21
+0      0.356
+108    0.212
+315    0.308
+450    0.124
+Name: proportion, dtype: float64
+---- 22 ----
+22
+0      0.356
+108    0.244
+315    0.296
+450    0.104
+Name: proportion, dtype: float64
+---- 23 ----
+23
+0      0.108
+108    0.296
+405    0.396
+450    0.200
+Name: proportion, dtype: float64
+---- 24 ----
+24
+0       0.108
+504     0.300
+1890    0.400
+2100    0.192
+Name: proportion, dtype: float64
+---- 25 ----
+25
+0       0.108
+504     0.296
+1890    0.404
+2100    0.192
+Name: proportion, dtype: float64
+---- 26 ----
+26
+0      0.060
+90     0.344
+210    0.384
+300    0.212
+Name: proportion, dtype: float64
+---- 27 ----
+27
+0      0.060
+90     0.300
+210    0.432
+300    0.208
+Name: proportion, dtype: float64
+---- 28 ----
+28
+0      0.060
+90     0.328
+210    0.440
+300    0.172
+Name: proportion, dtype: float64
+---- 29 ----
+29
+0      0.060
+180    0.392
+480    0.388
+600    0.160
+Name: proportion, dtype: float64
+---- 30 ----
+30
+0       0.060
+300     0.308
+800     0.444
+1000    0.188
+Name: proportion, dtype: float64
+---- 31 ----
+31
+0      0.036
+300    0.280
+600    0.480
+750    0.204
+Name: proportion, dtype: float64
+---- 32 ----
+32
+0       0.036
+420     0.284
+840     0.440
+1050    0.240
+Name: proportion, dtype: float64
+---- 33 ----
+33
+0      0.036
+120    0.324
+240    0.464
+300    0.176
+Name: proportion, dtype: float64
+node 1: all scenarios are 0
+node 2: all scenarios are 0
+node 3 has negative distorted prob
+node 4 has negative distorted prob
+node 5 has negative distorted prob
+node 6 has negative distorted prob
+node 7 has negative distorted prob
+node 8 has negative distorted prob
+node 9 has negative distorted prob
+node 10 has negative distorted prob
+node 11 has negative distorted prob
+node 12 has negative distorted prob
+node 13 has negative distorted prob
+node 14 has negative distorted prob
+node 15 has negative distorted prob
+node 16 has negative distorted prob
+node 17 has negative distorted prob
+node 18 has negative distorted prob
+node 19 has negative distorted prob
+node 20 has negative distorted prob
+node 21 has negative distorted prob
+node 22 has negative distorted prob
+node 23 has negative distorted prob
+node 24 has negative distorted prob
+node 25 has negative distorted prob
+node 26 has negative distorted prob
+node 27 has negative distorted prob
+node 28 has negative distorted prob
+node 29 has negative distorted prob
+node 30 has negative distorted prob
+node 31 has negative distorted prob
+node 32 has negative distorted prob
+node 33 has negative distorted prob
+Set parameter TimeLimit to value 720
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 17264 rows, 8584 columns and 78696 nonzeros
+Model fingerprint: 0xfea0ad7d
+Variable types: 972 continuous, 7612 integer (7581 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-01, 5e+03]
+Found heuristic solution: objective 18075.000000
+Presolve removed 14764 rows and 7000 columns
+Presolve time: 0.10s
+Presolved: 2500 rows, 1584 columns, 8665 nonzeros
+Variable types: 817 continuous, 767 integer (767 binary)
+
+Root relaxation: objective 1.142879e+04, 2042 iterations, 0.05 seconds (0.05 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11428.7907    0  130 18075.0000 11428.7907  36.8%     -    0s
+H    0     0                    17985.000000 11428.7907  36.5%     -    0s
+     0     0 12261.3391    0  127 17985.0000 12261.3391  31.8%     -    0s
+H    0     0                    16455.000000 12272.8716  25.4%     -    0s
+H    0     0                    16405.000000 12272.8716  25.2%     -    0s
+     0     0 12272.8716    0  111 16405.0000 12272.8716  25.2%     -    0s
+     0     0 12607.5309    0  119 16405.0000 12607.5309  23.1%     -    0s
+H    0     0                    16270.000000 12627.4857  22.4%     -    0s
+     0     0 12627.4857    0  110 16270.0000 12627.4857  22.4%     -    0s
+     0     0 12627.4857    0  111 16270.0000 12627.4857  22.4%     -    0s
+     0     0 12708.9048    0  104 16270.0000 12708.9048  21.9%     -    0s
+     0     0 12738.0625    0   98 16270.0000 12738.0625  21.7%     -    0s
+     0     0 12745.0194    0  122 16270.0000 12745.0194  21.7%     -    0s
+     0     0 12745.1333    0  116 16270.0000 12745.1333  21.7%     -    0s
+     0     0 12807.5343    0  119 16270.0000 12807.5343  21.3%     -    0s
+     0     0 12842.7373    0  115 16270.0000 12842.7373  21.1%     -    0s
+     0     0 12842.7373    0  128 16270.0000 12842.7373  21.1%     -    0s
+     0     0 12842.7373    0  127 16270.0000 12842.7373  21.1%     -    0s
+     0     0 12895.9829    0  148 16270.0000 12895.9829  20.7%     -    0s
+     0     0 12929.8403    0  151 16270.0000 12929.8403  20.5%     -    0s
+     0     0 12929.8403    0  157 16270.0000 12929.8403  20.5%     -    0s
+     0     0 13102.4299    0   98 16270.0000 13102.4299  19.5%     -    0s
+     0     0 13120.3609    0   95 16270.0000 13120.3609  19.4%     -    0s
+     0     0 13120.3609    0   96 16270.0000 13120.3609  19.4%     -    0s
+     0     0 13142.2781    0  105 16270.0000 13142.2781  19.2%     -    0s
+H    0     0                    16000.000000 13154.4146  17.8%     -    0s
+     0     0 13154.4146    0  138 16000.0000 13154.4146  17.8%     -    0s
+     0     0 13158.4270    0  149 16000.0000 13158.4270  17.8%     -    0s
+     0     0 13163.9819    0  141 16000.0000 13163.9819  17.7%     -    0s
+     0     0 13164.2953    0  160 16000.0000 13164.2953  17.7%     -    0s
+     0     0 13210.8646    0  194 16000.0000 13210.8646  17.4%     -    0s
+H    0     0                    14271.000000 13216.7597  7.39%     -    0s
+     0     0 13216.7597    0  185 14271.0000 13216.7597  7.39%     -    0s
+     0     0 13216.8724    0  183 14271.0000 13216.8724  7.39%     -    0s
+     0     0 13218.6701    0  200 14271.0000 13218.6701  7.37%     -    0s
+     0     0 13219.1205    0  211 14271.0000 13219.1205  7.37%     -    0s
+     0     0 13252.3598    0  186 14271.0000 13252.3598  7.14%     -    0s
+     0     0 13258.0833    0  187 14271.0000 13258.0833  7.10%     -    0s
+     0     0 13258.0833    0  198 14271.0000 13258.0833  7.10%     -    0s
+     0     0 13260.1111    0  183 14271.0000 13260.1111  7.08%     -    0s
+     0     0 13274.9891    0  187 14271.0000 13274.9891  6.98%     -    0s
+     0     0 13274.9891    0  183 14271.0000 13274.9891  6.98%     -    0s
+     0     0 13274.9891    0  128 14271.0000 13274.9891  6.98%     -    0s
+     0     2 13274.9891    0  128 14271.0000 13274.9891  6.98%     -    0s
+*   19    10              16    14001.000000 13274.9891  5.19%  64.7    0s
+
+Cutting planes:
+  Gomory: 12
+  Cover: 50
+  MIR: 14
+  Flow cover: 22
+  GUB cover: 55
+  Zero half: 151
+  RLT: 16
+  Relax-and-lift: 1
+  BQP: 30
+
+Explored 78 nodes (9924 simplex iterations) in 1.09 seconds (1.27 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 8: 14001 14271 16000 ... 18075
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.400100000000e+04, best bound 1.400100000000e+04, gap 0.0000%
+=======================================
+running time is 1.0861129760742188
+=======================================
+solution
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 600.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8      <gurobi.Var q[8] (value 1000.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 315.0)>
+20     <gurobi.Var q[20] (value 315.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 315.0)>
+23     <gurobi.Var q[23] (value 108.0)>
+24     <gurobi.Var q[24] (value 504.0)>
+25     <gurobi.Var q[25] (value 504.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 300.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+1    <gurobi.Var x[1] (value 1.0)>
+2    <gurobi.Var x[2] (value 0.0)>
+3    <gurobi.Var x[3] (value 0.0)>
+4    <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value 1.0)>
+6    <gurobi.Var x[6] (value 0.0)>
+dtype: object
+1  25    <gurobi.Var y[1,25] (value 1.0)>
+2  20    <gurobi.Var y[2,20] (value 1.0)>
+3  20    <gurobi.Var y[3,20] (value 1.0)>
+4  25    <gurobi.Var y[4,25] (value 1.0)>
+5  25    <gurobi.Var y[5,25] (value 1.0)>
+6  20    <gurobi.Var y[6,20] (value 1.0)>
+dtype: object
+1  23  r    <gurobi.Var beta[1,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[1,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[1,25,r] (value 1.0)>
+2  19  u    <gurobi.Var beta[2,19,u] (value 1.0)>
+   20  u    <gurobi.Var beta[2,20,u] (value 1.0)>
+   21  u    <gurobi.Var beta[2,21,u] (value 1.0)>
+3  19  u    <gurobi.Var beta[3,19,u] (value 1.0)>
+   20  u    <gurobi.Var beta[3,20,u] (value 1.0)>
+   21  u    <gurobi.Var beta[3,21,u] (value 1.0)>
+4  23  r    <gurobi.Var beta[4,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[4,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[4,25,r] (value 1.0)>
+5  23  r    <gurobi.Var beta[5,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[5,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[5,25,r] (value 1.0)>
+6  19  u    <gurobi.Var beta[6,19,u] (value 1.0)>
+   22  u    <gurobi.Var beta[6,22,u] (value 1.0)>
+dtype: object
+1  25  23               <gurobi.Var z_a[1,25,23] (value 88.0)>
+       24    <gurobi.Var z_a[1,25,24] (value 164.3333333333...
+       25                <gurobi.Var z_a[1,25,25] (value 1.0)>
+2  20  19                <gurobi.Var z_a[2,20,19] (value 1.0)>
+       20                <gurobi.Var z_a[2,20,20] (value 1.0)>
+       21                <gurobi.Var z_a[2,20,21] (value 1.0)>
+       22    <gurobi.Var z_a[2,20,22] (value 2.942330827068...
+3  20  19                <gurobi.Var z_a[3,20,19] (value 1.0)>
+       20                <gurobi.Var z_a[3,20,20] (value 1.0)>
+       21                <gurobi.Var z_a[3,20,21] (value 1.0)>
+4  25  23                <gurobi.Var z_a[4,25,23] (value 1.0)>
+       24               <gurobi.Var z_a[4,25,24] (value 81.0)>
+       25              <gurobi.Var z_a[4,25,25] (value 418.0)>
+5  25  23                <gurobi.Var z_a[5,25,23] (value 1.0)>
+       24    <gurobi.Var z_a[5,25,24] (value 164.6666666666...
+       25                <gurobi.Var z_a[5,25,25] (value 1.0)>
+6  20  19               <gurobi.Var z_a[6,20,19] (value 88.0)>
+       20               <gurobi.Var z_a[6,20,20] (value 88.0)>
+       21               <gurobi.Var z_a[6,20,21] (value 88.0)>
+       22    <gurobi.Var z_a[6,20,22] (value 87.05766917293...
+dtype: object
+1  25  25               <gurobi.Var z_r[1,25,25] (value 76.0)>
+2  20  19    <gurobi.Var z_r[2,20,19] (value 4.159631578947...
+3  20  22                <gurobi.Var z_r[3,20,22] (value 0.9)>
+4  25  25              <gurobi.Var z_r[4,25,25] (value 150.0)>
+5  25  23               <gurobi.Var z_r[5,25,23] (value 50.0)>
+6  20  19               <gurobi.Var z_r[6,20,19] (value 40.0)>
+       20    <gurobi.Var z_r[6,20,20] (value 25.31730075187...
+       21               <gurobi.Var z_r[6,20,21] (value 40.0)>
+dtype: object
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_a[18] (value -90.0)>), <MVar ()>
+array(<gurobi.Var f_a[19] (value 180.0)>), <MVar ()>
+array(<gurobi.Var f_a[20] (value 90.0)>), <MVar ()>
+array(<gurobi.Var f_a[22] (value -90.0)>), <MVar ()>
+array(<gurobi.Var f_a[23] (value -500.0)>)]
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_r[18] (value -44.15963157894794)>), <MVar ()>
+array(<gurobi.Var f_r[19] (value 40.9)>), <MVar ()>
+array(<gurobi.Var f_r[20] (value 0.9)>), <MVar ()>
+array(<gurobi.Var f_r[22] (value -50.0)>), <MVar ()>
+array(<gurobi.Var f_r[23] (value -50.0)>)]
+19                   <gurobi.Var gamma[19] (value 1.0)>
+20                   <gurobi.Var gamma[20] (value 1.0)>
+21                   <gurobi.Var gamma[21] (value 1.0)>
+22                   <gurobi.Var gamma[22] (value 1.0)>
+23                   <gurobi.Var gamma[23] (value 1.0)>
+24    <gurobi.Var gamma[24] (value 0.9761904761904762)>
+25                   <gurobi.Var gamma[25] (value 1.0)>
+dtype: object
+1  25    <gurobi.Var psi_a[1,25] (value 253.33333333333...
+2  20    <gurobi.Var psi_a[2,20] (value 5.9423308270685...
+3  20                 <gurobi.Var psi_a[3,20] (value 3.0)>
+4  25               <gurobi.Var psi_a[4,25] (value 500.0)>
+5  25    <gurobi.Var psi_a[5,25] (value 166.66666666666...
+6  20    <gurobi.Var psi_a[6,20] (value 351.05766917293...
+dtype: object
+1  25                <gurobi.Var psi_r[1,25] (value 76.0)>
+2  20    <gurobi.Var psi_r[2,20] (value 4.1596315789479...
+3  20                 <gurobi.Var psi_r[3,20] (value 0.9)>
+4  25               <gurobi.Var psi_r[4,25] (value 150.0)>
+5  25                <gurobi.Var psi_r[5,25] (value 50.0)>
+6  20    <gurobi.Var psi_r[6,20] (value 105.31730075187...
+dtype: object
+19    <gurobi.Var phi[19] (value 3.0)>
+20    <gurobi.Var phi[20] (value 2.0)>
+21    <gurobi.Var phi[21] (value 2.0)>
+22    <gurobi.Var phi[22] (value 1.0)>
+23    <gurobi.Var phi[23] (value 6.0)>
+24    <gurobi.Var phi[24] (value 6.0)>
+25    <gurobi.Var phi[25] (value 6.0)>
+dtype: object
+1              <gurobi.Var v[1] (value 144.648729)>
+2              <gurobi.Var v[2] (value 144.648729)>
+3              <gurobi.Var v[3] (value 144.648729)>
+4              <gurobi.Var v[4] (value 144.648729)>
+5              <gurobi.Var v[5] (value 144.648729)>
+6              <gurobi.Var v[6] (value 144.648729)>
+7              <gurobi.Var v[7] (value 144.648729)>
+8              <gurobi.Var v[8] (value 144.648729)>
+9              <gurobi.Var v[9] (value 144.648729)>
+10            <gurobi.Var v[10] (value 144.648729)>
+11            <gurobi.Var v[11] (value 144.648729)>
+12            <gurobi.Var v[12] (value 144.648729)>
+13            <gurobi.Var v[13] (value 144.648729)>
+14            <gurobi.Var v[14] (value 144.648729)>
+15            <gurobi.Var v[15] (value 144.648729)>
+16            <gurobi.Var v[16] (value 144.648729)>
+17            <gurobi.Var v[17] (value 144.648729)>
+18            <gurobi.Var v[18] (value 144.648729)>
+19            <gurobi.Var v[19] (value 144.648729)>
+20            <gurobi.Var v[20] (value 146.597551)>
+21            <gurobi.Var v[21] (value 144.814131)>
+22            <gurobi.Var v[22] (value 144.648729)>
+23            <gurobi.Var v[23] (value 144.648729)>
+24    <gurobi.Var v[24] (value 147.11036900000002)>
+25    <gurobi.Var v[25] (value 150.40636899999998)>
+26            <gurobi.Var v[26] (value 144.648729)>
+27            <gurobi.Var v[27] (value 144.648729)>
+28            <gurobi.Var v[28] (value 144.648729)>
+29            <gurobi.Var v[29] (value 144.648729)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+==========================================
+result for random state 2040
+==========================================
+---- 1 ----
+1
+0    1.0
+Name: proportion, dtype: float64
+---- 2 ----
+2
+0    1.0
+Name: proportion, dtype: float64
+---- 3 ----
+3
+0      0.352
+108    0.220
+315    0.284
+450    0.144
+Name: proportion, dtype: float64
+---- 4 ----
+4
+0      0.352
+144    0.200
+420    0.332
+600    0.116
+Name: proportion, dtype: float64
+---- 5 ----
+5
+0      0.352
+72     0.232
+210    0.252
+300    0.164
+Name: proportion, dtype: float64
+---- 6 ----
+6
+0      0.116
+90     0.288
+240    0.408
+300    0.188
+Name: proportion, dtype: float64
+---- 7 ----
+7
+0       0.116
+300     0.320
+800     0.388
+1000    0.176
+Name: proportion, dtype: float64
+---- 8 ----
+8
+0       0.116
+300     0.268
+800     0.440
+1000    0.176
+Name: proportion, dtype: float64
+---- 9 ----
+9
+0      0.116
+90     0.360
+240    0.380
+300    0.144
+Name: proportion, dtype: float64
+---- 10 ----
+10
+0      0.020
+120    0.368
+210    0.420
+300    0.192
+Name: proportion, dtype: float64
+---- 11 ----
+11
+0.0      0.020
+90.0     0.372
+157.5    0.436
+225.0    0.172
+Name: proportion, dtype: float64
+---- 12 ----
+12
+0      0.020
+120    0.324
+210    0.452
+300    0.204
+Name: proportion, dtype: float64
+---- 13 ----
+13
+0      0.020
+120    0.328
+210    0.448
+300    0.204
+Name: proportion, dtype: float64
+---- 14 ----
+14
+0      0.020
+240    0.316
+420    0.408
+600    0.256
+Name: proportion, dtype: float64
+---- 15 ----
+15
+0      0.004
+120    0.340
+210    0.460
+300    0.196
+Name: proportion, dtype: float64
+---- 16 ----
+16
+0      0.004
+120    0.352
+210    0.424
+300    0.220
+Name: proportion, dtype: float64
+---- 17 ----
+17
+0      0.004
+120    0.380
+210    0.416
+300    0.200
+Name: proportion, dtype: float64
+---- 18 ----
+18
+0      0.004
+180    0.296
+315    0.488
+450    0.212
+Name: proportion, dtype: float64
+---- 19 ----
+19
+0      0.412
+108    0.184
+315    0.292
+450    0.112
+Name: proportion, dtype: float64
+---- 20 ----
+20
+0      0.412
+108    0.216
+315    0.292
+450    0.080
+Name: proportion, dtype: float64
+---- 21 ----
+21
+0      0.412
+108    0.212
+315    0.252
+450    0.124
+Name: proportion, dtype: float64
+---- 22 ----
+22
+0      0.412
+108    0.164
+315    0.312
+450    0.112
+Name: proportion, dtype: float64
+---- 23 ----
+23
+0      0.116
+108    0.368
+405    0.340
+450    0.176
+Name: proportion, dtype: float64
+---- 24 ----
+24
+0       0.116
+504     0.292
+1890    0.436
+2100    0.156
+Name: proportion, dtype: float64
+---- 25 ----
+25
+0       0.116
+504     0.372
+1890    0.364
+2100    0.148
+Name: proportion, dtype: float64
+---- 26 ----
+26
+0      0.032
+90     0.380
+210    0.432
+300    0.156
+Name: proportion, dtype: float64
+---- 27 ----
+27
+0      0.032
+90     0.384
+210    0.460
+300    0.124
+Name: proportion, dtype: float64
+---- 28 ----
+28
+0      0.032
+90     0.328
+210    0.472
+300    0.168
+Name: proportion, dtype: float64
+---- 29 ----
+29
+0      0.032
+180    0.324
+480    0.472
+600    0.172
+Name: proportion, dtype: float64
+---- 30 ----
+30
+0       0.032
+300     0.376
+800     0.408
+1000    0.184
+Name: proportion, dtype: float64
+---- 31 ----
+31
+0      0.016
+300    0.332
+600    0.412
+750    0.240
+Name: proportion, dtype: float64
+---- 32 ----
+32
+0       0.016
+420     0.356
+840     0.448
+1050    0.180
+Name: proportion, dtype: float64
+---- 33 ----
+33
+0      0.016
+120    0.376
+240    0.376
+300    0.232
+Name: proportion, dtype: float64
+node 1: all scenarios are 0
+node 2: all scenarios are 0
+node 3 has negative distorted prob
+node 4 has negative distorted prob
+node 5 has negative distorted prob
+node 6 has negative distorted prob
+node 7 has negative distorted prob
+node 8 has negative distorted prob
+node 9 has negative distorted prob
+node 10 has negative distorted prob
+node 11 has negative distorted prob
+node 12 has negative distorted prob
+node 13 has negative distorted prob
+node 14 has negative distorted prob
+node 15 has negative distorted prob
+node 16 has negative distorted prob
+node 17 has negative distorted prob
+node 18 has negative distorted prob
+node 19 has negative distorted prob
+node 20 has negative distorted prob
+node 21 has negative distorted prob
+node 22 has negative distorted prob
+node 23 has negative distorted prob
+node 24 has negative distorted prob
+node 25 has negative distorted prob
+node 26 has negative distorted prob
+node 27 has negative distorted prob
+node 28 has negative distorted prob
+node 29 has negative distorted prob
+node 30 has negative distorted prob
+node 31 has negative distorted prob
+node 32 has negative distorted prob
+node 33 has negative distorted prob
+Set parameter TimeLimit to value 720
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 17258 rows, 8581 columns and 79101 nonzeros
+Model fingerprint: 0x63973237
+Variable types: 972 continuous, 7609 integer (7578 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-01, 5e+03]
+Found heuristic solution: objective 18075.000000
+Presolve removed 14760 rows and 6998 columns
+Presolve time: 0.10s
+Presolved: 2498 rows, 1583 columns, 8653 nonzeros
+Found heuristic solution: objective 17940.000000
+Variable types: 817 continuous, 766 integer (766 binary)
+
+Root relaxation: objective 1.124759e+04, 2060 iterations, 0.05 seconds (0.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11247.5933    0  143 17940.0000 11247.5933  37.3%     -    0s
+     0     0 12183.0778    0  112 17940.0000 12183.0778  32.1%     -    0s
+H    0     0                    14406.000000 12189.2017  15.4%     -    0s
+     0     0 12209.3599    0  115 14406.0000 12209.3599  15.2%     -    0s
+     0     0 12211.5122    0  116 14406.0000 12211.5122  15.2%     -    0s
+     0     0 12469.6246    0  100 14406.0000 12469.6246  13.4%     -    0s
+H    0     0                    14226.000000 12508.9093  12.1%     -    0s
+     0     0 12510.2863    0   99 14226.0000 12510.2863  12.1%     -    0s
+     0     0 12513.7767    0   94 14226.0000 12513.7767  12.0%     -    0s
+     0     0 12513.7767    0   95 14226.0000 12513.7767  12.0%     -    0s
+     0     0 12605.9029    0   93 14226.0000 12605.9029  11.4%     -    0s
+     0     0 12642.2449    0   99 14226.0000 12642.2449  11.1%     -    0s
+     0     0 12683.8192    0  104 14226.0000 12683.8192  10.8%     -    0s
+     0     0 12696.2804    0   97 14226.0000 12696.2804  10.8%     -    0s
+     0     0 12696.2804    0   91 14226.0000 12696.2804  10.8%     -    0s
+     0     0 12777.8865    0  140 14226.0000 12777.8865  10.2%     -    0s
+     0     0 12799.6943    0  164 14226.0000 12799.6943  10.0%     -    0s
+     0     0 12799.6943    0  172 14226.0000 12799.6943  10.0%     -    0s
+     0     0 12810.0900    0  172 14226.0000 12810.0900  10.0%     -    0s
+     0     0 12846.3614    0  179 14226.0000 12846.3614  9.70%     -    0s
+     0     0 12846.3614    0  179 14226.0000 12846.3614  9.70%     -    0s
+     0     0 12846.3614    0  196 14226.0000 12846.3614  9.70%     -    0s
+     0     0 12854.0190    0  196 14226.0000 12854.0190  9.64%     -    0s
+     0     0 12904.7786    0  156 14226.0000 12904.7786  9.29%     -    0s
+     0     0 12946.0000    0  155 14226.0000 12946.0000  9.00%     -    0s
+     0     0 12946.0000    0  168 14226.0000 12946.0000  9.00%     -    0s
+     0     0 12946.0000    0  165 14226.0000 12946.0000  9.00%     -    0s
+     0     0 12946.0000    0  170 14226.0000 12946.0000  9.00%     -    0s
+     0     0 12946.0000    0  115 14226.0000 12946.0000  9.00%     -    0s
+H    0     0                    14091.000000 12946.0000  8.13%     -    0s
+     0     0 12946.0000    0  149 14091.0000 12946.0000  8.13%     -    0s
+     0     0 12946.0000    0  149 14091.0000 12946.0000  8.13%     -    0s
+     0     0 12946.0000    0  100 14091.0000 12946.0000  8.13%     -    0s
+     0     2 12961.1856    0  100 14091.0000 12961.1856  8.02%     -    0s
+H    3     1                    14001.000000 12997.7505  7.17%   179    0s
+*   18     6              13    13821.000000 12997.7505  5.96%  90.8    0s
+*   39     2               7    13816.000000 13796.0000  0.14%   103    1s
+
+Cutting planes:
+  Gomory: 20
+  Cover: 36
+  MIR: 9
+  StrongCG: 1
+  Flow cover: 25
+  GUB cover: 46
+  Zero half: 123
+  RLT: 25
+  BQP: 12
+
+Explored 44 nodes (10526 simplex iterations) in 1.04 seconds (1.24 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 8: 13816 13821 14001 ... 18075
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.381600000000e+04, best bound 1.381600000000e+04, gap 0.0000%
+=======================================
+running time is 1.0393619537353516
+=======================================
+solution
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 600.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8      <gurobi.Var q[8] (value 1000.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 315.0)>
+21     <gurobi.Var q[21] (value 450.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 108.0)>
+24     <gurobi.Var q[24] (value 504.0)>
+25     <gurobi.Var q[25] (value 504.0)>
+26     <gurobi.Var q[26] (value 210.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 210.0)>
+29     <gurobi.Var q[29] (value 480.0)>
+30     <gurobi.Var q[30] (value 800.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+1    <gurobi.Var x[1] (value 1.0)>
+2    <gurobi.Var x[2] (value 0.0)>
+3    <gurobi.Var x[3] (value 0.0)>
+4    <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value 1.0)>
+6    <gurobi.Var x[6] (value 0.0)>
+dtype: object
+1  25    <gurobi.Var y[1,25] (value 1.0)>
+2  28    <gurobi.Var y[2,28] (value 1.0)>
+3  28    <gurobi.Var y[3,28] (value 1.0)>
+4  25    <gurobi.Var y[4,25] (value 1.0)>
+5  25    <gurobi.Var y[5,25] (value 1.0)>
+6  28    <gurobi.Var y[6,28] (value 1.0)>
+dtype: object
+1  24  r    <gurobi.Var beta[1,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[1,25,r] (value 1.0)>
+2  26  u    <gurobi.Var beta[2,26,u] (value 1.0)>
+   28  u    <gurobi.Var beta[2,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[2,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[2,30,u] (value 1.0)>
+3  28  u    <gurobi.Var beta[3,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[3,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[3,30,u] (value 1.0)>
+4  23  r    <gurobi.Var beta[4,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[4,24,r] (value 1.0)>
+5  23  r    <gurobi.Var beta[5,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[5,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[5,25,r] (value 1.0)>
+6  26  u    <gurobi.Var beta[6,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[6,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[6,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[6,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[6,30,u] (value 1.0)>
+dtype: object
+1  25  24                <gurobi.Var z_a[1,25,24] (value 1.0)>
+       25                <gurobi.Var z_a[1,25,25] (value 1.0)>
+2  28  26                <gurobi.Var z_a[2,28,26] (value 1.0)>
+       28                <gurobi.Var z_a[2,28,28] (value 1.0)>
+       29                <gurobi.Var z_a[2,28,29] (value 1.0)>
+       30    <gurobi.Var z_a[2,28,30] (value 63.66666666666...
+3  28  28                <gurobi.Var z_a[3,28,28] (value 1.0)>
+       29                <gurobi.Var z_a[3,28,29] (value 1.0)>
+       30                <gurobi.Var z_a[3,28,30] (value 1.0)>
+4  25  23               <gurobi.Var z_a[4,25,23] (value 81.0)>
+       24                <gurobi.Var z_a[4,25,24] (value 1.0)>
+       25              <gurobi.Var z_a[4,25,25] (value 418.0)>
+5  25  23                <gurobi.Var z_a[5,25,23] (value 9.0)>
+       24              <gurobi.Var z_a[5,25,24] (value 408.0)>
+       25                <gurobi.Var z_a[5,25,25] (value 1.0)>
+6  28  26               <gurobi.Var z_a[6,28,26] (value 59.0)>
+       27               <gurobi.Var z_a[6,28,27] (value 60.0)>
+       28               <gurobi.Var z_a[6,28,28] (value 58.0)>
+       29              <gurobi.Var z_a[6,28,29] (value 118.0)>
+       30    <gurobi.Var z_a[6,28,30] (value 135.3333333333...
+dtype: object
+1  25  24      <gurobi.Var z_r[1,25,24] (value 0.6)>
+2  28  28     <gurobi.Var z_r[2,28,28] (value 20.0)>
+3  28  29      <gurobi.Var z_r[3,28,29] (value 2.1)>
+4  25  25    <gurobi.Var z_r[4,25,25] (value 150.0)>
+5  25  23     <gurobi.Var z_r[5,25,23] (value 50.0)>
+       25     <gurobi.Var z_r[5,25,25] (value 75.4)>
+6  28  26     <gurobi.Var z_r[6,28,26] (value 25.0)>
+       27     <gurobi.Var z_r[6,28,27] (value 25.0)>
+       28     <gurobi.Var z_r[6,28,28] (value 20.0)>
+       29     <gurobi.Var z_r[6,28,29] (value 70.0)>
+dtype: object
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_a[22] (value -90.0)>), <MVar ()>
+array(<gurobi.Var f_a[23] (value -500.0)>), <MVar ()>
+array(<gurobi.Var f_a[25] (value -60.0)>), <MVar ()>
+array(<gurobi.Var f_a[26] (value -120.0)>), <MVar ()>
+array(<gurobi.Var f_a[27] (value 320.0)>), <MVar ()>
+array(<gurobi.Var f_a[28] (value 200.0)>)]
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_r[22] (value -50.0)>), <MVar ()>
+array(<gurobi.Var f_r[23] (value -50.6)>), <MVar ()>
+array(<gurobi.Var f_r[25] (value -25.0)>), <MVar ()>
+array(<gurobi.Var f_r[26] (value -50.0)>), <MVar ()>
+array(<gurobi.Var f_r[27] (value 72.1)>)]
+23                   <gurobi.Var gamma[23] (value 1.0)>
+24    <gurobi.Var gamma[24] (value 0.9761904761904762)>
+25                   <gurobi.Var gamma[25] (value 1.0)>
+26                   <gurobi.Var gamma[26] (value 1.0)>
+27                   <gurobi.Var gamma[27] (value 1.0)>
+28                   <gurobi.Var gamma[28] (value 1.0)>
+29                   <gurobi.Var gamma[29] (value 1.0)>
+30                   <gurobi.Var gamma[30] (value 1.0)>
+dtype: object
+1  25                 <gurobi.Var psi_a[1,25] (value 2.0)>
+2  28    <gurobi.Var psi_a[2,28] (value 66.666666666666...
+3  28                 <gurobi.Var psi_a[3,28] (value 3.0)>
+4  25               <gurobi.Var psi_a[4,25] (value 500.0)>
+5  25               <gurobi.Var psi_a[5,25] (value 418.0)>
+6  28    <gurobi.Var psi_a[6,28] (value 430.33333333333...
+dtype: object
+1  25      <gurobi.Var psi_r[1,25] (value 0.6)>
+2  28     <gurobi.Var psi_r[2,28] (value 20.0)>
+3  28      <gurobi.Var psi_r[3,28] (value 2.1)>
+4  25    <gurobi.Var psi_r[4,25] (value 150.0)>
+5  25    <gurobi.Var psi_r[5,25] (value 125.4)>
+6  28    <gurobi.Var psi_r[6,28] (value 140.0)>
+dtype: object
+23    <gurobi.Var phi[23] (value 4.0)>
+24    <gurobi.Var phi[24] (value 6.0)>
+25    <gurobi.Var phi[25] (value 4.0)>
+26    <gurobi.Var phi[26] (value 2.0)>
+27    <gurobi.Var phi[27] (value 1.0)>
+28    <gurobi.Var phi[28] (value 3.0)>
+29    <gurobi.Var phi[29] (value 3.0)>
+30    <gurobi.Var phi[30] (value 3.0)>
+dtype: object
+1              <gurobi.Var v[1] (value 145.115753)>
+2              <gurobi.Var v[2] (value 145.115753)>
+3              <gurobi.Var v[3] (value 145.115753)>
+4              <gurobi.Var v[4] (value 145.115753)>
+5              <gurobi.Var v[5] (value 145.115753)>
+6              <gurobi.Var v[6] (value 145.115753)>
+7              <gurobi.Var v[7] (value 145.115753)>
+8              <gurobi.Var v[8] (value 145.115753)>
+9              <gurobi.Var v[9] (value 145.115753)>
+10            <gurobi.Var v[10] (value 145.115753)>
+11    <gurobi.Var v[11] (value 145.11575300000004)>
+12    <gurobi.Var v[12] (value 145.11575300000004)>
+13    <gurobi.Var v[13] (value 145.11575300000004)>
+14    <gurobi.Var v[14] (value 145.11575300000004)>
+15    <gurobi.Var v[15] (value 145.11575300000004)>
+16    <gurobi.Var v[16] (value 145.11575300000004)>
+17    <gurobi.Var v[17] (value 145.11575300000004)>
+18    <gurobi.Var v[18] (value 145.11575300000004)>
+19            <gurobi.Var v[19] (value 145.115753)>
+20            <gurobi.Var v[20] (value 145.115753)>
+21            <gurobi.Var v[21] (value 145.115753)>
+22            <gurobi.Var v[22] (value 145.115753)>
+23            <gurobi.Var v[23] (value 145.115753)>
+24    <gurobi.Var v[24] (value 147.57739300000003)>
+25    <gurobi.Var v[25] (value 150.90219299999998)>
+26            <gurobi.Var v[26] (value 145.115753)>
+27    <gurobi.Var v[27] (value 146.44985700000004)>
+28            <gurobi.Var v[28] (value 149.404017)>
+29            <gurobi.Var v[29] (value 144.851729)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+==========================================
+result for random state 2050
+==========================================
+---- 1 ----
+1
+0    1.0
+Name: proportion, dtype: float64
+---- 2 ----
+2
+0    1.0
+Name: proportion, dtype: float64
+---- 3 ----
+3
+0      0.304
+108    0.252
+315    0.308
+450    0.136
+Name: proportion, dtype: float64
+---- 4 ----
+4
+0      0.304
+144    0.224
+420    0.336
+600    0.136
+Name: proportion, dtype: float64
+---- 5 ----
+5
+0      0.304
+72     0.252
+210    0.284
+300    0.160
+Name: proportion, dtype: float64
+---- 6 ----
+6
+0      0.104
+90     0.272
+240    0.432
+300    0.192
+Name: proportion, dtype: float64
+---- 7 ----
+7
+0       0.104
+300     0.256
+800     0.444
+1000    0.196
+Name: proportion, dtype: float64
+---- 8 ----
+8
+0       0.104
+300     0.328
+800     0.392
+1000    0.176
+Name: proportion, dtype: float64
+---- 9 ----
+9
+0      0.104
+90     0.352
+240    0.432
+300    0.112
+Name: proportion, dtype: float64
+---- 10 ----
+10
+0      0.048
+120    0.292
+210    0.496
+300    0.164
+Name: proportion, dtype: float64
+---- 11 ----
+11
+0.0      0.048
+90.0     0.328
+157.5    0.428
+225.0    0.196
+Name: proportion, dtype: float64
+---- 12 ----
+12
+0      0.048
+120    0.352
+210    0.408
+300    0.192
+Name: proportion, dtype: float64
+---- 13 ----
+13
+0      0.048
+120    0.308
+210    0.404
+300    0.240
+Name: proportion, dtype: float64
+---- 14 ----
+14
+0      0.048
+240    0.400
+420    0.356
+600    0.196
+Name: proportion, dtype: float64
+---- 15 ----
+15
+0      0.024
+120    0.300
+210    0.448
+300    0.228
+Name: proportion, dtype: float64
+---- 16 ----
+16
+0      0.024
+120    0.344
+210    0.488
+300    0.144
+Name: proportion, dtype: float64
+---- 17 ----
+17
+0      0.024
+120    0.356
+210    0.432
+300    0.188
+Name: proportion, dtype: float64
+---- 18 ----
+18
+0      0.024
+180    0.304
+315    0.484
+450    0.188
+Name: proportion, dtype: float64
+---- 19 ----
+19
+0      0.344
+108    0.276
+315    0.296
+450    0.084
+Name: proportion, dtype: float64
+---- 20 ----
+20
+0      0.344
+108    0.256
+315    0.300
+450    0.100
+Name: proportion, dtype: float64
+---- 21 ----
+21
+0      0.344
+108    0.236
+315    0.300
+450    0.120
+Name: proportion, dtype: float64
+---- 22 ----
+22
+0      0.344
+108    0.224
+315    0.308
+450    0.124
+Name: proportion, dtype: float64
+---- 23 ----
+23
+0      0.140
+108    0.276
+405    0.408
+450    0.176
+Name: proportion, dtype: float64
+---- 24 ----
+24
+0       0.140
+504     0.292
+1890    0.384
+2100    0.184
+Name: proportion, dtype: float64
+---- 25 ----
+25
+0       0.140
+504     0.308
+1890    0.400
+2100    0.152
+Name: proportion, dtype: float64
+---- 26 ----
+26
+0      0.024
+90     0.356
+210    0.432
+300    0.188
+Name: proportion, dtype: float64
+---- 27 ----
+27
+0      0.024
+90     0.340
+210    0.460
+300    0.176
+Name: proportion, dtype: float64
+---- 28 ----
+28
+0      0.024
+90     0.308
+210    0.540
+300    0.128
+Name: proportion, dtype: float64
+---- 29 ----
+29
+0      0.024
+180    0.332
+480    0.456
+600    0.188
+Name: proportion, dtype: float64
+---- 30 ----
+30
+0       0.024
+300     0.336
+800     0.448
+1000    0.192
+Name: proportion, dtype: float64
+---- 31 ----
+31
+0      0.012
+300    0.256
+600    0.464
+750    0.268
+Name: proportion, dtype: float64
+---- 32 ----
+32
+0       0.012
+420     0.360
+840     0.432
+1050    0.196
+Name: proportion, dtype: float64
+---- 33 ----
+33
+0      0.012
+120    0.412
+240    0.444
+300    0.132
+Name: proportion, dtype: float64
+node 1: all scenarios are 0
+node 2: all scenarios are 0
+node 3 has negative distorted prob
+node 4 has negative distorted prob
+node 5 has negative distorted prob
+node 6 has negative distorted prob
+node 7 has negative distorted prob
+node 8 has negative distorted prob
+node 9 has negative distorted prob
+node 10 has negative distorted prob
+node 11 has negative distorted prob
+node 12 has negative distorted prob
+node 13 has negative distorted prob
+node 14 has negative distorted prob
+node 15 has negative distorted prob
+node 16 has negative distorted prob
+node 17 has negative distorted prob
+node 18 has negative distorted prob
+node 19 has negative distorted prob
+node 20 has negative distorted prob
+node 21 has negative distorted prob
+node 22 has negative distorted prob
+node 23 has negative distorted prob
+node 24 has negative distorted prob
+node 25 has negative distorted prob
+node 26 has negative distorted prob
+node 27 has negative distorted prob
+node 28 has negative distorted prob
+node 29 has negative distorted prob
+node 30 has negative distorted prob
+node 32 has negative distorted prob
+node 33 has negative distorted prob
+Set parameter TimeLimit to value 720
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Warning for adding constraints: zero or small (< 1e-13) coefficients, ignored
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 17370 rows, 8637 columns and 79944 nonzeros
+Model fingerprint: 0x7bfecec5
+Variable types: 972 continuous, 7665 integer (7634 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 1e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e-01, 5e+03]
+Found heuristic solution: objective 18075.000000
+Presolve removed 14874 rows and 7055 columns
+Presolve time: 0.10s
+Presolved: 2496 rows, 1582 columns, 8641 nonzeros
+Found heuristic solution: objective 17805.000000
+Variable types: 817 continuous, 765 integer (765 binary)
+
+Root relaxation: objective 1.152524e+04, 2260 iterations, 0.05 seconds (0.05 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 11525.2376    0  150 17805.0000 11525.2376  35.3%     -    0s
+     0     0 12374.2441    0   93 17805.0000 12374.2441  30.5%     -    0s
+H    0     0                    15867.000000 12374.2441  22.0%     -    0s
+     0     0 12470.6650    0  133 15867.0000 12470.6650  21.4%     -    0s
+     0     0 12584.0749    0  145 15867.0000 12584.0749  20.7%     -    0s
+H    0     0                    14271.000000 12604.8634  11.7%     -    0s
+     0     0 12604.8634    0  143 14271.0000 12604.8634  11.7%     -    0s
+     0     0 12604.8634    0  143 14271.0000 12604.8634  11.7%     -    0s
+     0     0 12696.8760    0   95 14271.0000 12696.8760  11.0%     -    0s
+     0     0 12752.2346    0  103 14271.0000 12752.2346  10.6%     -    0s
+     0     0 12754.2558    0   79 14271.0000 12754.2558  10.6%     -    0s
+     0     0 12754.2558    0   88 14271.0000 12754.2558  10.6%     -    0s
+     0     0 12822.0208    0  107 14271.0000 12822.0208  10.2%     -    0s
+H    0     0                    14211.000000 12866.8125  9.46%     -    0s
+     0     0 12866.8125    0  107 14211.0000 12866.8125  9.46%     -    0s
+     0     0 12895.7938    0  143 14211.0000 12895.7938  9.25%     -    0s
+     0     0 12913.2460    0  129 14211.0000 12913.2460  9.13%     -    0s
+     0     0 12920.6041    0  154 14211.0000 12920.6041  9.08%     -    0s
+     0     0 12920.6061    0  156 14211.0000 12920.6061  9.08%     -    0s
+     0     0 12981.4970    0  122 14211.0000 12981.4970  8.65%     -    0s
+H    0     0                    14076.000000 12984.3875  7.76%     -    0s
+     0     0 12984.4128    0  135 14076.0000 12984.4128  7.75%     -    0s
+     0     0 12990.7360    0  140 14076.0000 12990.7360  7.71%     -    0s
+     0     0 12994.5607    0  168 14076.0000 12994.5607  7.68%     -    0s
+     0     0 12997.0096    0  137 14076.0000 12997.0096  7.67%     -    0s
+     0     0 12997.0096    0  138 14076.0000 12997.0096  7.67%     -    0s
+     0     0 13048.4109    0  134 14076.0000 13048.4109  7.30%     -    0s
+     0     0 13054.7290    0  168 14076.0000 13054.7290  7.26%     -    0s
+     0     0 13054.8989    0  205 14076.0000 13054.8989  7.25%     -    0s
+     0     0 13077.2828    0  166 14076.0000 13077.2828  7.10%     -    0s
+H    0     0                    14011.000000 13088.7845  6.58%     -    0s
+     0     0 13088.7845    0  213 14011.0000 13088.7845  6.58%     -    0s
+     0     0 13088.7845    0  197 14011.0000 13088.7845  6.58%     -    0s
+     0     0 13088.7845    0  136 14011.0000 13088.7845  6.58%     -    0s
+     0     0 13091.9457    0  217 14011.0000 13091.9457  6.56%     -    0s
+     0     0 13095.9694    0  236 14011.0000 13095.9694  6.53%     -    0s
+     0     0 13096.6105    0  234 14011.0000 13096.6105  6.53%     -    0s
+     0     0 13096.6453    0  243 14011.0000 13096.6453  6.53%     -    0s
+     0     0 13107.6689    0  254 14011.0000 13107.6689  6.45%     -    0s
+     0     0 13108.8172    0  254 14011.0000 13108.8172  6.44%     -    0s
+     0     0 13109.2851    0  269 14011.0000 13109.2851  6.44%     -    0s
+     0     0 13132.8224    0  200 14011.0000 13132.8224  6.27%     -    0s
+     0     0 13146.7097    0  199 14011.0000 13146.7097  6.17%     -    0s
+     0     0 13146.7097    0  202 14011.0000 13146.7097  6.17%     -    0s
+     0     0 13165.9420    0  198 14011.0000 13165.9420  6.03%     -    0s
+H    0     0                    13896.000000 13167.3557  5.24%     -    0s
+     0     0 13167.3557    0  190 13896.0000 13167.3557  5.24%     -    0s
+     0     0 13167.3557    0  198 13896.0000 13167.3557  5.24%     -    0s
+     0     0 13167.3557    0  205 13896.0000 13167.3557  5.24%     -    0s
+     0     0 13167.3557    0  220 13896.0000 13167.3557  5.24%     -    0s
+     0     0 13167.3557    0  172 13896.0000 13167.3557  5.24%     -    0s
+H    0     0                    13866.000000 13169.2293  5.03%     -    1s
+     0     2 13171.8111    0  159 13866.0000 13171.8111  5.01%     -    1s
+H   26    15                    13821.000000 13193.2208  4.54%  41.1    1s
+
+Cutting planes:
+  Gomory: 25
+  Cover: 68
+  Clique: 2
+  MIR: 21
+  Flow cover: 13
+  GUB cover: 65
+  Zero half: 95
+  RLT: 24
+  BQP: 4
+
+Explored 157 nodes (13993 simplex iterations) in 1.57 seconds (1.87 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 10: 13821 13866 13896 ... 18075
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.382100000000e+04, best bound 1.382100000000e+04, gap 0.0000%
+=======================================
+running time is 1.5721631050109863
+=======================================
+solution
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 315.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8      <gurobi.Var q[8] (value 1000.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 315.0)>
+20     <gurobi.Var q[20] (value 315.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 108.0)>
+24     <gurobi.Var q[24] (value 504.0)>
+25     <gurobi.Var q[25] (value 504.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 300.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+1    <gurobi.Var x[1] (value 1.0)>
+2    <gurobi.Var x[2] (value 0.0)>
+3    <gurobi.Var x[3] (value 1.0)>
+4    <gurobi.Var x[4] (value 0.0)>
+5    <gurobi.Var x[5] (value 1.0)>
+6    <gurobi.Var x[6] (value 0.0)>
+dtype: object
+1  25    <gurobi.Var y[1,25] (value 1.0)>
+2  3      <gurobi.Var y[2,3] (value 1.0)>
+3  25    <gurobi.Var y[3,25] (value 1.0)>
+4  3      <gurobi.Var y[4,3] (value 1.0)>
+5  25    <gurobi.Var y[5,25] (value 1.0)>
+6  20    <gurobi.Var y[6,20] (value 1.0)>
+dtype: object
+1  23  r    <gurobi.Var beta[1,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[1,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[1,25,r] (value 1.0)>
+2  3   u     <gurobi.Var beta[2,3,u] (value 1.0)>
+   4   u     <gurobi.Var beta[2,4,u] (value 1.0)>
+3  23  r    <gurobi.Var beta[3,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[3,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[3,25,r] (value 1.0)>
+4  3   u     <gurobi.Var beta[4,3,u] (value 1.0)>
+   4   u     <gurobi.Var beta[4,4,u] (value 1.0)>
+5  23  r    <gurobi.Var beta[5,23,r] (value 1.0)>
+   24  r    <gurobi.Var beta[5,24,r] (value 1.0)>
+   25  r    <gurobi.Var beta[5,25,r] (value 1.0)>
+6  21  u    <gurobi.Var beta[6,21,u] (value 1.0)>
+dtype: object
+1  25  23    <gurobi.Var z_a[1,25,23] (value 85.68115942028...
+       24    <gurobi.Var z_a[1,25,24] (value 371.9726027397...
+       25    <gurobi.Var z_a[1,25,25] (value 42.34623783999...
+2  3   3                   <gurobi.Var z_a[2,3,3] (value 1.0)>
+       4                   <gurobi.Var z_a[2,3,4] (value 1.0)>
+3  25  23                <gurobi.Var z_a[3,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[3,25,24] (value 1.0)>
+       25                <gurobi.Var z_a[3,25,25] (value 1.0)>
+4  3   3     <gurobi.Var z_a[4,3,3] (value 68.95798319327642)>
+       4     <gurobi.Var z_a[4,3,4] (value 110.554621848737...
+5  25  23                <gurobi.Var z_a[5,25,23] (value 1.0)>
+       24                <gurobi.Var z_a[5,25,24] (value 1.0)>
+       25    <gurobi.Var z_a[5,25,25] (value 299.0780045842...
+6  20  21    <gurobi.Var z_a[6,20,21] (value 88.98305084745...
+dtype: object
+1  25  24              <gurobi.Var z_r[1,25,24] (value 150.0)>
+2  3   3                   <gurobi.Var z_r[2,3,3] (value 0.6)>
+3  25  24                <gurobi.Var z_r[3,25,24] (value 0.9)>
+4  3   4     <gurobi.Var z_r[4,3,4] (value 53.8537815126040...
+5  25  24    <gurobi.Var z_r[5,25,24] (value 90.32340137527...
+6  20  20    <gurobi.Var z_r[6,20,20] (value 26.69491525423...
+dtype: object
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_a[2] (value 111.55462184873694)>), <MVar ()>
+array(<gurobi.Var f_a[19] (value 88.9830508474552)>), <MVar ()>
+array(<gurobi.Var f_a[22] (value -87.68115942028979)>), <MVar ()>
+array(<gurobi.Var f_a[23] (value -461.6537621600053)>)]
+this variable starts with index 0; so f_a[0] is f_a[1] in our model
+[<MVar ()>
+array(<gurobi.Var f_r[2] (value 53.853781512604094)>), <MVar ()>
+array(<gurobi.Var f_r[23] (value -241.22340137527237)>)]
+3       <gurobi.Var gamma[3] (value 0.777310924369738)>
+4       <gurobi.Var gamma[4] (value 0.929621848739479)>
+21    <gurobi.Var gamma[21] (value 0.9887005649717245)>
+23    <gurobi.Var gamma[23] (value 0.9742351046698865)>
+24    <gurobi.Var gamma[24] (value 0.8904109589040845)>
+25     <gurobi.Var gamma[25] (value 0.815295815295801)>
+dtype: object
+1  25               <gurobi.Var psi_a[1,25] (value 500.0)>
+2  3                   <gurobi.Var psi_a[2,3] (value 2.0)>
+3  25                 <gurobi.Var psi_a[3,25] (value 3.0)>
+4  3     <gurobi.Var psi_a[4,3] (value 179.512605042013...
+5  25    <gurobi.Var psi_a[5,25] (value 301.07800458424...
+6  20    <gurobi.Var psi_a[6,20] (value 88.983050847455...
+dtype: object
+1  25               <gurobi.Var psi_r[1,25] (value 150.0)>
+2  3                   <gurobi.Var psi_r[2,3] (value 0.6)>
+3  25                 <gurobi.Var psi_r[3,25] (value 0.9)>
+4  3     <gurobi.Var psi_r[4,3] (value 53.8537815126040...
+5  25    <gurobi.Var psi_r[5,25] (value 90.323401375273...
+6  20    <gurobi.Var psi_r[6,20] (value 26.694915254236...
+dtype: object
+3      <gurobi.Var phi[3] (value 2.0)>
+4      <gurobi.Var phi[4] (value 2.0)>
+21    <gurobi.Var phi[21] (value 1.0)>
+23    <gurobi.Var phi[23] (value 6.0)>
+24    <gurobi.Var phi[24] (value 6.0)>
+25    <gurobi.Var phi[25] (value 6.0)>
+dtype: object
+1      <gurobi.Var v[1] (value 164.14036682987734)>
+2      <gurobi.Var v[2] (value 164.14036682987734)>
+3      <gurobi.Var v[3] (value 164.14036682987734)>
+4      <gurobi.Var v[4] (value 163.73558615760842)>
+5      <gurobi.Var v[5] (value 163.73558615760842)>
+6      <gurobi.Var v[6] (value 163.73558615760842)>
+7      <gurobi.Var v[7] (value 163.73558615760842)>
+8      <gurobi.Var v[8] (value 163.73558615760842)>
+9      <gurobi.Var v[9] (value 163.73558615760842)>
+10    <gurobi.Var v[10] (value 163.73558615760842)>
+11    <gurobi.Var v[11] (value 163.73558615760842)>
+12    <gurobi.Var v[12] (value 163.73558615760842)>
+13    <gurobi.Var v[13] (value 163.73558615760842)>
+14    <gurobi.Var v[14] (value 163.73558615760842)>
+15    <gurobi.Var v[15] (value 163.73558615760842)>
+16    <gurobi.Var v[16] (value 163.73558615760842)>
+17    <gurobi.Var v[17] (value 163.73558615760842)>
+18    <gurobi.Var v[18] (value 163.73558615760842)>
+19    <gurobi.Var v[19] (value 164.14036682987734)>
+20    <gurobi.Var v[20] (value 164.14036682987734)>
+21    <gurobi.Var v[21] (value 164.06748971123326)>
+22    <gurobi.Var v[22] (value 164.06748971123326)>
+23    <gurobi.Var v[23] (value 164.14036682987734)>
+24    <gurobi.Var v[24] (value 164.29784219219619)>
+25            <gurobi.Var v[25] (value 176.703849)>
+26    <gurobi.Var v[26] (value 163.73558615760842)>
+27    <gurobi.Var v[27] (value 163.73558615760842)>
+28    <gurobi.Var v[28] (value 163.73558615760842)>
+29    <gurobi.Var v[29] (value 163.73558615760842)>
+30    <gurobi.Var v[30] (value 163.73558615760842)>
+31    <gurobi.Var v[31] (value 163.73558615760842)>
+32    <gurobi.Var v[32] (value 163.73558615760842)>
+33    <gurobi.Var v[33] (value 163.73558615760842)>
+dtype: object
