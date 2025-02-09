@@ -31,10 +31,6 @@ scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
 other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
 
-num_nodes = 33
-num_lines = 32
-num_scen = scen_eta.shape[0]
-
 other_params.isnull().sum(axis = 0)
 other_params.index += 1
 
@@ -62,6 +58,11 @@ for rnd in random_state:
     
     scen_xi_sampled.index += 1
     scen_eta_sampled.index += 1
+    
+    num_nodes = 33
+    num_lines = 32
+    num_scen = scen_eta_sampled.shape[0]
+    
     
     scen_xi_sampled.columns = np.arange(1, num_nodes + 1)
     xi = {(scen, node): scen_xi_sampled.loc[scen, node] for scen, node in itertools.product(scen_xi_sampled.index, scen_xi_sampled.columns)}
