@@ -36,7 +36,7 @@ other_params.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 0.05
+frac = 0.1
 
 print('===============================')
 print(f'number of scenarios is {frac * 1000}')
