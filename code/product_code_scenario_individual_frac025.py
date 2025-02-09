@@ -78,14 +78,8 @@ for rnd in random_state:
     eta = scen_eta_sampled * -1
     eta = eta[sorted(pd.concat([eta] * 2, axis = 1).columns)]
     
-    scen_sub.columns = [int(re.findall('[0-9]+$', col)[0]) for col in scen_sub.columns]
-    
-    
-    
-    
-    
-    
-    xi_sub = {(scen, sub_num): scen_sub.loc[scen, sub_num] for scen, sub_num in itertools.product(scen_sub.index, scen_sub.columns)}
+    # scen_sub.columns = [int(re.findall('[0-9]+$', col)[0]) for col in scen_sub.columns]
+    # xi_sub = {(scen, sub_num): scen_sub.loc[scen, sub_num] for scen, sub_num in itertools.product(scen_sub.index, scen_sub.columns)}
     
     # transform from dataframe to dict
     for col in other_params.columns:
