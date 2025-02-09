@@ -406,6 +406,10 @@ for rnd in random_state:
     m.optimize()
     m.ObjVal
     
+    print('=======================================')
+    print(f'running time is {m.Runtime}')
+    
+    print('=======================================')
     
     # =============================================================================
     # for c in scen_xi.columns:
