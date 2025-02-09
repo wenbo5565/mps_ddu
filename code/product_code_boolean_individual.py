@@ -115,7 +115,7 @@ other_params.index += 1
 
 ########## re-sample scenario for computational efficiency test
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 1.5
+frac = 0.025
 
 for rnd in random_state:
     print('==========================================')
@@ -306,7 +306,7 @@ for rnd in random_state:
     ### init model
     model_name = 'mps'
     m = gp.Model(model_name)
-    m.setParam(GRB.Param.TimeLimit, 0.2 * 3600)
+    m.setParam(GRB.Param.TimeLimit, 1 * 3600)
     m.setParam(GRB.Param.Threads, 1) # this is not for computational test
     m.setParam(GRB.Param.LogFile, model_name)
     
