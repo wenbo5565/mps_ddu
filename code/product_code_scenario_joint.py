@@ -24,41 +24,39 @@ def return_omega_index(node, q_thresh):
     ind_down = np.where(node > cut)[0] + 1
     return (ind_0, ind_up, ind_down)
 
-def return_joint_omega_index(scen, sub_network, q_thresh, :
+def return_joint_omega_index(scen, sub_network, q_thresh):
     """
         take a set of multi-dimensional scenario values of ens;
-        return index for sets Omega_0, Omega_down and Omega_up
+        return a dict with keys being subnetwork and values are up, down and zero index
     """
-    scen = scen_xi.copy()
-    for S in sub_network.keys():
-        scen_S = scen_xi[sub_network[S]]
+    
+    omega_ind = {}
+    for s in sub_network.keys():
+        scen_s = scen_xi[sub_network[s]]
         # index for 0 vector
-        col_sum = scen_S.sum(axis = 1)
+        col_sum = scen_s.sum(axis = 1)
         ind_0 = np.where(col_sum == 0)[0] + 1
-        # index for up vector
-        scen_S_wo_0 = scen_S.loc[list(set(scen_S.index) - set(ind_0)), :]
-        
-        omega_ind = {}
-        
-        for ind in 
-        
-        num_le = scen_S_wo_0.le(scen_S_wo_0.loc[1]).all(axis = 1).sum() # +1 to count itself
-        if num_le / scen_S_wo_0.shape[0] <= q_thresh:
-            omega_ind[S]['up'] = ind
-        
-        cut = node_wo_0.quantile(q_thresh)
-        ind_up = np.where((node <= cut) & (node > 0))[0] + 1
-        ind_down = np.where(node > cut)[0] + 1
-    return (ind_0, ind_up, ind_down)
+        # 
+        scen_s_wo_0 = scen_s.loc[list(set(scen_s.index) - set(ind_0)), :].copy()
+        scen_s_wo_0['cum_prob'] = scen_s_wo_0.apply(lambda x: scen_s_wo_0.le(x).all(axis = 1).sum() / scen_s_wo_0.shape[0], axis = 1) # calculate cumulative probability of each scenarios
+        up_ind = scen_s_wo_0[scen_s_wo_0['cum_prob'] <= q_thresh].index
+        down_ind = scen_s_wo_0[scen_s_wo_0['cum_prob'] > q_thresh].index
+        omega_ind[s] = {'up': list(up_ind), 
+                     'down': list(down_ind), 
+                     'zero': list(ind_0)}
+       
+    return omega_ind
 
-def compare_vec(vec_A, vec_B):
-    """
-        check if vector A no larger than B for every component
-    """
+# =============================================================================
+# def compare_vec(vec_A, vec_B):
+#     """
+#         check if vector A no larger than B for every component
+#     """
+# 
+# =============================================================================
 
-
-# data_folder = os.path.dirname(os.getcwd())
-data_folder = r'D:\Research\gw_ddu_mps'
+data_folder = os.path.dirname(os.getcwd())
+# data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -130,6 +128,8 @@ sub_network = {1: [3, 4, 5],
        7: [26, 27, 28, 29, 30],
        8: [31, 32, 33]
        }
+num_subs = len(sub_network)
+S = np.arange(1, num_subs + 1)
 
 ###### define parameters
 ### parameters for mobile power sources
@@ -147,7 +147,7 @@ Psi_r = pd.Series(mps_cap_r * np.ones(num_mps), index = np.arange(1, num_mps + 1
 low_quant = 0.2 # threashold for the set Omega_down
 
 # ??? Need to add new function to calculate subnetwork level value
-Omega_ind = {col: return_omega_index(scen_xi[col], low_quant) for col in scen_xi.columns} # return scenario index
+Omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = low_quant)
 
 ### parameters for nodes
 D_a = other_params['D_a']
@@ -156,7 +156,7 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.9 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
+alpha = pd.Series(0.9 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
 phi_ub = b + num_mps
 phi_lb = 0
 gamma_ub = 1
@@ -199,6 +199,10 @@ loc = ['r', 'u']
 h_hat = 3 # upper limit for mps at rural locations
 ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 
+# parameters for decision-dependent 
+# T_S = np.identity(num_subs)
+
+
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
@@ -214,9 +218,7 @@ y = m.addVars(M, I_c, vtype = GRB.BINARY, name = 'y')
 z_a = m.addVars(ind_z, vtype = GRB.CONTINUOUS, name = 'z_a')
 z_r = m.addVars(ind_z, vtype = GRB.CONTINUOUS, name = 'z_r')
 # gamma = m.addVars(I, vtype = GRB.CONTINUOUS, ub = 1, name = 'gamma')
-gamma = m.addVars(I_mps, vtype = GRB.CONTINUOUS, name = 'gamma')
-for j in gamma:
-    gamma[j].ub = 1
+
 
 v = m.addVars(I, vtype = GRB.CONTINUOUS, name = 'v')
 q = m.addVars(I, vtype = GRB.CONTINUOUS, name = 'q')
@@ -236,17 +238,23 @@ f_r = m.addMVar(num_lines, vtype = GRB.CONTINUOUS, name = 'f_r', lb = -GRB.INFIN
 f_r_hat = f_r[L_hat - 1]
 z_hat = m.addMVar(num_scen, vtype = GRB.BINARY, name = 'z_hat')
 
-# variables related to decision-dependent individual  chance constraints (impacted nodes)
-phi = m.addVars(I_mps, vtype = GRB.INTEGER, name = 'phi') # phi should be integer variables
-epsilon_ind = np.arange(0, b + num_mps + 1)
-epsilon = m.addVars(I, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
-h_ind = [(j, k) for j in I for k in K if k in Omega_ind[j][1] or k in Omega_ind[j][2]] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
+# variables related to decision-dependent joint chance constraints (impacted nodes)
+phi = m.addVars(S, vtype = GRB.INTEGER, name = 'phi') # phi should be integer variables
+gamma = m.addVars(S, vtype = GRB.CONTINUOUS, name = 'gamma')
+for s in gamma:
+    gamma[s].ub = 1
+epsilon_ind = np.arange(0, num_subs * (b + num_mps) + 1)
+epsilon = m.addVars(S, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
+
+h_ind = [(s, k) for s in S for k in K if k in Omega_ind[s]['up'] or k in Omega_ind[s]['down']] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
 h = m.addVars(h_ind, vtype = GRB.CONTINUOUS, name = 'h_mccormick') # h is bounded between 0 and 1?
-pi_ind = [(j, k, ep_ind) for j, k in h_ind for ep_ind in epsilon_ind]
+pi_ind = [(s, k, ep_ind) for s, k in h_ind for ep_ind in epsilon_ind]
 pi = m.addVars(pi_ind, vtype = GRB.CONTINUOUS, name = 'pi_mccormick')
-z_tilde = m.addVars(I, K, vtype = GRB.BINARY, name = 'z_tilde')
+z_bar = m.addVars(S, K, vtype = GRB.BINARY, name = 'z_bar')
 q = m.addVars(I, vtype = GRB.CONTINUOUS, name = 'q')
 
+V_s_ind = [(s, j) for s in S for j in sub_network[s]]
+v_s = m.addVars(V_s_ind, vtype = GRB.CONTINUOUS, name = 'v^S')
 
 ### define optimization constraints
 
@@ -265,8 +273,11 @@ m.addConstrs((z_a[m, i, j] <= min(Psi_a[m], D_a[j]) * y[m, i] for m in M for i i
 m.addConstrs((z_r[m, i, j] <= min(Psi_r[m], D_r[j]) * y[m, i] for m in M for i in I_c for j in I_i[i]), name = 'z<min(phi,D)_r')
 m.addConstrs((sum(z_a[m, i, j] for i in I_c for j in I_i[i]) <= Psi_a[m] for m in M), name = 'sum_z_a<phi_a')
 m.addConstrs((sum(z_r[m, i, j] for i in I_c for j in I_i[i]) <= Psi_r[m] for m in M), name = 'sum_z_r<phi_r')
-m.addConstrs((sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i]) == D_a[j] * gamma[j] for j in I_mps), name = 'gamma_def')
-m.addConstrs((sum(2 * beta[m, j, 'r'] + beta[m, j, 'u'] for m in M) == phi[j] for j in I_mps), name = 'phi_def')
+
+m.addConstrs((sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i] if i in sub_network[s]) == sum(D_a[j] for j in sub_network[s]) * gamma[s] for s in S), name = 'gamma_def')
+
+m.addConstrs((sum(2 * beta[m, j, 'r'] + beta[m, j, 'u'] for j in sub_network[s] for m in M) == phi[s] for s in S), name = 'phi_def')
+
 m.addConstrs((sum(f_a[l - 1] for l in L if Lambda[l] == j) + sum(psi_a[m, j] for m in M)  ==  sum(f_a[l - 1] for l in L if Gamma[l] == j) + sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i]) for j in I_c), name = 'flow_bal_a_not_ic')
 m.addConstrs((sum(f_a[l - 1] for l in L if Lambda[l] == j)  ==  sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i]) + sum(f_a[l - 1] for l in L if Gamma[l] == j) for j in I if j not in I_c), name = 'flow_bal_a_ic')
 
@@ -315,31 +326,34 @@ m.addConstr(sum(p_eta[k] * z_hat[k - 1] for k in K) >= alpha_L, name = 'knapsack
 # m.addConstrs((sum(p_b[k] * z_tilde[j, k] for k in K) >=
 #               alpha[j] for j in I), name = 'long_dec_depen')
 # =============================================================================
-m.addConstrs((q[j] + (1 - z_tilde[j, k]) * xi[k, j] >= xi[k, j] for j in I for k in K), name = 'q+(1-z)w>w')
+
+m.addConstrs((q[j] == v_s[s, j] for s in S for j in sub_network[s]), name = 'Tq=v_s')
+m.addConstrs((v_s[s, j] + (1 - z_bar[s, k]) * xi[k, j] >= xi[k, j] for s in S for j in sub_network[s] for k in K), name = 'v_s+(1-z)w>w')
 
 
 # extract index for sets Omega_0, Omega_down and Omega_up
-Omega_0_ind = {j: Omega_ind[j][0] for j in Omega_ind.keys()}
-Omega_up_ind = {j: Omega_ind[j][1] for j in Omega_ind.keys()}
-Omega_down_ind = {j: Omega_ind[j][2] for j in Omega_ind.keys()}
-m.addConstrs((Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_up_ind[j])) 
-              + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[j])) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j])
-              - sum(p_b[k] for k in K if k in Omega_up_ind[j]) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j])
-              - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_down_ind[j])
-              >= alpha[j] * Omega_down_ind[j].shape[0] for j in I), name = 'long_dec_depen')
+Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
+Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
+Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
 
-m.addConstrs((phi[j] == sum(n * epsilon[j, n] for n in epsilon_ind) for j in I_mps), name = 'phi=sum_n*epsilon')
-m.addConstrs((sum(epsilon[j, n] for n in epsilon_ind) == 1 for j in I_mps), name = 'sum_epsilon=1')
+m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in N_ind) for k in K if k in Omega_up_ind[s])) 
+              + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
+              - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
+              - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in N_ind) for k in K if k in Omega_down_ind[s])
+              >= alpha[s] * len(Omega_down_ind[s]) for s in S), name = 'long_dec_depen')
 
-m.addConstrs((h[j, k] >= gamma_lb * z_tilde[j, k] for j, k in h_ind), name = 'mc_h_1')
-m.addConstrs((h[j, k] >= gamma_ub * (z_tilde[j, k] - 1) + gamma[j] for j, k in h_ind), name = 'mc_h_2')
-m.addConstrs((h[j, k] <= gamma_ub * z_tilde[j, k] for j, k in h_ind), name = 'mc_h_3')
-m.addConstrs((h[j, k] <= gamma_lb * (z_tilde[j, k] - 1) + gamma[j] for j, k in h_ind), name = 'mc_h_4')
+m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind) for s in S), name = 'phi=sum_n*epsilon')
+m.addConstrs((sum(epsilon[s, n] for n in epsilon_ind) == 1 for s in S), name = 'sum_epsilon=1')
 
-m.addConstrs((pi[j, k, n] >= h_lb * epsilon[j, n] for j, k, n in pi_ind), name = 'mc_pi_1')
-m.addConstrs((pi[j, k, n] >= h_ub * (epsilon[j, n] - 1) + h[j, k] for j, k, n in pi_ind), name = 'mc_pi_2')
-m.addConstrs((pi[j, k, n] <= h_ub * epsilon[j, n] for j, k, n in pi_ind), name = 'mc_pi_3')
-m.addConstrs((pi[j, k, n] <= h_lb * (epsilon[j, n] - 1) + h[j, k] for j, k, n in pi_ind), name = 'mc_pi_4')
+m.addConstrs((h[s, k] >= gamma_lb * z_bar[s, k] for s, k in h_ind), name = 'mc_h_1')
+m.addConstrs((h[s, k] >= gamma_ub * (z_bar[s, k] - 1) + gamma[s] for s, k in h_ind), name = 'mc_h_2')
+m.addConstrs((h[s, k] <= gamma_ub * z_bar[s, k] for s, k in h_ind), name = 'mc_h_3')
+m.addConstrs((h[s, k] <= gamma_lb * (z_bar[s, k] - 1) + gamma[s] for s, k in h_ind), name = 'mc_h_4')
+
+m.addConstrs((pi[s, k, n] >= h_lb * epsilon[s, n] for s, k, n in pi_ind), name = 'mc_pi_1')
+m.addConstrs((pi[s, k, n] >= h_ub * (epsilon[s, n] - 1) + h[s, k] for s, k, n in pi_ind), name = 'mc_pi_2')
+m.addConstrs((pi[s, k, n] <= h_ub * epsilon[s, n] for s, k, n in pi_ind), name = 'mc_pi_3')
+m.addConstrs((pi[s, k, n] <= h_lb * (epsilon[s, n] - 1) + h[s, k] for s, k, n in pi_ind), name = 'mc_pi_4')
 
 # =============================================================================
 # test_node = 33
