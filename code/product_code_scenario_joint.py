@@ -12,17 +12,19 @@ from gurobipy import GRB
 import os
 
 ### define helper functions
-def return_omega_index(node, q_thresh):
-    """
-        take a set of scenario values of ens;
-        return index for sets Omega_0, Omega_down and Omega_up
-    """
-    ind_0 = np.where(node == 0)[0] + 1
-    node_wo_0 = node[node != 0]
-    cut = node_wo_0.quantile(q_thresh)
-    ind_up = np.where((node <= cut) & (node > 0))[0] + 1
-    ind_down = np.where(node > cut)[0] + 1
-    return (ind_0, ind_up, ind_down)
+
+
+# =============================================================================
+# scen = scen_xi
+# sub_network = test
+# q_thresh = low_quant
+# s = 7
+# test_vec = (210, 300, 300, 600, 1000)  # (300, 300, 300, 600, 800)
+# 
+# scen_s['cum_prob'] = scen_s.apply(lambda x: scen_s.le(test_vec).all(axis = 1).sum() / scen_s.shape[0], axis = 1)
+# 
+# =============================================================================
+
 
 def return_joint_omega_index(scen, sub_network, q_thresh):
     """
@@ -32,13 +34,21 @@ def return_joint_omega_index(scen, sub_network, q_thresh):
     
     omega_ind = {}
     for s in sub_network.keys():
-        scen_s = scen_xi[sub_network[s]]
+        scen_s = scen_xi[sub_network[s]].copy()
         # index for 0 vector
         col_sum = scen_s.sum(axis = 1)
         ind_0 = np.where(col_sum == 0)[0] + 1
         # 
         scen_s_wo_0 = scen_s.loc[list(set(scen_s.index) - set(ind_0)), :].copy()
         scen_s_wo_0['cum_prob'] = scen_s_wo_0.apply(lambda x: scen_s_wo_0.le(x).all(axis = 1).sum() / scen_s_wo_0.shape[0], axis = 1) # calculate cumulative probability of each scenarios
+        print(f'cumulative prob for sub network {s}')
+        
+        
+        # print(scen_s.apply(lambda x: scen_s.le(x).all(axis = 1).sum() / scen_s.shape[0], axis = 1)) 
+        scen_s['tuple'] = list(scen_s.itertuples(index = False, name = None))
+        scen_s['cum_prob'] = scen_s.apply(lambda x: scen_s.le(x).all(axis = 1).sum() / scen_s.shape[0], axis = 1)
+        print(scen_s.groupby('tuple')['cum_prob'].first().sort_values())
+        
         up_ind = scen_s_wo_0[scen_s_wo_0['cum_prob'] <= q_thresh].index
         down_ind = scen_s_wo_0[scen_s_wo_0['cum_prob'] > q_thresh].index
         omega_ind[s] = {'up': list(up_ind), 
@@ -87,10 +97,12 @@ scen_sub.index += 1
 # node ENS
 scen_xi.columns = np.arange(1, num_nodes + 1)
 xi = {(scen, node): scen_xi.loc[scen, node] for scen, node in itertools.product(scen_xi.index, scen_xi.columns)}
-for c in scen_xi.columns:
-    print('----', c, '----')
-    print(scen_xi[c].value_counts(normalize = True).sort_index())
-
+# =============================================================================
+# for c in scen_xi.columns:
+#     print('----', c, '----')
+#     print(scen_xi[c].value_counts(normalize = True).sort_index())
+# 
+# =============================================================================
 # line ENS
 scen_eta.columns = [int(re.findall('[0-9]+$', col)[0]) for col in scen_eta.columns]
 eta = scen_eta * -1
@@ -99,6 +111,8 @@ eta = eta[sorted(pd.concat([eta] * 2, axis = 1).columns)]
 # subnetwork ENS
 scen_sub.columns = [int(re.findall('[0-9]+$', col)[0]) for col in scen_sub.columns]
 xi_sub = {(scen, sub_num): scen_sub.loc[scen, sub_num] for scen, sub_num in itertools.product(scen_sub.index, scen_sub.columns)}
+
+
 
 # transform from dataframe to dict
 for col in other_params.columns:
@@ -131,11 +145,19 @@ sub_network = {1: [3, 4, 5],
 num_subs = len(sub_network)
 S = np.arange(1, num_subs + 1)
 
+# =============================================================================
+# for s in S:
+#     scen_sub_node = scen_xi[sub_network[s]].copy()
+#     scen_sub_node['joint'] = list(scen_sub_node.itertuples(index = False, name = None))
+#     print(f'distribution of subnetwork {s}')
+#     print(scen_sub_node['joint'].value_counts(normalize = True).sort_index().cumsum())
+# 
+# =============================================================================
 ###### define parameters
 ### parameters for mobile power sources
 num_mps = 6
 b = 3 # maximal MPS pre-disposed at rural locations
-N_ind = np.arange(0, num_mps + b + 1) # index for ???
+# N_ind = np.arange(0, num_mps + b + 1) # index for ???
 mps_cap_a = 500 # active power capacity for mps
 mps_cap_r = 500 # reactive power capacity for mps
 
@@ -163,7 +185,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+c = pd.Series(1.5 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -336,10 +358,10 @@ Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
 Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
 Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
 
-m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in N_ind) for k in K if k in Omega_up_ind[s])) 
+m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[s])) 
               + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
               - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
-              - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in N_ind) for k in K if k in Omega_down_ind[s])
+              - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_down_ind[s])
               >= alpha[s] * len(Omega_down_ind[s]) for s in S), name = 'long_dec_depen')
 
 m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind) for s in S), name = 'phi=sum_n*epsilon')
@@ -497,9 +519,9 @@ print(f_a)
 
 print(f_r)
 
-z_tilde_sol = pd.Series(z_tilde.values(), index = z_tilde.keys())
-z_tilde_nz_ind = [True if row.X != 0 else False for row in z_tilde_sol]
-print(z_tilde_sol[z_tilde_nz_ind])
+z_bar_sol = pd.Series(z_bar.values(), index = z_bar.keys())
+z_bar_nz_ind = [True if row.X != 0 else False for row in z_bar_sol]
+print(z_bar_sol[z_bar_nz_ind])
 
 gamma_sol = pd.Series(gamma.values(), index = gamma.keys())
 gamma_nz_ind = [True if row.X != 0 else False for row in gamma_sol]
