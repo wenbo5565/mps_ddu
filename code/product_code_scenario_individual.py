@@ -115,7 +115,6 @@ for rnd in random_state:
     ### parameters for mobile power sources
     num_mps = 6
     b = 3 # maximal MPS pre-disposed at rural locations
-    N_ind = np.arange(0, num_mps + b + 1) # index for ???
     mps_cap_a = 500 # active power capacity for mps
     mps_cap_r = 500 # reactive power capacity for mps
     
@@ -216,6 +215,8 @@ for rnd in random_state:
     
     # variables related to decision-dependent individual  chance constraints (impacted nodes)
     phi = m.addVars(I_mps, vtype = GRB.INTEGER, name = 'phi') # phi should be integer variables
+    
+    # N_ind = np.arange(0, num_mps + b + 1) # index for ???
     epsilon_ind = np.arange(0, b + num_mps + 1)
     epsilon = m.addVars(I, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
     h_ind = [(j, k) for j in I for k in K if k in Omega_ind[j][1] or k in Omega_ind[j][2]] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
@@ -300,10 +301,10 @@ for rnd in random_state:
     Omega_0_ind = {j: Omega_ind[j][0] for j in Omega_ind.keys()}
     Omega_up_ind = {j: Omega_ind[j][1] for j in Omega_ind.keys()}
     Omega_down_ind = {j: Omega_ind[j][2] for j in Omega_ind.keys()}
-    m.addConstrs((Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_up_ind[j])) 
+    m.addConstrs((Omega_down_ind[j].shape[0] * (sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_0_ind[j]) + sum(p_b[k] * z_tilde[j, k] for k in K if k in Omega_up_ind[j]) + sum(p_b[k] * c[j] * sum(n * pi[j, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[j])) 
                   + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[j])) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j])
                   - sum(p_b[k] for k in K if k in Omega_up_ind[j]) * sum(z_tilde[j, k] for k in K if k in Omega_down_ind[j])
-                  - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in N_ind) for k in K if k in Omega_down_ind[j])
+                  - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[j]) * sum(c[j] * sum(n * pi[j, k, n] for n in epsilon_ind) for k in K if k in Omega_down_ind[j])
                   >= alpha[j] * Omega_down_ind[j].shape[0] for j in I), name = 'long_dec_depen')
     
     m.addConstrs((phi[j] == sum(n * epsilon[j, n] for n in epsilon_ind) for j in I_mps), name = 'phi=sum_n*epsilon')
