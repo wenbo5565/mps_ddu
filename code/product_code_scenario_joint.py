@@ -185,7 +185,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(1.5 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -228,8 +228,8 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 12 * 3600)
-m.setParam(GRB.Param.Threads, 1) 
+m.setParam(GRB.Param.TimeLimit, 24 * 3600)
+# m.setParam(GRB.Param.Threads, 1) 
 m.setParam(GRB.Param.LogFile, model_name)
 
 ### define optimization variables
@@ -296,7 +296,19 @@ m.addConstrs((z_r[m, i, j] <= min(Psi_r[m], D_r[j]) * y[m, i] for m in M for i i
 m.addConstrs((sum(z_a[m, i, j] for i in I_c for j in I_i[i]) <= Psi_a[m] for m in M), name = 'sum_z_a<phi_a')
 m.addConstrs((sum(z_r[m, i, j] for i in I_c for j in I_i[i]) <= Psi_r[m] for m in M), name = 'sum_z_r<phi_r')
 
-m.addConstrs((sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i] if i in sub_network[s]) == sum(D_a[j] for j in sub_network[s]) * gamma[s] for s in S), name = 'gamma_def')
+m.addConstrs((sum(z_a[m, i, j] for m in M for i in I_c for j in I_i[i] if i in sub_network[s]) == sum(D_a[j] for j in sub_network[s]) * gamma[s] for s in S), name = 'gamma_def')
+
+"""
+s = 8
+right = sum(D_a[j] for j in sub_network[s]) 
+gamma[s].getValue()
+right.getValue()
+
+
+
+left = sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i] if i in sub_network[s])
+"""
+
 
 m.addConstrs((sum(2 * beta[m, j, 'r'] + beta[m, j, 'u'] for j in sub_network[s] for m in M) == phi[s] for s in S), name = 'phi_def')
 
