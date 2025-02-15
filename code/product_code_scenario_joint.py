@@ -228,8 +228,8 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 ### init model
 model_name = 'mps'
 m = gp.Model(model_name)
-m.setParam(GRB.Param.TimeLimit, 15 * 3600)
-m.setParam(GRB.Param.Threads, 6) 
+m.setParam(GRB.Param.TimeLimit, 18 * 3600)
+m.setParam(GRB.Param.Threads, 1) 
 m.setParam(GRB.Param.LogFile, model_name)
 
 ### define optimization variables
