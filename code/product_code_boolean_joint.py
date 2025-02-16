@@ -57,6 +57,76 @@ def return_joint_omega_index(scen, sub_network, q_thresh):
        
     return omega_ind
 
+# ??? function to calculate cut point and recombination
+def return_cut_points(E, c, scen_xi, sub_network, alpha, q_thresh):
+    """
+        return cut points and recombination given e in E, c (sensitivity)
+    """    
+    S = sub_network.keys()
+    omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = q_thresh)
+    cuts = {}
+    recombs = {}
+    p_insuff_recombs = {}
+    p_suff_recombs = {}
+    beta_hat = {}
+    
+    for s in S:
+        for e_ind, e in enumerate(E[s]): 
+            omega_0_ind = omega_ind[s]['zero']
+            omega_up_ind = omega_ind[s]['up']
+            omega_down_ind = omega_ind[s]['down']
+            scen_s = scen_xi.loc[:, sub_network[s]].copy()
+            p_0 = 1 / scen_s.shape[0]
+            if 1 / scen_s.shape[0] * (1 + c[s] * e) <= (1 - p_0) / len(omega_up_ind):
+                p_up = 1 / scen_s.shape[0] * (1 + c[s] * e)
+                p_0_up = p_0 * len(omega_0_ind) + p_up * len(omega_up_ind)
+                p_down = (1 - p_0_up) / len(omega_down_ind)
+            else:
+                p_up = (1 - p_0 * len(omega_0_ind)) / len(omega_up_ind)
+                p_down = 0
+            # get distorted probability
+            scen_s['prob_d'] = p_0
+            scen_s.loc[omega_up_ind, 'prob_d'] = p_up
+            scen_s.loc[omega_down_ind, 'prob_d'] = p_down
+            # Extract numerical columns (excluding 'prob_d')
+            numeric_cols = scen_s.columns.difference(["prob_d"])
+            # Convert to NumPy arrays for fast computation
+            X = scen_s[numeric_cols].to_numpy()  # Feature matrix
+            weights = scen_s["prob_d"].to_numpy()  # Probability column
+            comparison_matrix = np.all(X[:, None, :] >= X[None, :, :], axis=2)
+            scen_s['cum_prob'] = comparison_matrix @ weights
+            scen_s['tuple'] = list(scen_s[numeric_cols].itertuples(index = False, name = None))
+            # get cut points for each j in S
+            cut = {}
+            for j in sub_network[s]:
+                scen_j = scen_s[[j]].copy()
+                scen_j_np = scen_s[j].to_numpy()
+                comp_matrix = scen_j_np[:, None] >= scen_j_np[None, :]
+                scen_j['cum_prob'] = comp_matrix @ weights
+                cut[j] = list(set(scen_j.loc[scen_j.cum_prob >= alpha[s], j])) 
+                cuts[s, e, j] = cut[j]
+            # get recombinations
+            recomb = list(itertools.product(*[cuts[s, e, j] for j in sub_network[s]]))
+            recombs[(s, e)] = recomb
+            # obtain which recombs are p insufficient
+            recomb_np = pd.DataFrame(recomb).to_numpy()
+            comp_matrix = (recomb_np[:, None, :] >= X[None, :, :]).all(axis = 2)
+            recomb_cum_prob = comp_matrix @ weights
+            p_insuff_recomb = np.array(recomb)[recomb_cum_prob < alpha[s]]
+            p_suff_recomb = np.array(recomb)[recomb_cum_prob >= alpha[s]]
+            p_insuff_recombs[(s, e)] = p_insuff_recomb
+            p_suff_recombs[(s, e)] = p_suff_recomb
+            for k, p_insuff_iter in enumerate(p_insuff_recomb):
+                for ind, ens in enumerate(p_insuff_iter):
+                    j = sub_network[s][ind]
+                    for g_ind, cut_num in enumerate(cut[j]):
+                            if ens >= cut_num:
+                                beta_hat[s, e, j, k + 1, g_ind + 1] = 1
+                            else:
+                                beta_hat[s, e, j, k + 1, g_ind + 1] = 0
+    return beta_hat, cuts, p_suff_recombs, p_insuff_recombs     
+
+
 # =============================================================================
 # def compare_vec(vec_A, vec_B):
 #     """
@@ -185,7 +255,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+c = pd.Series(0.3 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -228,7 +298,7 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 # T_S = np.identity(num_subs)
 
 # ??? function to calculate the set of values of gamma * phi
-s = 8
+# s = 8
 
 
 D_a_S = {s: sum(D_a[j] for j in sub_network[s]) for s in S} # demand for each sub network s
@@ -237,52 +307,13 @@ pre_phi = {s:[len(sub_network[s]) * (2 * r_num + 1 * (num - r_num)) for num in n
 M_combi = [list(itertools.combinations(M, num)) for num in np.arange(0, h_hat + 1)]
 pre_gamma = {s: list(set([min(1, sum(Psi_a[m] for m in m_combi) / D_a_S[s]) for m_by_num in M_combi for m_combi in m_by_num])) for s in S} 
 E = {s:list(set([phi * gamma for phi in pre_phi[s] for gamma in pre_gamma[s]])) for s in S}
-
-# ??? function to calculate cut point and recombination
-def return_cut_points(E, c, scen_xi, sub_network, alpha, q_thresh):
-    """
-        return cut points and recombination given e in E, c (sensitivity)
-    """    
-    S = sub_network.keys()
-    omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = q_thresh)
-    cut = {}
-    recomb = {}
-    for s in S:
-        for e in E[s]: 
-            omega_0_ind = omega_ind[s]['zero']
-            omega_up_ind = omega_ind[s]['up']
-            omega_down_ind = omega_ind[s]['down']
-            scen_s = scen_xi.loc[:, sub_network[s]].copy()
-            p_0 = 1 / scen_s.shape[0]
-            p_up = min((1 - p_0) / len(omega_up_ind),  1 / scen_s.shape[0] * (1 + c * e))
-            p_0_up = p_0 * len(omega_0_ind) + p_up * len(omega_up_ind)
-            p_down = max(0, (1 - p_0_up) / len(omega_down_ind))
-            # get distorted probability
-            scen_s['prob_d'] = p_0
-            scen_s.loc[omega_up_ind, 'prob_d'] = p_up
-            scen_s.loc[omega_down_ind, 'prob_d'] = p_down
-            # Extract numerical columns (excluding 'prob_d')
-            numeric_cols = scen_s.columns.difference(["prob_d"])
-            # Convert to NumPy arrays for fast computation
-            X = scen_s[numeric_cols].to_numpy()  # Feature matrix
-            weights = scen_s["prob_d"].to_numpy()  # Probability column
-            comparison_matrix = np.all(X[:, None, :] >= X[None, :, :], axis=2)
-            scen_s['cum_prob'] = comparison_matrix @ weights
-            scen_s['tuple'] = list(scen_s[numeric_cols].itertuples(index = False, name = None))
-            # get cut points for each j in S
-            for j in sub_network[s]:
-                scen_j = scen_s[[j]].copy()
-                scen_j_np = scen_s[j].to_numpy()
-                comp_matrix = scen_j_np[:, None] >= scen_j_np[None, :]
-                scen_j['cum_prob'] = comp_matrix @ weights
-                cut[(s, e, j)] = list(set(scen_j.loc[scen_j.cum_prob >= alpha[s], j])) 
-            recomb[(s, e)] = list(itertools.product(*[cut[s, e, j] for j in sub_network[s]]))
-            # obtain which recombs are p insufficient
-
-
-
+# E_ind = {s: np.arange(1, len(E[s]) + 1) for s in S}
+                        
 # ??? function to calculate p-insufficient recombination
-
+beta_hat, cuts, p_suff_recombs, p_insuff_recombs = return_cut_points(E = E, c = c, scen_xi = scen_xi, 
+                                                                     sub_network = sub_network, alpha = alpha, q_thresh = low_quant)
+g_ind = {(s, e, j): np.arange(1, len(cuts[s, e, j]) + 1) for s in S for e in E[s] for j in sub_network[s]}
+k_ind = {(s, e): np.arange(1, len(p_insuff_recombs[s, e]) + 1) for s in S for e in E[s]}
 
 ### init model
 model_name = 'mps'
@@ -324,18 +355,22 @@ phi = m.addVars(S, vtype = GRB.INTEGER, name = 'phi') # phi should be integer va
 gamma = m.addVars(S, vtype = GRB.CONTINUOUS, name = 'gamma')
 for s in gamma:
     gamma[s].ub = 1
-epsilon_ind = np.arange(0, num_subs * (b + num_mps) + 1)
-epsilon = m.addVars(S, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
+# epsilon_ind = np.arange(0, num_subs * (b + num_mps) + 1)
+# epsilon = m.addVars(S, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
 
-h_ind = [(s, k) for s in S for k in K if k in Omega_ind[s]['up'] or k in Omega_ind[s]['down']] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
-h = m.addVars(h_ind, vtype = GRB.CONTINUOUS, name = 'h_mccormick') # h is bounded between 0 and 1?
-pi_ind = [(s, k, ep_ind) for s, k in h_ind for ep_ind in epsilon_ind]
-pi = m.addVars(pi_ind, vtype = GRB.CONTINUOUS, name = 'pi_mccormick')
-z_bar = m.addVars(S, K, vtype = GRB.BINARY, name = 'z_bar')
+# h_ind = [(s, k) for s in S for k in K if k in Omega_ind[s]['up'] or k in Omega_ind[s]['down']] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
+# h = m.addVars(h_ind, vtype = GRB.CONTINUOUS, name = 'h_mccormick') # h is bounded between 0 and 1?
+# pi_ind = [(s, k, ep_ind) for s, k in h_ind for ep_ind in epsilon_ind]
+# pi = m.addVars(pi_ind, vtype = GRB.CONTINUOUS, name = 'pi_mccormick')
+# z_bar = m.addVars(S, K, vtype = GRB.BINARY, name = 'z_bar')
 q = m.addVars(I, vtype = GRB.CONTINUOUS, name = 'q')
-
-V_s_ind = [(s, j) for s in S for j in sub_network[s]]
-v_s = m.addVars(V_s_ind, vtype = GRB.CONTINUOUS, name = 'v^S')
+nu_ind = [(s, e) for s in S for e in E[s]]
+nu = m.addVars(nu_ind, vtype = GRB.BINARY, name = 'nu')
+mu_ind = [(s, e, j, g) for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]]
+mu = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'mu')
+zeta = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'zeta')
+# ? V_s_ind = [(s, j) for s in S for j in sub_network[s]]
+# ? v_s = m.addVars(V_s_ind, vtype = GRB.CONTINUOUS, name = 'v^S')
 
 ### define optimization constraints
 
@@ -415,28 +450,40 @@ m.addConstr(sum(p_eta[k] * z_hat[k - 1] for k in K) >= alpha_L, name = 'knapsack
 ##############################################################
 ##### decision-dependent individual constraints
 ##############################################################
+m.addConstrs((sum(mu[s, e, j, g] for g in g_ind[s, e, j])  == 1 for s in S for e in E[s] for j in sub_network[s]), name = 'sum_mu=1')
+m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
+m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
+m.addConstrs((q[j] >= sum(cuts[s, e, j][g] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for j in sub_network[s]), name = 'q>=sum_c_zeta')
+m.addConstrs((q[j] >= sum(cuts[s, e, j][g] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for e in E[s]), name = 'sum_beta<=|J|-1')
+
+
+
 # =============================================================================
 # m.addConstrs((sum(p_b[k] * z_tilde[j, k] for k in K) >=
 #               alpha[j] for j in I), name = 'long_dec_depen')
 # =============================================================================
 
-m.addConstrs((q[j] == v_s[s, j] for s in S for j in sub_network[s]), name = 'Tq=v_s')
-m.addConstrs((v_s[s, j] + (1 - z_bar[s, k]) * xi[k, j] >= xi[k, j] for s in S for j in sub_network[s] for k in K), name = 'v_s+(1-z)w>w')
+# =============================================================================
 
 
-# extract index for sets Omega_0, Omega_down and Omega_up
-Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
-Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
-Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
-
-m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[s])) 
-              + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
-              - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
-              - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_down_ind[s])
-              >= alpha[s] * len(Omega_down_ind[s]) for s in S), name = 'long_dec_depen')
-
-m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind) for s in S), name = 'phi=sum_n*epsilon')
-m.addConstrs((sum(epsilon[s, n] for n in epsilon_ind) == 1 for s in S), name = 'sum_epsilon=1')
+# m.addConstrs((q[j] == v_s[s, j] for s in S for j in sub_network[s]), name = 'Tq=v_s')
+# m.addConstrs((v_s[s, j] + (1 - z_bar[s, k]) * xi[k, j] >= xi[k, j] for s in S for j in sub_network[s] for k in K), name = 'v_s+(1-z)w>w')
+# 
+# 
+# # extract index for sets Omega_0, Omega_down and Omega_up
+# Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
+# Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
+# Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
+# 
+# m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[s])) 
+#               + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
+#               - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
+#               - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_down_ind[s])
+#               >= alpha[s] * len(Omega_down_ind[s]) for s in S), name = 'long_dec_depen')
+# 
+# m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind) for s in S), name = 'phi=sum_n*epsilon')
+# m.addConstrs((sum(epsilon[s, n] for n in epsilon_ind) == 1 for s in S), name = 'sum_epsilon=1')
+# =============================================================================
 
 m.addConstrs((h[s, k] >= gamma_lb * z_bar[s, k] for s, k in h_ind), name = 'mc_h_1')
 m.addConstrs((h[s, k] >= gamma_ub * (z_bar[s, k] - 1) + gamma[s] for s, k in h_ind), name = 'mc_h_2')
