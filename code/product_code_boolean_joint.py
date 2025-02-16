@@ -248,7 +248,7 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.9 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
+alpha = pd.Series(0.8 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
 phi_ub = b + num_mps
 phi_lb = 0
 gamma_ub = 1
@@ -448,59 +448,19 @@ m.addConstrs((T @ f_r_hat + M_r * (1 - z_hat[k - 1]) >= eta.loc[k, :].values for
 m.addConstr(sum(p_eta[k] * z_hat[k - 1] for k in K) >= alpha_L, name = 'knapsack')
 
 ##############################################################
-##### decision-dependent individual constraints
+##### decision-dependent joint constraints
 ##############################################################
+m.addConstrs((q[j] >= sum(cuts[s, e, j][g - 1] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for j in sub_network[s]), name = 'q>=sum_c_zeta') # g - 1 for position index
+m.addConstrs((sum(beta_hat[s, e, j, k, g] * zeta[s, e, j, g] for j in sub_network[s] for g in g_ind[s, e, j]) <= len(sub_network[s]) - 1 for s in S for e in E[s] for k in k_ind[s, e]), name = 'sum_nu_beta_mu<|J|-1') # g - 1 for position index
 m.addConstrs((sum(mu[s, e, j, g] for g in g_ind[s, e, j])  == 1 for s in S for e in E[s] for j in sub_network[s]), name = 'sum_mu=1')
 m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
 m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
-m.addConstrs((q[j] >= sum(cuts[s, e, j][g] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for j in sub_network[s]), name = 'q>=sum_c_zeta')
-m.addConstrs((q[j] >= sum(cuts[s, e, j][g] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for e in E[s]), name = 'sum_beta<=|J|-1')
 
 
-
-# =============================================================================
-# m.addConstrs((sum(p_b[k] * z_tilde[j, k] for k in K) >=
-#               alpha[j] for j in I), name = 'long_dec_depen')
-# =============================================================================
-
-# =============================================================================
-
-
-# m.addConstrs((q[j] == v_s[s, j] for s in S for j in sub_network[s]), name = 'Tq=v_s')
-# m.addConstrs((v_s[s, j] + (1 - z_bar[s, k]) * xi[k, j] >= xi[k, j] for s in S for j in sub_network[s] for k in K), name = 'v_s+(1-z)w>w')
-# 
-# 
-# # extract index for sets Omega_0, Omega_down and Omega_up
-# Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
-# Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
-# Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
-# 
-# m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[s])) 
-#               + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
-#               - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
-#               - sum(p_b[k_prime] for k_prime in K if k_prime in Omega_up_ind[s]) * sum(c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_down_ind[s])
-#               >= alpha[s] * len(Omega_down_ind[s]) for s in S), name = 'long_dec_depen')
-# 
-# m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind) for s in S), name = 'phi=sum_n*epsilon')
-# m.addConstrs((sum(epsilon[s, n] for n in epsilon_ind) == 1 for s in S), name = 'sum_epsilon=1')
-# =============================================================================
-
-m.addConstrs((h[s, k] >= gamma_lb * z_bar[s, k] for s, k in h_ind), name = 'mc_h_1')
-m.addConstrs((h[s, k] >= gamma_ub * (z_bar[s, k] - 1) + gamma[s] for s, k in h_ind), name = 'mc_h_2')
-m.addConstrs((h[s, k] <= gamma_ub * z_bar[s, k] for s, k in h_ind), name = 'mc_h_3')
-m.addConstrs((h[s, k] <= gamma_lb * (z_bar[s, k] - 1) + gamma[s] for s, k in h_ind), name = 'mc_h_4')
-
-m.addConstrs((pi[s, k, n] >= h_lb * epsilon[s, n] for s, k, n in pi_ind), name = 'mc_pi_1')
-m.addConstrs((pi[s, k, n] >= h_ub * (epsilon[s, n] - 1) + h[s, k] for s, k, n in pi_ind), name = 'mc_pi_2')
-m.addConstrs((pi[s, k, n] <= h_ub * epsilon[s, n] for s, k, n in pi_ind), name = 'mc_pi_3')
-m.addConstrs((pi[s, k, n] <= h_lb * (epsilon[s, n] - 1) + h[s, k] for s, k, n in pi_ind), name = 'mc_pi_4')
-
-# =============================================================================
-# test_node = 33
-# len(Omega_0_ind[test_node])
-# len(Omega_up_ind[test_node])
-# len(Omega_down_ind[test_node])
-# =============================================================================
+m.addConstrs((zeta[s, e, j, g] >= 0 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_1')
+m.addConstrs((zeta[s, e, j, g] >= mu[s, e, j, g] + nu[s, e] - 1 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_2')
+m.addConstrs((zeta[s, e, j, g] <= mu[s, e, j, g] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_3')
+m.addConstrs((zeta[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_4')
 
 ### setting objective functions
 m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
