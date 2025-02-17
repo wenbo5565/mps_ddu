@@ -248,14 +248,14 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.8 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
+alpha = pd.Series(0.9 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
 phi_ub = b + num_mps
 phi_lb = 0
 gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0.3 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
+c = pd.Series(0 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -450,12 +450,38 @@ m.addConstr(sum(p_eta[k] * z_hat[k - 1] for k in K) >= alpha_L, name = 'knapsack
 ##############################################################
 ##### decision-dependent joint constraints
 ##############################################################
-m.addConstrs((q[j] >= sum(cuts[s, e, j][g - 1] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for j in sub_network[s]), name = 'q>=sum_c_zeta') # g - 1 for position index
-m.addConstrs((sum(beta_hat[s, e, j, k, g] * zeta[s, e, j, g] for j in sub_network[s] for g in g_ind[s, e, j]) <= len(sub_network[s]) - 1 for s in S for e in E[s] for k in k_ind[s, e]), name = 'sum_nu_beta_mu<|J|-1') # g - 1 for position index
-m.addConstrs((sum(mu[s, e, j, g] for g in g_ind[s, e, j])  == 1 for s in S for e in E[s] for j in sub_network[s]), name = 'sum_mu=1')
-m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
-m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
 
+#??? this set is infeasible
+m.addConstrs((q[j] >= sum(cuts[s, e, j][g - 1] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j]) for s in S for j in sub_network[s]), name = 'q>=sum_c_zeta') # g - 1 for position index
+
+"""
+s = 8
+j = 31
+rh = q[j].X
+lh = sum(cuts[s, e, j][g - 1] * zeta[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])
+lh.getValue()
+
+nu_sol = pd.Series(nu.values(), index = nu.keys())
+nu_nz_ind = [True if row.X != 0 else False for row in nu_sol]
+print(nu_sol[nu_nz_ind])
+
+mu_sol = pd.Series(mu.values(), index = mu.keys())
+mu_nz_ind = [True if row.X != 0 else False for row in mu_sol]
+print(mu_sol[mu_nz_ind])
+
+
+
+"""
+
+m.addConstrs((sum(beta_hat[s, e, j, k, g] * zeta[s, e, j, g] for j in sub_network[s] for g in g_ind[s, e, j]) <= len(sub_network[s]) - 1 for s in S for e in E[s] for k in k_ind[s, e]), name = 'sum_nu_beta_mu<|J|-1') # g - 1 for position index
+
+# ??? this set is infeasible
+m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
+m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
+
+# ??? do i need this constraint???
+m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
+#??? end of infeasible set
 
 m.addConstrs((zeta[s, e, j, g] >= 0 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_1')
 m.addConstrs((zeta[s, e, j, g] >= mu[s, e, j, g] + nu[s, e] - 1 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_2')
@@ -573,6 +599,13 @@ m.ObjVal
 q_sol = pd.Series(q.values(), index = q.keys())
 print(q_sol)
 
+for s in S:
+    print('===============================')
+    print(f'sub network {s} includes nodes {sub_network[s]}')
+    for j in sub_network[s]:
+        print(f'optimal ens for node {j} is {q[j]}')
+    print('===============================')
+    
 x_sol = pd.Series(x.values(), index = x.keys())
 print(x_sol)
 
