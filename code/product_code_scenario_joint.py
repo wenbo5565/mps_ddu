@@ -188,7 +188,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+c = pd.Series(0 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
