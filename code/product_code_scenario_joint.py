@@ -73,11 +73,14 @@ scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
 other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
 
 ### Adding function to resample the scenarios
-# random_state = [2010, 2020, 2030, 2040, 2050]
-# frac = 1
+random_state = [2010, 2020, 2030, 2040, 2050]
+frac = 0.05
 
 #for rnd in random_state:
-#    scen_xi_sampled = scen_xi.sample(frac = frac, random_state = rnd)
+rnd = 2010
+scen_xi = scen_xi.sample(frac = frac, random_state = rnd, ignore_index = True)
+scen_eta = scen_eta.sample(frac = frac, random_state = rnd, ignore_index = True)
+scen_sub = scen_sub.sample(frac = frac, random_state = rnd, ignore_index = True)
 
 
 num_nodes = 33
