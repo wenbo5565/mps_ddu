@@ -246,7 +246,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(2 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
+c = pd.Series(0.3 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -636,8 +636,12 @@ z_r_sol = pd.Series(z_r.values(), index = z_r.keys())
 z_r_nz_ind = [True if row.X != 0 else False for row in z_r_sol]
 print(z_r_sol[z_r_nz_ind])
 
+print('The index of f starts from 0 in Python result for this project')
+print('So f[0] here corresponds to f[1] in overleaf')
 print(f_a)
 
+print('The index of f starts from 0 in Python result for this project')
+print('So f[0] here corresponds to f[1] in overleaf')
 print(f_r)
 
 # =============================================================================
@@ -672,3 +676,13 @@ print(phi_sol[phi_nz_ind])
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
 print(v_sol[v_nz_ind])
+
+theta_sol = pd.Series(theta.values(), index = theta.keys())
+theta_nz_ind = [True if row.X != 0 else False for row in theta_sol]
+print(theta_sol[theta_nz_ind])
+
+nu_sol = pd.Series(nu.values(), index = nu.keys())
+nu_nz_ind = [True if row.X != 0 else False for row in nu_sol]
+print(nu_sol[nu_nz_ind])
+
+
