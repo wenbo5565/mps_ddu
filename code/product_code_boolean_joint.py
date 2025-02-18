@@ -126,15 +126,6 @@ def return_cut_points(E, c, scen_xi, sub_network, alpha, q_thresh):
                                 beta_hat[s, e, j, k + 1, g_ind + 1] = 0
     return beta_hat, cuts, p_suff_recombs, p_insuff_recombs     
 
-
-# =============================================================================
-# def compare_vec(vec_A, vec_B):
-#     """
-#         check if vector A no larger than B for every component
-#     """
-# 
-# =============================================================================
-
 data_folder = os.path.dirname(os.getcwd())
 # data_folder = r'D:\Research\gw_ddu_mps'
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
@@ -255,7 +246,7 @@ gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
+c = pd.Series(2 * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -303,17 +294,20 @@ ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
 
 D_a_S = {s: sum(D_a[j] for j in sub_network[s]) for s in S} # demand for each sub network s
 # possible set of values for phi and gamma
-pre_phi = {s:[len(sub_network[s]) * (2 * r_num + 1 * (num - r_num)) for num in np.arange(0, len(M) + 1) for r_num in np.arange(0, num + 1) if r_num <= b and num <= h_hat] for s in S} 
+pre_phi = {s:list(set([len(sub_network[s]) * (2 * r_num + 1 * (num - r_num)) for num in np.arange(0, len(M) + 1) for r_num in np.arange(0, num + 1) if r_num <= b and num <= h_hat])) for s in S} 
 M_combi = [list(itertools.combinations(M, num)) for num in np.arange(0, h_hat + 1)]
 pre_gamma = {s: list(set([min(1, sum(Psi_a[m] for m in m_combi) / D_a_S[s]) for m_by_num in M_combi for m_combi in m_by_num])) for s in S} 
 E = {s:list(set([phi * gamma for phi in pre_phi[s] for gamma in pre_gamma[s]])) for s in S}
 # E_ind = {s: np.arange(1, len(E[s]) + 1) for s in S}
-                        
+# Phi = {s: [phi for phi in pre_phi[s]] for s in S}
+
 # ??? function to calculate p-insufficient recombination
 beta_hat, cuts, p_suff_recombs, p_insuff_recombs = return_cut_points(E = E, c = c, scen_xi = scen_xi, 
                                                                      sub_network = sub_network, alpha = alpha, q_thresh = low_quant)
 g_ind = {(s, e, j): np.arange(1, len(cuts[s, e, j]) + 1) for s in S for e in E[s] for j in sub_network[s]}
 k_ind = {(s, e): np.arange(1, len(p_insuff_recombs[s, e]) + 1) for s in S for e in E[s]}
+theta_ind = [(s, phi_enum) for s in S for phi_enum in pre_phi[s]]
+
 
 ### init model
 model_name = 'mps'
@@ -369,6 +363,8 @@ nu = m.addVars(nu_ind, vtype = GRB.BINARY, name = 'nu')
 mu_ind = [(s, e, j, g) for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]]
 mu = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'mu')
 zeta = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'zeta')
+theta = m.addVars(theta_ind, vtype = GRB.BINARY, name = 'theta')
+lambda_var = m.addVars(theta_ind, vtype = GRB.CONTINUOUS, name = 'lambda')
 # ? V_s_ind = [(s, j) for s in S for j in sub_network[s]]
 # ? v_s = m.addVars(V_s_ind, vtype = GRB.CONTINUOUS, name = 'v^S')
 
@@ -477,16 +473,30 @@ m.addConstrs((sum(beta_hat[s, e, j, k, g] * zeta[s, e, j, g] for j in sub_networ
 
 # ??? this set is infeasible
 m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
+
+
+
+m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
 m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
 
 # ??? do i need this constraint???
 m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
 #??? end of infeasible set
 
+m.addConstrs((phi[s] == sum(phi_enum * theta[s, phi_enum] for phi_enum in pre_phi[s]) for s in S), name = 'phi=sum_theta')
+m.addConstrs((sum(theta[s, phi_enum] for phi_enum in pre_phi[s]) == 1 for s in S), name = 'sum=theta=1')
+m.addConstrs((sum(e * nu[s, e] for e in E[s]) == sum(phi_enum * lambda_var[s, phi_enum] for phi_enum in pre_phi[s]) for s in S), name = 'sum_e_nu=sum_phi_enum*lambda')
+
+
 m.addConstrs((zeta[s, e, j, g] >= 0 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_1')
 m.addConstrs((zeta[s, e, j, g] >= mu[s, e, j, g] + nu[s, e] - 1 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_2')
 m.addConstrs((zeta[s, e, j, g] <= mu[s, e, j, g] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_3')
 m.addConstrs((zeta[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_4')
+
+m.addConstrs((lambda_var[s, phi_enum] >= gamma_lb * theta[s, phi_enum] for s, phi_enum in theta_ind), name = 'mc_lambda_1')
+m.addConstrs((lambda_var[s, phi_enum] >= gamma_ub * (theta[s, phi_enum] - 1) + gamma[s] for s, phi_enum in theta_ind), name = 'mc_lambda_2')
+m.addConstrs((lambda_var[s, phi_enum] <= gamma_ub * theta[s, phi_enum] for s, phi_enum in theta_ind), name = 'mc_lambda_3')
+m.addConstrs((lambda_var[s, phi_enum] <= gamma_lb * (theta[s, phi_enum] - 1) + gamma[s] for s, phi_enum in theta_ind), name = 'mc_lambda_4')
 
 ### setting objective functions
 m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
@@ -630,9 +640,11 @@ print(f_a)
 
 print(f_r)
 
-z_bar_sol = pd.Series(z_bar.values(), index = z_bar.keys())
-z_bar_nz_ind = [True if row.X != 0 else False for row in z_bar_sol]
-print(z_bar_sol[z_bar_nz_ind])
+# =============================================================================
+# z_bar_sol = pd.Series(z_bar.values(), index = z_bar.keys())
+# z_bar_nz_ind = [True if row.X != 0 else False for row in z_bar_sol]
+# print(z_bar_sol[z_bar_nz_ind])
+# =============================================================================
 
 gamma_sol = pd.Series(gamma.values(), index = gamma.keys())
 gamma_nz_ind = [True if row.X != 0 else False for row in gamma_sol]
@@ -650,9 +662,11 @@ phi_sol = pd.Series(phi.values(), index = phi.keys())
 phi_nz_ind = [True if row.X != 0 else False for row in phi_sol]
 print(phi_sol[phi_nz_ind])
 
-pi_sol = pd.Series(pi.values(), index = pi.keys())
-pi_nz_ind = [True if row.X != 0 else False for row in pi_sol]
-print(pi_sol[pi_nz_ind])
+# =============================================================================
+# pi_sol = pd.Series(pi.values(), index = pi.keys())
+# pi_nz_ind = [True if row.X != 0 else False for row in pi_sol]
+# print(pi_sol[pi_nz_ind])
+# =============================================================================
 # print(pi_sol[pi_nz_ind][30])
 
 v_sol = pd.Series(v.values(), index = v.keys())
