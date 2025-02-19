@@ -168,11 +168,15 @@ M = np.arange(1, num_mps + 1) # set for MPS
 Psi_a = pd.Series(mps_cap_a * np.ones(num_mps), index = np.arange(1, num_mps + 1))
 Psi_r = pd.Series(mps_cap_r * np.ones(num_mps), index = np.arange(1, num_mps + 1))
 
+max_num_nodes = max(len(s) for s in sub_network.values()) # num of nodes of the largest sub network
+
 ### parameters for decision-dependent functions
 low_quant = 0.2 # threashold for the set Omega_down
 
 # ??? Need to add new function to calculate subnetwork level value
 Omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = low_quant)
+
+
 
 ### parameters for nodes
 D_a = other_params['D_a']
@@ -182,13 +186,22 @@ V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
 alpha = pd.Series(0.9 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
-phi_ub = b + num_mps
-phi_lb = 0
+# =============================================================================
+# phi_ub = b + num_mps
+# phi_lb = 0
+# =============================================================================
 gamma_ub = 1
 gamma_lb = 0
 h_ub = 1
 h_lb = 0
-c = pd.Series(0 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+
+p_b_scalar = 1 / scen_xi.shape[0]
+phi_max = max_num_nodes * (b + num_mps)
+c_max = [(1 - p_b_scalar * len(Omega_ind[s]['zero'])) / (p_b_scalar * len(Omega_ind[s]['up']) * phi_max) for s in S]
+
+c_scalar = min(0.03, min(c_max))
+
+c = pd.Series(c_scalar * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
 
 # create indicator if candidate node and node are connected
@@ -268,7 +281,8 @@ phi = m.addVars(S, vtype = GRB.INTEGER, name = 'phi') # phi should be integer va
 gamma = m.addVars(S, vtype = GRB.CONTINUOUS, name = 'gamma')
 for s in gamma:
     gamma[s].ub = 1
-epsilon_ind = np.arange(0, num_subs * (b + num_mps) + 1)
+    
+epsilon_ind = np.arange(0, max_num_nodes * (b + num_mps) + 1)
 epsilon = m.addVars(S, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
 
 h_ind = [(s, k) for s in S for k in K if k in Omega_ind[s]['up'] or k in Omega_ind[s]['down']] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
@@ -493,6 +507,8 @@ m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
 
 ###
 
+#gamma[6].lb = 1
+#gamma[6].ub = 1
 
 ### solving the model
 m.optimize()
@@ -507,6 +523,8 @@ m.ObjVal
 ### extract optimal solutions
 # sol_df = pd.DataFrame()
 # sol_df.index = pd.Index(q.keys())
+print(f'c is {c}')
+
 q_sol = pd.Series(q.values(), index = q.keys())
 print(q_sol)
 
