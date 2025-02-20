@@ -529,6 +529,7 @@ m.ObjVal
 # sol_df = pd.DataFrame()
 # sol_df.index = pd.Index(q.keys())
 print(f'c is {c}')
+print(f'alpha is {alpha}')
 
 q_sol = pd.Series(q.values(), index = q.keys())
 print(q_sol)
