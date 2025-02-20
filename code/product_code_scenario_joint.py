@@ -185,7 +185,7 @@ V_under = other_params['V_under']
 V_over = other_params['V_over']
 tan_theta_up = other_params['tan_theta_up']
 tan_theta_low = other_params['tan_theta_low']
-alpha = pd.Series(0.9 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
+alpha = pd.Series(0.85 * np.ones(num_subs), index = np.arange(1, num_subs + 1))
 # =============================================================================
 # phi_ub = b + num_mps
 # phi_lb = 0
@@ -346,8 +346,9 @@ m.addConstrs((sum(z_a[m, i, j] for i in I_c if j in I_i[i]) * tan_theta_low[j] <
 m.addConstrs((sum(z_r[m, i, j] for i in I_c if j in I_i[i]) <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) * tan_theta_up[i] for j in I_mps for m in M), name = 'psi<tan_theta_up')
 
 m.addConstrs((v[Gamma[l]] - v[Lambda[l]] == 2 * (f_a[l - 1] * R[l] + f_r[l - 1] * X[l]) / 1000 for l in L), name = 'square_voltage')
-m.addConstrs((beta[m, j, 'r'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_r_z')
-m.addConstrs((beta[m, j, 'u'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_u_z')
+
+# m.addConstrs((beta[m, j, 'r'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_r_z')
+# m.addConstrs((beta[m, j, 'u'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_u_z')
 
 
 m.addConstrs((v[j] >= V_under[j]  for j in I), name = 'V_under<v')
@@ -585,5 +586,5 @@ v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
 print(v_sol[v_nz_ind])
 
-m.write('scen_joint.mps')
-m.write('sol.sol')
+m.write('scen_joint_alpha85.mps')
+m.write('sol_alpha85.sol')
