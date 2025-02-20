@@ -197,9 +197,9 @@ h_lb = 0
 
 p_b_scalar = 1 / scen_xi.shape[0]
 phi_max = max_num_nodes * (b + num_mps)
-c_max = [(1 - p_b_scalar * len(Omega_ind[s]['zero'])) / (p_b_scalar * len(Omega_ind[s]['up']) * phi_max) for s in S]
+c_max = [((1 - p_b_scalar * len(Omega_ind[s]['zero'])) / (p_b_scalar * len(Omega_ind[s]['up'])) - 1) / phi_max for s in S]
 
-c_scalar = min(0.03, min(c_max))
+c_scalar = min(0.01, min(c_max))
 
 c = pd.Series(c_scalar * np.ones(num_subs), index = np.arange(1, num_subs + 1)) # 1： 0.1; 
 p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
@@ -387,6 +387,11 @@ Omega_0_ind = {s: Omega_ind[s]['zero'] for s in Omega_ind.keys()}
 Omega_up_ind = {s: Omega_ind[s]['up'] for s in Omega_ind.keys()}
 Omega_down_ind = {s: Omega_ind[s]['down'] for s in Omega_ind.keys()}
 
+
+"""
+s = 3
+"""
+
 m.addConstrs((len(Omega_down_ind[s]) * (sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_0_ind[s]) + sum(p_b[k] * z_bar[s, k] for k in K if k in Omega_up_ind[s]) + sum(p_b[k] * c[s] * sum(n * pi[s, k, n] for n in epsilon_ind) for k in K if k in Omega_up_ind[s])) 
               + (1 - sum(p_b[k] for k in K if k in Omega_0_ind[s])) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
               - sum(p_b[k] for k in K if k in Omega_up_ind[s]) * sum(z_bar[s, k] for k in K if k in Omega_down_ind[s])
@@ -514,7 +519,6 @@ m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
 m.optimize()
 m.ObjVal
 
-
 # =============================================================================
 # for c in scen_xi.columns:
 #     print('----', c, '----')
@@ -580,3 +584,6 @@ print(pi_sol[pi_nz_ind])
 v_sol = pd.Series(v.values(), index = v.keys())
 v_nz_ind = [True if row.X != 0 else False for row in v_sol]
 print(v_sol[v_nz_ind])
+
+m.write('scen_joint.mps')
+m.write('sol.sol')
