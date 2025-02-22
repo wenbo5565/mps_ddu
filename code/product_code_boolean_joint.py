@@ -157,7 +157,7 @@ scen_sub_csv.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 1.5
+frac = 5
 
 #for rnd in random_state:
 #    scen_xi_sampled = scen_xi.sample(frac = frac, random_state = rnd)
