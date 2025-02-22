@@ -24,7 +24,7 @@ import os
 # 
 # =============================================================================
 
-def return_joint_omega_index(scen, sub_network, q_thresh):
+def return_joint_omega_index(scen_xi, sub_network, q_thresh):
     """
         take a set of multi-dimensional scenario values of ens;
         return a dict with keys being subnetwork and values are up, down and zero index
@@ -61,7 +61,7 @@ def return_cut_points(E, c, scen_xi, sub_network, alpha, q_thresh):
         return cut points and recombination given e in E, c (sensitivity)
     """    
     S = sub_network.keys()
-    omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = q_thresh)
+    omega_ind = return_joint_omega_index(scen_xi = scen_xi, sub_network = sub_network, q_thresh = q_thresh)
     cuts = {}
     recombs = {}
     p_insuff_recombs = {}
@@ -144,6 +144,17 @@ scen_eta_csv = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub_csv = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
 other_params = pd.read_csv(os.path.join(data_folder, "data", "Deter_param_v2_formatted.csv"))
 
+other_params.isnull().sum(axis = 0)
+scen_xi_csv.isnull().sum(axis = 0)
+scen_eta_csv.isnull().sum(axis = 0)
+scen_sub_csv.isnull().sum(axis = 0)
+
+other_params.index += 1
+scen_xi_csv.index += 1
+scen_eta_csv.index += 1
+scen_sub_csv.index += 1
+
+
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
 frac = 1
@@ -159,20 +170,15 @@ for rnd in random_state:
     scen_eta = scen_eta_csv.sample(frac = frac, random_state = rnd, ignore_index = True)
     scen_sub = scen_sub_csv.sample(frac = frac, random_state = rnd, ignore_index = True)
     
+    scen_xi.index += 1
+    scen_eta.index += 1
+    scen_sub.index += 1
     
     num_nodes = 33
     num_lines = 32
     num_scen = scen_eta.shape[0]
     
-    other_params.isnull().sum(axis = 0)
-    scen_xi.isnull().sum(axis = 0)
-    scen_eta.isnull().sum(axis = 0)
-    scen_sub.isnull().sum(axis = 0)
-    
-    other_params.index += 1
-    scen_xi.index += 1
-    scen_eta.index += 1
-    scen_sub.index += 1
+
     
     # node ENS
     scen_xi.columns = np.arange(1, num_nodes + 1)
@@ -249,7 +255,7 @@ for rnd in random_state:
     low_quant = 0.2 # threashold for the set Omega_down
     
     # Need to add new function to calculate subnetwork level value
-    Omega_ind = return_joint_omega_index(scen = scen_xi, sub_network = sub_network, q_thresh = low_quant)
+    Omega_ind = return_joint_omega_index(scen_xi = scen_xi, sub_network = sub_network, q_thresh = low_quant)
     
     ### parameters for nodes
     D_a = other_params['D_a']
