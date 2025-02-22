@@ -339,7 +339,7 @@ for rnd in random_state:
     model_name = 'mps'
     m = gp.Model(model_name)
     m.setParam(GRB.Param.TimeLimit, 1 * 3600)
-    # m.setParam(GRB.Param.Threads, 1) 
+    m.setParam(GRB.Param.Threads, 1) 
     m.setParam(GRB.Param.LogFile, model_name)
     
     ### define optimization variables
