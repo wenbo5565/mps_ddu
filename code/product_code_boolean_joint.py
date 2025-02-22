@@ -178,7 +178,7 @@ for rnd in random_state:
     num_lines = 32
     num_scen = scen_eta.shape[0]
     
-
+    print(f'sample size is {scen_xi.shape[0], scen_sub.shape[0], scen_eta.shape[0]}')
     
     # node ENS
     scen_xi.columns = np.arange(1, num_nodes + 1)
