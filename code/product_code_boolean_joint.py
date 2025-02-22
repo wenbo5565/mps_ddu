@@ -23,7 +23,19 @@ import os
 # scen_s['cum_prob'] = scen_s.apply(lambda x: scen_s.le(test_vec).all(axis = 1).sum() / scen_s.shape[0], axis = 1)
 # 
 # =============================================================================
-
+def is_joint_sufficient(recomb, sample, p):
+    """
+        Check if a multi-dimensional recomb is p-sufficient for a sample
+    """    
+    conf_mtrx = sample <= recomb
+    suffi_ind = conf_mtrx.mean(axis = 1)
+    suffi_ind_conf = suffi_ind == 1
+    cum_prob = suffi_ind_conf.mean()
+    if cum_prob >= p:
+        return True
+    else:
+        return False
+    
 def return_joint_omega_index(scen_xi, sub_network, q_thresh):
     """
         take a set of multi-dimensional scenario values of ens;
@@ -157,8 +169,11 @@ scen_sub_csv.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 5
+frac = 1
 
+"""
+rnd = 2010
+"""
 #for rnd in random_state:
 #    scen_xi_sampled = scen_xi.sample(frac = frac, random_state = rnd)
 ### Adding function to resample the scenarios
@@ -297,13 +312,50 @@ for rnd in random_state:
     
     ### parameters for scenario-based reformulation
     # parameters for decision-independent
-    p_eta = pd.Series(np.ones(num_scen) / num_scen)
-    p_eta.index += 1
+# =============================================================================
+#     p_eta = pd.Series(np.ones(num_scen) / num_scen)
+#     p_eta.index += 1
+#     alpha_L = 0.90
+#     num_L_hat = L_hat.shape[0]
+#     T = np.zeros((2 * num_L_hat, num_L_hat))
+#     for row in np.arange(T.shape[0]):
+#         T[row, row // 2] = (-1) ** row
+# =============================================================================
+        
+        
     alpha_L = 0.90
+    
+    eta_B = pd.concat((eta, eta), axis = 1) # large eta to include active and reactive pwer
+    quant_eta_B = eta_B.quantile(alpha_L)
+    mrg_suffi_eta_B_conf = eta_B[eta_B >= quant_eta_B]
+    
+    I_eta_B = np.arange(1, mrg_suffi_eta_B_conf.shape[1] + 1)
+    cut_eta_B = {i: list(mrg_suffi_eta_B_conf.iloc[:, i - 1].dropna().unique()) for i in I_eta_B}
+    recomb_eta_B = pd.Series(list(itertools.product(*list(cut_eta_B.values()))))
+    g_eta_B = {ind: np.arange(1, len(cuts) + 1) for ind, cuts in cut_eta_B.items()}
+    c_tilde = {(i, g): cut_eta_B[i][g - 1] for i in I_eta_B for g in g_eta_B[i]} # we use c_tilde in overleaf
+    
+    suffi_ind = recomb_eta_B.apply(is_joint_sufficient, sample = eta_B, p = alpha_L)
+    K_eta_B_pos = list(suffi_ind[suffi_ind == True].index + 1) 
+    K_eta_B_neg = list(suffi_ind[suffi_ind == False].index + 1) 
+    suffi_recomb_eta_B = recomb_eta_B[suffi_ind]
+    insuffi_recomb_eta_B = recomb_eta_B[~suffi_ind]
+    
+    u_ind = [(i, j) for i in I_eta_B for j in np.arange(1, len(cut_eta_B[i]) + 1)]
+    beta_tilde_ind = list(itertools.product(u_ind, K_eta_B_neg))
+    beta_tilde_ind = [(*each[0], each[1]) for each in beta_tilde_ind]
+    
+    beta_tilde = {(i, g, k): 1 if recomb_eta_B[k - 1][i -1] >= cut_eta_B[i][g - 1] else 0 for i, g, k in beta_tilde_ind}
+        
+        # =============================================================================
+        # p_eta = pd.Series(np.ones(num_scen) / num_scen)
+        # p_eta.index += 1
+        # =============================================================================
+        
     num_L_hat = L_hat.shape[0]
-    T = np.zeros((2 * num_L_hat, num_L_hat))
-    for row in np.arange(T.shape[0]):
-        T[row, row // 2] = (-1) ** row
+    T_B = np.zeros((4 * num_L_hat, 2* num_L_hat))
+    for row in np.arange(T_B.shape[0]):
+        T_B[row, row // 2] = (-1) ** row
     
     M_a = np.ones(2 * num_L_hat) * 500
     M_r = np.ones(2 * num_L_hat) * 500
@@ -311,9 +363,6 @@ for rnd in random_state:
     loc = ['r', 'u']
     h_hat = 3 # upper limit for mps at rural locations
     ind_z = [(m, i, j) for m in M for i in I_c for j in I_i[i]]
-    
-    
-    
     
     # parameters for decision-dependent 
     # T_S = np.identity(num_subs)
@@ -370,11 +419,16 @@ for rnd in random_state:
     
     # notice that f_a[0] corresponds to the first line. gurobi 
     # matrix variable starts with index 0
+    
     f_a = m.addMVar(num_lines, vtype = GRB.CONTINUOUS, name = 'f_a', lb = -GRB.INFINITY)
     f_a_hat = f_a[L_hat - 1] # index start with 0 for gurobipy MVar object # f_hat is vulnerable line
     f_r = m.addMVar(num_lines, vtype = GRB.CONTINUOUS, name = 'f_r', lb = -GRB.INFINITY)
     f_r_hat = f_r[L_hat - 1]
-    z_hat = m.addMVar(num_scen, vtype = GRB.BINARY, name = 'z_hat')
+    f_hat = gp.MVar.fromlist(f_a_hat.tolist() + f_r_hat.tolist())
+    u = m.addVars(u_ind, vtype = GRB.BINARY, name = 'u')
+    
+    
+    
     
     # variables related to decision-dependent joint chance constraints (impacted nodes)
     phi = m.addVars(S, vtype = GRB.INTEGER, name = 'phi') # phi should be integer variables
@@ -472,9 +526,10 @@ for rnd in random_state:
     ##############################################################
     ##### decision-independent (for vulnerable lines) constraints
     ##############################################################
-    m.addConstrs((T @ f_a_hat + M_a * (1 - z_hat[k - 1]) >= eta.loc[k, :].values for k in K), name = 'act-Tf+(1-z)M>=eta') # z_hat is gurobi M variable starting with index 0
-    m.addConstrs((T @ f_r_hat + M_r * (1 - z_hat[k - 1]) >= eta.loc[k, :].values for k in K), name = 'react-Tf+(1-z)M>=eta') 
-    m.addConstr(sum(p_eta[k] * z_hat[k - 1] for k in K) >= alpha_L, name = 'knapsack')
+    m.addConstrs((T_B[i - 1, :] @ f_hat >= sum(c_tilde[i, g] * u[i, g] for g in g_eta_B[i]) for i in I_eta_B), name = 'Tf>sum_c_u')
+    m.addConstrs((sum(beta_tilde[i, g, k] * u[i, g] for i in I_eta_B for g in g_eta_B[i]) <= I_eta_B[-1] - 1 for k in K_eta_B_neg), name = 'beta_u<I_eta-1')
+    m.addConstrs((sum(u[i, g] for g in g_eta_B[i]) == 1 for i in I_eta_B), name = 'sum_u_ig=1')
+    
     
     ##############################################################
     ##### decision-dependent joint constraints
