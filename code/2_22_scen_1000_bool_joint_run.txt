@@ -1,0 +1,3555 @@
+nohup: ignoring input
+number of scenarios: 1000
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-12-28
+Set parameter TimeLimit to value 3600
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 38765 rows, 3933 columns and 84124 nonzeros
+Model fingerprint: 0x93d89962
+Variable types: 762 continuous, 3171 integer (3163 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-01, 5e+03]
+Presolve removed 20479 rows and 1363 columns
+Presolve time: 0.30s
+Presolved: 18286 rows, 2570 columns, 42942 nonzeros
+Variable types: 612 continuous, 1958 integer (1958 binary)
+Found heuristic solution: objective 17850.000000
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.615666e+04, 653 iterations, 0.03 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 16156.6628    0  136 17850.0000 16156.6628  9.49%     -    0s
+     0     0 16457.0189    0   87 17850.0000 16457.0189  7.80%     -    0s
+     0     0 16589.5300    0  121 17850.0000 16589.5300  7.06%     -    0s
+     0     0 16629.5238    0  130 17850.0000 16629.5238  6.84%     -    0s
+     0     0 16776.6667    0   87 17850.0000 16776.6667  6.01%     -    0s
+     0     0 16780.0000    0   85 17850.0000 16780.0000  5.99%     -    0s
+     0     0 16812.5000    0   97 17850.0000 16812.5000  5.81%     -    0s
+     0     0 16887.4603    0  101 17850.0000 16887.4603  5.39%     -    0s
+     0     0 16896.9048    0  102 17850.0000 16896.9048  5.34%     -    0s
+     0     0 16901.2585    0  137 17850.0000 16901.2585  5.32%     -    1s
+     0     0 16901.2585    0  131 17850.0000 16901.2585  5.32%     -    1s
+     0     0 16954.7438    0  165 17850.0000 16954.7438  5.02%     -    1s
+     0     0 17030.0234    0  148 17850.0000 17030.0234  4.59%     -    1s
+     0     0 17030.0234    0  138 17850.0000 17030.0234  4.59%     -    1s
+     0     0 17030.0234    0  138 17850.0000 17030.0234  4.59%     -    1s
+     0     0 17083.8990    0  148 17850.0000 17083.8990  4.29%     -    1s
+     0     0 17095.8824    0  136 17850.0000 17095.8824  4.22%     -    1s
+     0     0 17095.8824    0  136 17850.0000 17095.8824  4.22%     -    1s
+     0     0 17112.9412    0  121 17850.0000 17112.9412  4.13%     -    1s
+     0     0 17112.9412    0  125 17850.0000 17112.9412  4.13%     -    1s
+     0     0 17115.6721    0  137 17850.0000 17115.6721  4.11%     -    1s
+     0     0 17120.4672    0  127 17850.0000 17120.4672  4.09%     -    1s
+     0     0 17126.0862    0  138 17850.0000 17126.0862  4.06%     -    2s
+H    0     0                    17805.000000 17135.5113  3.76%     -    2s
+     0     0 17135.5113    0  164 17805.0000 17135.5113  3.76%     -    2s
+     0     0 17135.5113    0  199 17805.0000 17135.5113  3.76%     -    2s
+     0     0 17135.5113    0  202 17805.0000 17135.5113  3.76%     -    2s
+     0     0 17145.0553    0  137 17805.0000 17145.0553  3.71%     -    2s
+H    0     0                    17760.000000 17145.0553  3.46%     -    2s
+     0     0 17145.2561    0  145 17760.0000 17145.2561  3.46%     -    2s
+     0     0 17145.2561    0  165 17760.0000 17145.2561  3.46%     -    2s
+     0     0 17150.4179    0  151 17760.0000 17150.4179  3.43%     -    2s
+     0     0 17152.3868    0  144 17760.0000 17152.3868  3.42%     -    2s
+     0     0 17152.3868    0  151 17760.0000 17152.3868  3.42%     -    2s
+H    0     0                    17560.000000 17158.3582  2.29%     -    2s
+     0     0 17158.3582    0  163 17560.0000 17158.3582  2.29%     -    2s
+     0     0 17158.3582    0  162 17560.0000 17158.3582  2.29%     -    2s
+     0     0 17167.1176    0  197 17560.0000 17167.1176  2.24%     -    2s
+     0     0 17167.1176    0  173 17560.0000 17167.1176  2.24%     -    2s
+     0     0 17167.3529    0  143 17560.0000 17167.3529  2.24%     -    3s
+     0     0 17168.0270    0  155 17560.0000 17168.0270  2.23%     -    3s
+     0     0 17168.0270    0  159 17560.0000 17168.0270  2.23%     -    3s
+     0     0 17168.4216    0  130 17560.0000 17168.4216  2.23%     -    3s
+     0     0 17168.9842    0  144 17560.0000 17168.9842  2.23%     -    3s
+     0     0 17169.0377    0  160 17560.0000 17169.0377  2.23%     -    3s
+     0     0 17169.2371    0  171 17560.0000 17169.2371  2.23%     -    3s
+     0     0 17170.4167    0  123 17560.0000 17170.4167  2.22%     -    3s
+     0     2 17170.6446    0  123 17560.0000 17170.6446  2.22%     -    3s
+    82    72 17469.0000   28   81 17560.0000 17171.7181  2.21%  61.0    5s
+   624   447 17357.1332   23  123 17560.0000 17243.3333  1.80%  63.7   10s
+   652   466 17402.4107   13   23 17560.0000 17402.4107  0.90%  61.0   15s
+H  693   453                    17500.000000 17403.4783  0.55%  75.1   18s
+H  700   424                    17492.500000 17403.4783  0.51%  74.4   18s
+H  711   400                    17490.000000 17403.4783  0.49%  73.7   18s
+H  748   358                    17470.000000 17463.2500  0.04%  72.0   18s
+
+Cutting planes:
+  Gomory: 26
+  Cover: 5
+  MIR: 10
+  StrongCG: 1
+  Flow cover: 11
+  GUB cover: 18
+  Zero half: 167
+  RLT: 3
+  Relax-and-lift: 2
+
+Explored 752 nodes (62102 simplex iterations) in 18.97 seconds (24.24 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 10: 17470 17490 17492.5 ... 17850
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.747000000000e+04, best bound 1.747000000000e+04, gap 0.0000%
+c is 1    0.01
+2    0.01
+3    0.01
+4    0.01
+5    0.01
+6    0.01
+7    0.01
+8    0.01
+dtype: float64
+alpha is 1    0.85
+2    0.85
+3    0.85
+4    0.85
+5    0.85
+6    0.85
+7    0.85
+8    0.85
+dtype: float64
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8       <gurobi.Var q[8] (value 800.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 450.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 450.0)>
+24    <gurobi.Var q[24] (value 2100.0)>
+25    <gurobi.Var q[25] (value 2100.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+===============================
+sub network 1 includes nodes [3, 4, 5]
+optimal ens for node 3 is <gurobi.Var q[3] (value 450.0)>
+optimal ens for node 4 is <gurobi.Var q[4] (value 420.0)>
+optimal ens for node 5 is <gurobi.Var q[5] (value 300.0)>
+===============================
+===============================
+sub network 2 includes nodes [6, 7, 8, 9]
+optimal ens for node 6 is <gurobi.Var q[6] (value 300.0)>
+optimal ens for node 7 is <gurobi.Var q[7] (value 1000.0)>
+optimal ens for node 8 is <gurobi.Var q[8] (value 800.0)>
+optimal ens for node 9 is <gurobi.Var q[9] (value 300.0)>
+===============================
+===============================
+sub network 3 includes nodes [10, 11, 12, 13, 14]
+optimal ens for node 10 is <gurobi.Var q[10] (value 300.0)>
+optimal ens for node 11 is <gurobi.Var q[11] (value 225.0)>
+optimal ens for node 12 is <gurobi.Var q[12] (value 300.0)>
+optimal ens for node 13 is <gurobi.Var q[13] (value 300.0)>
+optimal ens for node 14 is <gurobi.Var q[14] (value 600.0)>
+===============================
+===============================
+sub network 4 includes nodes [15, 16, 17, 18]
+optimal ens for node 15 is <gurobi.Var q[15] (value 300.0)>
+optimal ens for node 16 is <gurobi.Var q[16] (value 300.0)>
+optimal ens for node 17 is <gurobi.Var q[17] (value 300.0)>
+optimal ens for node 18 is <gurobi.Var q[18] (value 450.0)>
+===============================
+===============================
+sub network 5 includes nodes [19, 20, 21, 22]
+optimal ens for node 19 is <gurobi.Var q[19] (value 450.0)>
+optimal ens for node 20 is <gurobi.Var q[20] (value 450.0)>
+optimal ens for node 21 is <gurobi.Var q[21] (value 315.0)>
+optimal ens for node 22 is <gurobi.Var q[22] (value 450.0)>
+===============================
+===============================
+sub network 6 includes nodes [23, 24, 25]
+optimal ens for node 23 is <gurobi.Var q[23] (value 450.0)>
+optimal ens for node 24 is <gurobi.Var q[24] (value 2100.0)>
+optimal ens for node 25 is <gurobi.Var q[25] (value 2100.0)>
+===============================
+===============================
+sub network 7 includes nodes [26, 27, 28, 29, 30]
+optimal ens for node 26 is <gurobi.Var q[26] (value 300.0)>
+optimal ens for node 27 is <gurobi.Var q[27] (value 210.0)>
+optimal ens for node 28 is <gurobi.Var q[28] (value 300.0)>
+optimal ens for node 29 is <gurobi.Var q[29] (value 600.0)>
+optimal ens for node 30 is <gurobi.Var q[30] (value 1000.0)>
+===============================
+===============================
+sub network 8 includes nodes [31, 32, 33]
+optimal ens for node 31 is <gurobi.Var q[31] (value 750.0)>
+optimal ens for node 32 is <gurobi.Var q[32] (value 1050.0)>
+optimal ens for node 33 is <gurobi.Var q[33] (value 300.0)>
+===============================
+1    <gurobi.Var x[1] (value 0.0)>
+2    <gurobi.Var x[2] (value 0.0)>
+3    <gurobi.Var x[3] (value 0.0)>
+4    <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value 1.0)>
+6    <gurobi.Var x[6] (value 1.0)>
+dtype: object
+1  6      <gurobi.Var y[1,6] (value 1.0)>
+2  28    <gurobi.Var y[2,28] (value 1.0)>
+3  28    <gurobi.Var y[3,28] (value 1.0)>
+4  6      <gurobi.Var y[4,6] (value 1.0)>
+5  28    <gurobi.Var y[5,28] (value 1.0)>
+6  6      <gurobi.Var y[6,6] (value 1.0)>
+dtype: object
+1  6   u     <gurobi.Var beta[1,6,u] (value 1.0)>
+   7   u     <gurobi.Var beta[1,7,u] (value 1.0)>
+   8   u     <gurobi.Var beta[1,8,u] (value 1.0)>
+   9   u     <gurobi.Var beta[1,9,u] (value 1.0)>
+2  26  u    <gurobi.Var beta[2,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[2,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[2,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[2,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[2,30,u] (value 1.0)>
+3  26  u    <gurobi.Var beta[3,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[3,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[3,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[3,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[3,30,u] (value 1.0)>
+4  6   r     <gurobi.Var beta[4,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[4,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[4,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[4,9,r] (value 1.0)>
+5  26  r    <gurobi.Var beta[5,26,r] (value 1.0)>
+   27  r    <gurobi.Var beta[5,27,r] (value 1.0)>
+   29  r    <gurobi.Var beta[5,29,r] (value 1.0)>
+   30  r    <gurobi.Var beta[5,30,r] (value 1.0)>
+6  6   r     <gurobi.Var beta[6,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[6,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[6,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[6,9,r] (value 1.0)>
+dtype: object
+1  6   6        <gurobi.Var z_a[1,6,6] (value 60.0)>
+       7        <gurobi.Var z_a[1,6,7] (value 20.0)>
+       9        <gurobi.Var z_a[1,6,9] (value 60.0)>
+2  28  26     <gurobi.Var z_a[2,28,26] (value 60.0)>
+       28     <gurobi.Var z_a[2,28,28] (value 60.0)>
+       29     <gurobi.Var z_a[2,28,29] (value 60.0)>
+       30    <gurobi.Var z_a[2,28,30] (value 200.0)>
+4  6   6        <gurobi.Var z_a[4,6,6] (value 60.0)>
+5  28  26     <gurobi.Var z_a[5,28,26] (value 60.0)>
+       27     <gurobi.Var z_a[5,28,27] (value 60.0)>
+6  6   6        <gurobi.Var z_a[6,6,6] (value 60.0)>
+       8       <gurobi.Var z_a[6,6,8] (value 200.0)>
+       9        <gurobi.Var z_a[6,6,9] (value 60.0)>
+dtype: object
+1  6   6                  <gurobi.Var z_r[1,6,6] (value 18.0)>
+       7                   <gurobi.Var z_r[1,6,7] (value 6.0)>
+       9                  <gurobi.Var z_r[1,6,9] (value 18.0)>
+2  28  26               <gurobi.Var z_r[2,28,26] (value 18.0)>
+       28               <gurobi.Var z_r[2,28,28] (value 18.0)>
+       29               <gurobi.Var z_r[2,28,29] (value 18.0)>
+       30    <gurobi.Var z_r[2,28,30] (value 66.50926315789...
+4  6   6                  <gurobi.Var z_r[4,6,6] (value 18.0)>
+5  28  26               <gurobi.Var z_r[5,28,26] (value 18.0)>
+       27               <gurobi.Var z_r[5,28,27] (value 18.0)>
+6  6   6                  <gurobi.Var z_r[6,6,6] (value 18.0)>
+       8                  <gurobi.Var z_r[6,6,8] (value 60.0)>
+       9                  <gurobi.Var z_r[6,6,9] (value 18.0)>
+dtype: object
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_a[0] (value 0.0)>, <gurobi.Var f_a[1] (value 0.0)>,
+       <gurobi.Var f_a[2] (value 0.0)>, <gurobi.Var f_a[3] (value 0.0)>,
+       <gurobi.Var f_a[4] (value 0.0)>, <gurobi.Var f_a[5] (value 340.0)>,
+       <gurobi.Var f_a[6] (value 320.0)>,
+       <gurobi.Var f_a[7] (value 120.0)>, <gurobi.Var f_a[8] (value 0.0)>,
+       <gurobi.Var f_a[9] (value 0.0)>, <gurobi.Var f_a[10] (value 0.0)>,
+       <gurobi.Var f_a[11] (value 0.0)>, <gurobi.Var f_a[12] (value 0.0)>,
+       <gurobi.Var f_a[13] (value 0.0)>, <gurobi.Var f_a[14] (value 0.0)>,
+       <gurobi.Var f_a[15] (value 0.0)>, <gurobi.Var f_a[16] (value 0.0)>,
+       <gurobi.Var f_a[17] (value 0.0)>, <gurobi.Var f_a[18] (value 0.0)>,
+       <gurobi.Var f_a[19] (value 0.0)>, <gurobi.Var f_a[20] (value 0.0)>,
+       <gurobi.Var f_a[21] (value 0.0)>, <gurobi.Var f_a[22] (value 0.0)>,
+       <gurobi.Var f_a[23] (value 0.0)>, <gurobi.Var f_a[24] (value 0.0)>,
+       <gurobi.Var f_a[25] (value -120.0)>,
+       <gurobi.Var f_a[26] (value -180.0)>,
+       <gurobi.Var f_a[27] (value 260.0)>,
+       <gurobi.Var f_a[28] (value 200.0)>,
+       <gurobi.Var f_a[29] (value 0.0)>, <gurobi.Var f_a[30] (value 0.0)>,
+       <gurobi.Var f_a[31] (value 0.0)>])
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_r[0] (value 0.0)>, <gurobi.Var f_r[1] (value 0.0)>,
+       <gurobi.Var f_r[2] (value 0.0)>, <gurobi.Var f_r[3] (value 0.0)>,
+       <gurobi.Var f_r[4] (value 0.0)>, <gurobi.Var f_r[5] (value 102.0)>,
+       <gurobi.Var f_r[6] (value 96.0)>, <gurobi.Var f_r[7] (value 36.0)>,
+       <gurobi.Var f_r[8] (value 0.0)>, <gurobi.Var f_r[9] (value 0.0)>,
+       <gurobi.Var f_r[10] (value 0.0)>, <gurobi.Var f_r[11] (value 0.0)>,
+       <gurobi.Var f_r[12] (value 0.0)>, <gurobi.Var f_r[13] (value 0.0)>,
+       <gurobi.Var f_r[14] (value 0.0)>, <gurobi.Var f_r[15] (value 0.0)>,
+       <gurobi.Var f_r[16] (value 0.0)>, <gurobi.Var f_r[17] (value 0.0)>,
+       <gurobi.Var f_r[18] (value 0.0)>, <gurobi.Var f_r[19] (value 0.0)>,
+       <gurobi.Var f_r[20] (value 0.0)>, <gurobi.Var f_r[21] (value 0.0)>,
+       <gurobi.Var f_r[22] (value 0.0)>, <gurobi.Var f_r[23] (value 0.0)>,
+       <gurobi.Var f_r[24] (value 0.0)>,
+       <gurobi.Var f_r[25] (value -36.0)>,
+       <gurobi.Var f_r[26] (value -54.0)>,
+       <gurobi.Var f_r[27] (value 84.509263157894)>,
+       <gurobi.Var f_r[28] (value 66.5092631578945)>,
+       <gurobi.Var f_r[29] (value 0.0)>, <gurobi.Var f_r[30] (value 0.0)>,
+       <gurobi.Var f_r[31] (value 0.0)>])
+2    <gurobi.Var gamma[2] (value 1.0)>
+7    <gurobi.Var gamma[7] (value 1.0)>
+dtype: object
+1  6      <gurobi.Var psi_a[1,6] (value 140.0)>
+2  28    <gurobi.Var psi_a[2,28] (value 380.0)>
+4  6       <gurobi.Var psi_a[4,6] (value 60.0)>
+5  28    <gurobi.Var psi_a[5,28] (value 120.0)>
+6  6      <gurobi.Var psi_a[6,6] (value 320.0)>
+dtype: object
+1  6                  <gurobi.Var psi_r[1,6] (value 42.0)>
+2  28    <gurobi.Var psi_r[2,28] (value 120.50926315789...
+4  6                  <gurobi.Var psi_r[4,6] (value 18.0)>
+5  28                <gurobi.Var psi_r[5,28] (value 36.0)>
+6  6                  <gurobi.Var psi_r[6,6] (value 96.0)>
+dtype: object
+2    <gurobi.Var phi[2] (value 20.0)>
+7    <gurobi.Var phi[7] (value 18.0)>
+dtype: object
+1      <gurobi.Var v[1] (value 148.62252099999998)>
+2      <gurobi.Var v[2] (value 148.62252099999998)>
+3      <gurobi.Var v[3] (value 148.62252099999998)>
+4      <gurobi.Var v[4] (value 148.62252099999998)>
+5      <gurobi.Var v[5] (value 148.62252099999998)>
+6      <gurobi.Var v[6] (value 148.62252099999998)>
+7              <gurobi.Var v[7] (value 147.271225)>
+8              <gurobi.Var v[8] (value 145.471929)>
+9              <gurobi.Var v[9] (value 144.648729)>
+10            <gurobi.Var v[10] (value 144.648729)>
+11            <gurobi.Var v[11] (value 144.648729)>
+12            <gurobi.Var v[12] (value 144.648729)>
+13            <gurobi.Var v[13] (value 144.648729)>
+14            <gurobi.Var v[14] (value 144.648729)>
+15            <gurobi.Var v[15] (value 144.648729)>
+16            <gurobi.Var v[16] (value 144.648729)>
+17            <gurobi.Var v[17] (value 144.648729)>
+18            <gurobi.Var v[18] (value 144.648729)>
+19    <gurobi.Var v[19] (value 148.62252099999998)>
+20    <gurobi.Var v[20] (value 148.62252099999998)>
+21    <gurobi.Var v[21] (value 148.62252099999998)>
+22    <gurobi.Var v[22] (value 148.62252099999998)>
+23    <gurobi.Var v[23] (value 148.62252099999998)>
+24    <gurobi.Var v[24] (value 148.62252099999998)>
+25    <gurobi.Var v[25] (value 148.62252099999998)>
+26    <gurobi.Var v[26] (value 148.62252099999998)>
+27            <gurobi.Var v[27] (value 150.562729)>
+28    <gurobi.Var v[28] (value 153.85996899999998)>
+29     <gurobi.Var v[29] (value 148.7092662631579)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+1  0      <gurobi.Var theta[1,0] (value 1.0)>
+2  20    <gurobi.Var theta[2,20] (value 1.0)>
+3  0      <gurobi.Var theta[3,0] (value 1.0)>
+4  0      <gurobi.Var theta[4,0] (value 1.0)>
+5  0      <gurobi.Var theta[5,0] (value 1.0)>
+6  0      <gurobi.Var theta[6,0] (value 1.0)>
+7  18    <gurobi.Var theta[7,18] (value 1.0)>
+8  0      <gurobi.Var theta[8,0] (value 1.0)>
+dtype: object
+1  0.0     <gurobi.Var nu[1,0.0] (value 1.0)>
+2  20.0     <gurobi.Var nu[2,20] (value 1.0)>
+3  0.0     <gurobi.Var nu[3,0.0] (value 1.0)>
+4  0.0     <gurobi.Var nu[4,0.0] (value 1.0)>
+5  0.0     <gurobi.Var nu[5,0.0] (value 1.0)>
+6  0.0     <gurobi.Var nu[6,0.0] (value 1.0)>
+7  18.0     <gurobi.Var nu[7,18] (value 1.0)>
+8  0.0     <gurobi.Var nu[8,0.0] (value 1.0)>
+dtype: object
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+Set parameter TimeLimit to value 3600
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 38765 rows, 3933 columns and 84124 nonzeros
+Model fingerprint: 0x8535d8e3
+Variable types: 762 continuous, 3171 integer (3163 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-01, 5e+03]
+Presolve removed 20479 rows and 1363 columns
+Presolve time: 0.30s
+Presolved: 18286 rows, 2570 columns, 42942 nonzeros
+Variable types: 612 continuous, 1958 integer (1958 binary)
+Found heuristic solution: objective 17850.000000
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.615666e+04, 639 iterations, 0.03 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 16156.6628    0  136 17850.0000 16156.6628  9.49%     -    0s
+H    0     0                    17760.000000 16156.6628  9.03%     -    0s
+     0     0 16433.0189    0   90 17760.0000 16433.0189  7.47%     -    0s
+     0     0 16496.6340    0   98 17760.0000 16496.6340  7.11%     -    0s
+     0     0 16572.8571    0  125 17760.0000 16572.8571  6.68%     -    0s
+     0     0 16743.5714    0   53 17760.0000 16743.5714  5.72%     -    0s
+     0     0 16747.4603    0   94 17760.0000 16747.4603  5.70%     -    0s
+     0     0 16779.1667    0  107 17760.0000 16779.1667  5.52%     -    0s
+     0     0 16846.9048    0  117 17760.0000 16846.9048  5.14%     -    0s
+     0     0 16853.8127    0  112 17760.0000 16853.8127  5.10%     -    0s
+     0     0 16853.8127    0  118 17760.0000 16853.8127  5.10%     -    1s
+     0     0 16919.8210    0  124 17760.0000 16919.8210  4.73%     -    1s
+     0     0 17029.7270    0  128 17760.0000 17029.7270  4.11%     -    1s
+     0     0 17029.7270    0  133 17760.0000 17029.7270  4.11%     -    1s
+     0     0 17029.7270    0  136 17760.0000 17029.7270  4.11%     -    1s
+     0     0 17029.7270    0  141 17760.0000 17029.7270  4.11%     -    1s
+     0     0 17029.7270    0   98 17760.0000 17029.7270  4.11%     -    1s
+     0     0 17040.5208    0   93 17760.0000 17040.5208  4.05%     -    1s
+     0     0 17042.4583    0   92 17760.0000 17042.4583  4.04%     -    1s
+     0     0 17044.4167    0   82 17760.0000 17044.4167  4.03%     -    1s
+     0     0 17044.4167    0   82 17760.0000 17044.4167  4.03%     -    1s
+     0     0 17062.6452    0  112 17760.0000 17062.6452  3.93%     -    1s
+H    0     0                    17640.000000 17067.6452  3.24%     -    1s
+     0     0 17067.6452    0   93 17640.0000 17067.6452  3.24%     -    1s
+     0     0 17076.5349    0  134 17640.0000 17076.5349  3.19%     -    1s
+H    0     0                    17560.000000 17089.9662  2.68%     -    1s
+     0     0 17089.9662    0  127 17560.0000 17089.9662  2.68%     -    1s
+     0     0 17089.9662    0  139 17560.0000 17089.9662  2.68%     -    1s
+     0     0 17096.9175    0  123 17560.0000 17096.9175  2.64%     -    2s
+     0     0 17109.4175    0  135 17560.0000 17109.4175  2.57%     -    2s
+     0     0 17109.4175    0  175 17560.0000 17109.4175  2.57%     -    2s
+     0     0 17141.2379    0  179 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  140 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  149 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  126 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  147 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  120 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  125 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  136 17560.0000 17141.2379  2.38%     -    2s
+     0     0 17141.2379    0  135 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  169 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  185 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  145 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  164 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  171 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  181 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  180 17560.0000 17141.2379  2.38%     -    3s
+     0     0 17141.2379    0  174 17560.0000 17141.2379  2.38%     -    3s
+     0     2 17141.2379    0  174 17560.0000 17141.2379  2.38%     -    3s
+    87    77 17423.3333   27   31 17560.0000 17174.3939  2.20%  40.5    5s
+H  460   332                    17535.000000 17250.3125  1.62%  43.3    7s
+H  523   296                    17490.000000 17250.3125  1.37%  44.7    8s
+   668   359 17273.8776   14  174 17490.0000 17270.0065  1.26%  47.3   10s
+H  670   341                    17470.000000 17360.0000  0.63%  47.1   11s
+   696   359 17423.0769   31   50 17470.0000 17402.9530  0.38%  45.4   15s
+
+Cutting planes:
+  Gomory: 61
+  Cover: 1
+  Clique: 1
+  MIR: 2
+  StrongCG: 2
+  Flow cover: 5
+  GUB cover: 5
+  Zero half: 105
+  RLT: 1
+
+Explored 755 nodes (51854 simplex iterations) in 16.97 seconds (21.55 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 9: 17470 17490 17490 ... 17850
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.747000000000e+04, best bound 1.747000000000e+04, gap 0.0000%
+c is 1    0.01
+2    0.01
+3    0.01
+4    0.01
+5    0.01
+6    0.01
+7    0.01
+8    0.01
+dtype: float64
+alpha is 1    0.85
+2    0.85
+3    0.85
+4    0.85
+5    0.85
+6    0.85
+7    0.85
+8    0.85
+dtype: float64
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8       <gurobi.Var q[8] (value 800.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 450.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 450.0)>
+24    <gurobi.Var q[24] (value 2100.0)>
+25    <gurobi.Var q[25] (value 2100.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+===============================
+sub network 1 includes nodes [3, 4, 5]
+optimal ens for node 3 is <gurobi.Var q[3] (value 450.0)>
+optimal ens for node 4 is <gurobi.Var q[4] (value 420.0)>
+optimal ens for node 5 is <gurobi.Var q[5] (value 300.0)>
+===============================
+===============================
+sub network 2 includes nodes [6, 7, 8, 9]
+optimal ens for node 6 is <gurobi.Var q[6] (value 300.0)>
+optimal ens for node 7 is <gurobi.Var q[7] (value 1000.0)>
+optimal ens for node 8 is <gurobi.Var q[8] (value 800.0)>
+optimal ens for node 9 is <gurobi.Var q[9] (value 300.0)>
+===============================
+===============================
+sub network 3 includes nodes [10, 11, 12, 13, 14]
+optimal ens for node 10 is <gurobi.Var q[10] (value 300.0)>
+optimal ens for node 11 is <gurobi.Var q[11] (value 225.0)>
+optimal ens for node 12 is <gurobi.Var q[12] (value 300.0)>
+optimal ens for node 13 is <gurobi.Var q[13] (value 300.0)>
+optimal ens for node 14 is <gurobi.Var q[14] (value 600.0)>
+===============================
+===============================
+sub network 4 includes nodes [15, 16, 17, 18]
+optimal ens for node 15 is <gurobi.Var q[15] (value 300.0)>
+optimal ens for node 16 is <gurobi.Var q[16] (value 300.0)>
+optimal ens for node 17 is <gurobi.Var q[17] (value 300.0)>
+optimal ens for node 18 is <gurobi.Var q[18] (value 450.0)>
+===============================
+===============================
+sub network 5 includes nodes [19, 20, 21, 22]
+optimal ens for node 19 is <gurobi.Var q[19] (value 450.0)>
+optimal ens for node 20 is <gurobi.Var q[20] (value 450.0)>
+optimal ens for node 21 is <gurobi.Var q[21] (value 315.0)>
+optimal ens for node 22 is <gurobi.Var q[22] (value 450.0)>
+===============================
+===============================
+sub network 6 includes nodes [23, 24, 25]
+optimal ens for node 23 is <gurobi.Var q[23] (value 450.0)>
+optimal ens for node 24 is <gurobi.Var q[24] (value 2100.0)>
+optimal ens for node 25 is <gurobi.Var q[25] (value 2100.0)>
+===============================
+===============================
+sub network 7 includes nodes [26, 27, 28, 29, 30]
+optimal ens for node 26 is <gurobi.Var q[26] (value 300.0)>
+optimal ens for node 27 is <gurobi.Var q[27] (value 210.0)>
+optimal ens for node 28 is <gurobi.Var q[28] (value 300.0)>
+optimal ens for node 29 is <gurobi.Var q[29] (value 600.0)>
+optimal ens for node 30 is <gurobi.Var q[30] (value 1000.0)>
+===============================
+===============================
+sub network 8 includes nodes [31, 32, 33]
+optimal ens for node 31 is <gurobi.Var q[31] (value 750.0)>
+optimal ens for node 32 is <gurobi.Var q[32] (value 1050.0)>
+optimal ens for node 33 is <gurobi.Var q[33] (value 300.0)>
+===============================
+1    <gurobi.Var x[1] (value 1.0)>
+2    <gurobi.Var x[2] (value 0.0)>
+3    <gurobi.Var x[3] (value 0.0)>
+4    <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value 1.0)>
+6    <gurobi.Var x[6] (value 0.0)>
+dtype: object
+1  6      <gurobi.Var y[1,6] (value 1.0)>
+2  6      <gurobi.Var y[2,6] (value 1.0)>
+3  28    <gurobi.Var y[3,28] (value 1.0)>
+4  6      <gurobi.Var y[4,6] (value 1.0)>
+5  28    <gurobi.Var y[5,28] (value 1.0)>
+6  28    <gurobi.Var y[6,28] (value 1.0)>
+dtype: object
+1  6   r     <gurobi.Var beta[1,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[1,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[1,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[1,9,r] (value 1.0)>
+2  6   u     <gurobi.Var beta[2,6,u] (value 1.0)>
+   7   u     <gurobi.Var beta[2,7,u] (value 1.0)>
+   8   u     <gurobi.Var beta[2,8,u] (value 1.0)>
+   9   u     <gurobi.Var beta[2,9,u] (value 1.0)>
+3  26  u    <gurobi.Var beta[3,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[3,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[3,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[3,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[3,30,u] (value 1.0)>
+4  6   r     <gurobi.Var beta[4,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[4,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[4,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[4,9,r] (value 1.0)>
+5  26  r    <gurobi.Var beta[5,26,r] (value 1.0)>
+   27  r    <gurobi.Var beta[5,27,r] (value 1.0)>
+   28  r    <gurobi.Var beta[5,28,r] (value 1.0)>
+   29  r    <gurobi.Var beta[5,29,r] (value 1.0)>
+   30  r    <gurobi.Var beta[5,30,r] (value 1.0)>
+6  26  u    <gurobi.Var beta[6,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[6,27,u] (value 1.0)>
+   29  u    <gurobi.Var beta[6,29,u] (value 1.0)>
+dtype: object
+1  6   6        <gurobi.Var z_a[1,6,6] (value 60.0)>
+       7       <gurobi.Var z_a[1,6,7] (value 140.0)>
+       9        <gurobi.Var z_a[1,6,9] (value 60.0)>
+2  6   6        <gurobi.Var z_a[2,6,6] (value 60.0)>
+       9        <gurobi.Var z_a[2,6,9] (value 60.0)>
+3  28  28     <gurobi.Var z_a[3,28,28] (value 60.0)>
+       29    <gurobi.Var z_a[3,28,29] (value 120.0)>
+4  6   6        <gurobi.Var z_a[4,6,6] (value 60.0)>
+       9        <gurobi.Var z_a[4,6,9] (value 60.0)>
+5  28  28     <gurobi.Var z_a[5,28,28] (value 60.0)>
+       29    <gurobi.Var z_a[5,28,29] (value 120.0)>
+6  28  28     <gurobi.Var z_a[6,28,28] (value 60.0)>
+       29     <gurobi.Var z_a[6,28,29] (value 80.0)>
+dtype: object
+1  6   6       <gurobi.Var z_r[1,6,6] (value 18.0)>
+       7       <gurobi.Var z_r[1,6,7] (value 42.0)>
+       9       <gurobi.Var z_r[1,6,9] (value 20.0)>
+2  6   6       <gurobi.Var z_r[2,6,6] (value 18.0)>
+       9       <gurobi.Var z_r[2,6,9] (value 20.0)>
+3  28  28    <gurobi.Var z_r[3,28,28] (value 18.0)>
+       29    <gurobi.Var z_r[3,28,29] (value 36.0)>
+4  6   6       <gurobi.Var z_r[4,6,6] (value 18.0)>
+       9       <gurobi.Var z_r[4,6,9] (value 20.0)>
+5  28  28    <gurobi.Var z_r[5,28,28] (value 18.0)>
+       29    <gurobi.Var z_r[5,28,29] (value 36.0)>
+6  28  28    <gurobi.Var z_r[6,28,28] (value 18.0)>
+       29    <gurobi.Var z_r[6,28,29] (value 24.0)>
+dtype: object
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_a[0] (value 0.0)>, <gurobi.Var f_a[1] (value 0.0)>,
+       <gurobi.Var f_a[2] (value 0.0)>, <gurobi.Var f_a[3] (value 0.0)>,
+       <gurobi.Var f_a[4] (value 0.0)>, <gurobi.Var f_a[5] (value 320.0)>,
+       <gurobi.Var f_a[6] (value 180.0)>,
+       <gurobi.Var f_a[7] (value 180.0)>, <gurobi.Var f_a[8] (value 0.0)>,
+       <gurobi.Var f_a[9] (value 0.0)>, <gurobi.Var f_a[10] (value 0.0)>,
+       <gurobi.Var f_a[11] (value 0.0)>, <gurobi.Var f_a[12] (value 0.0)>,
+       <gurobi.Var f_a[13] (value 0.0)>, <gurobi.Var f_a[14] (value 0.0)>,
+       <gurobi.Var f_a[15] (value 0.0)>, <gurobi.Var f_a[16] (value 0.0)>,
+       <gurobi.Var f_a[17] (value 0.0)>, <gurobi.Var f_a[18] (value 0.0)>,
+       <gurobi.Var f_a[19] (value 0.0)>, <gurobi.Var f_a[20] (value 0.0)>,
+       <gurobi.Var f_a[21] (value 0.0)>, <gurobi.Var f_a[22] (value 0.0)>,
+       <gurobi.Var f_a[23] (value 0.0)>, <gurobi.Var f_a[24] (value 0.0)>,
+       <gurobi.Var f_a[25] (value 0.0)>, <gurobi.Var f_a[26] (value 0.0)>,
+       <gurobi.Var f_a[27] (value 320.0)>,
+       <gurobi.Var f_a[28] (value 0.0)>, <gurobi.Var f_a[29] (value 0.0)>,
+       <gurobi.Var f_a[30] (value 0.0)>, <gurobi.Var f_a[31] (value 0.0)>])
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_r[0] (value 0.0)>, <gurobi.Var f_r[1] (value 0.0)>,
+       <gurobi.Var f_r[2] (value 0.0)>, <gurobi.Var f_r[3] (value 0.0)>,
+       <gurobi.Var f_r[4] (value 0.0)>, <gurobi.Var f_r[5] (value 102.0)>,
+       <gurobi.Var f_r[6] (value 60.0)>, <gurobi.Var f_r[7] (value 60.0)>,
+       <gurobi.Var f_r[8] (value 0.0)>, <gurobi.Var f_r[9] (value 0.0)>,
+       <gurobi.Var f_r[10] (value 0.0)>, <gurobi.Var f_r[11] (value 0.0)>,
+       <gurobi.Var f_r[12] (value 0.0)>, <gurobi.Var f_r[13] (value 0.0)>,
+       <gurobi.Var f_r[14] (value 0.0)>, <gurobi.Var f_r[15] (value 0.0)>,
+       <gurobi.Var f_r[16] (value 0.0)>, <gurobi.Var f_r[17] (value 0.0)>,
+       <gurobi.Var f_r[18] (value 0.0)>, <gurobi.Var f_r[19] (value 0.0)>,
+       <gurobi.Var f_r[20] (value 0.0)>, <gurobi.Var f_r[21] (value 0.0)>,
+       <gurobi.Var f_r[22] (value 0.0)>, <gurobi.Var f_r[23] (value 0.0)>,
+       <gurobi.Var f_r[24] (value 0.0)>, <gurobi.Var f_r[25] (value 0.0)>,
+       <gurobi.Var f_r[26] (value 0.0)>,
+       <gurobi.Var f_r[27] (value 96.0)>,
+       <gurobi.Var f_r[28] (value 0.0)>, <gurobi.Var f_r[29] (value 0.0)>,
+       <gurobi.Var f_r[30] (value 0.0)>, <gurobi.Var f_r[31] (value 0.0)>])
+2    <gurobi.Var gamma[2] (value 0.9615384615384615)>
+7                   <gurobi.Var gamma[7] (value 1.0)>
+dtype: object
+1  6      <gurobi.Var psi_a[1,6] (value 260.0)>
+2  6      <gurobi.Var psi_a[2,6] (value 120.0)>
+3  28    <gurobi.Var psi_a[3,28] (value 180.0)>
+4  6      <gurobi.Var psi_a[4,6] (value 120.0)>
+5  28    <gurobi.Var psi_a[5,28] (value 180.0)>
+6  28    <gurobi.Var psi_a[6,28] (value 140.0)>
+dtype: object
+1  6      <gurobi.Var psi_r[1,6] (value 80.0)>
+2  6      <gurobi.Var psi_r[2,6] (value 38.0)>
+3  28    <gurobi.Var psi_r[3,28] (value 54.0)>
+4  6      <gurobi.Var psi_r[4,6] (value 38.0)>
+5  28    <gurobi.Var psi_r[5,28] (value 54.0)>
+6  28    <gurobi.Var psi_r[6,28] (value 42.0)>
+dtype: object
+2    <gurobi.Var phi[2] (value 20.0)>
+7    <gurobi.Var phi[7] (value 18.0)>
+dtype: object
+1      <gurobi.Var v[1] (value 150.53941700000001)>
+2      <gurobi.Var v[2] (value 150.53941700000001)>
+3      <gurobi.Var v[3] (value 150.53941700000001)>
+4      <gurobi.Var v[4] (value 150.53941700000001)>
+5      <gurobi.Var v[5] (value 150.53941700000001)>
+6      <gurobi.Var v[6] (value 150.53941700000001)>
+7      <gurobi.Var v[7] (value 149.19560900000002)>
+8      <gurobi.Var v[8] (value 148.09950500000002)>
+9      <gurobi.Var v[9] (value 146.76870500000004)>
+10    <gurobi.Var v[10] (value 146.76870500000004)>
+11    <gurobi.Var v[11] (value 146.76870500000004)>
+12    <gurobi.Var v[12] (value 146.76870500000004)>
+13    <gurobi.Var v[13] (value 146.76870500000004)>
+14    <gurobi.Var v[14] (value 146.76870500000004)>
+15    <gurobi.Var v[15] (value 146.76870500000004)>
+16    <gurobi.Var v[16] (value 146.76870500000004)>
+17    <gurobi.Var v[17] (value 146.76870500000004)>
+18    <gurobi.Var v[18] (value 146.76870500000004)>
+19    <gurobi.Var v[19] (value 150.53941700000001)>
+20    <gurobi.Var v[20] (value 150.53941700000001)>
+21    <gurobi.Var v[21] (value 150.53941700000001)>
+22    <gurobi.Var v[22] (value 150.53941700000001)>
+23    <gurobi.Var v[23] (value 150.53941700000001)>
+24    <gurobi.Var v[24] (value 150.53941700000001)>
+25    <gurobi.Var v[25] (value 150.53941700000001)>
+26    <gurobi.Var v[26] (value 150.53941700000001)>
+27    <gurobi.Var v[27] (value 150.53941700000001)>
+28    <gurobi.Var v[28] (value 150.53941700000001)>
+29            <gurobi.Var v[29] (value 144.648729)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+1  0      <gurobi.Var theta[1,0] (value 1.0)>
+2  20    <gurobi.Var theta[2,20] (value 1.0)>
+3  0      <gurobi.Var theta[3,0] (value 1.0)>
+4  0      <gurobi.Var theta[4,0] (value 1.0)>
+5  0      <gurobi.Var theta[5,0] (value 1.0)>
+6  0      <gurobi.Var theta[6,0] (value 1.0)>
+7  18    <gurobi.Var theta[7,18] (value 1.0)>
+8  0      <gurobi.Var theta[8,0] (value 1.0)>
+dtype: object
+1  0.000000                   <gurobi.Var nu[1,0.0] (value 1.0)>
+2  19.230769    <gurobi.Var nu[2,19.23076923076923] (value 1.0)>
+3  0.000000                   <gurobi.Var nu[3,0.0] (value 1.0)>
+4  0.000000                   <gurobi.Var nu[4,0.0] (value 1.0)>
+5  0.000000                   <gurobi.Var nu[5,0.0] (value 1.0)>
+6  0.000000                   <gurobi.Var nu[6,0.0] (value 1.0)>
+7  18.000000                   <gurobi.Var nu[7,18] (value 1.0)>
+8  0.000000                   <gurobi.Var nu[8,0.0] (value 1.0)>
+dtype: object
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+Set parameter TimeLimit to value 3600
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 38765 rows, 3933 columns and 84124 nonzeros
+Model fingerprint: 0x5a9f4674
+Variable types: 762 continuous, 3171 integer (3163 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-01, 5e+03]
+Presolve removed 20479 rows and 1363 columns
+Presolve time: 0.30s
+Presolved: 18286 rows, 2570 columns, 42942 nonzeros
+Variable types: 612 continuous, 1958 integer (1958 binary)
+Found heuristic solution: objective 17850.000000
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.615666e+04, 656 iterations, 0.03 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 16156.6628    0  143 17850.0000 16156.6628  9.49%     -    0s
+     0     0 16456.9796    0  100 17850.0000 16456.9796  7.80%     -    0s
+     0     0 16584.5300    0  119 17850.0000 16584.5300  7.09%     -    0s
+     0     0 16687.5524    0  127 17850.0000 16687.5524  6.51%     -    0s
+     0     0 16837.5000    0   89 17850.0000 16837.5000  5.67%     -    0s
+     0     0 16865.2941    0  112 17850.0000 16865.2941  5.52%     -    0s
+     0     0 16906.8571    0  125 17850.0000 16906.8571  5.28%     -    0s
+     0     0 17002.1429    0  130 17850.0000 17002.1429  4.75%     -    0s
+     0     0 17031.0714    0  133 17850.0000 17031.0714  4.59%     -    0s
+     0     0 17051.2987    0  125 17850.0000 17051.2987  4.47%     -    1s
+     0     0 17055.4824    0  140 17850.0000 17055.4824  4.45%     -    1s
+     0     0 17055.8412    0  143 17850.0000 17055.8412  4.45%     -    1s
+     0     0 17056.9055    0  147 17850.0000 17056.9055  4.44%     -    1s
+     0     0 17056.9055    0  142 17850.0000 17056.9055  4.44%     -    1s
+     0     0 17112.0266    0  141 17850.0000 17112.0266  4.13%     -    1s
+     0     0 17121.6265    0  130 17850.0000 17121.6265  4.08%     -    1s
+     0     0 17159.0391    0  149 17850.0000 17159.0391  3.87%     -    1s
+     0     0 17159.3546    0  145 17850.0000 17159.3546  3.87%     -    1s
+     0     0 17159.3546    0  145 17850.0000 17159.3546  3.87%     -    1s
+     0     0 17172.3026    0  130 17850.0000 17172.3026  3.80%     -    1s
+     0     0 17175.3755    0  129 17850.0000 17175.3755  3.78%     -    1s
+     0     0 17176.8730    0  109 17850.0000 17176.8730  3.77%     -    1s
+H    0     0                    17760.000000 17179.9720  3.27%     -    1s
+     0     0 17180.4010    0  121 17760.0000 17180.4010  3.26%     -    1s
+     0     0 17180.4010    0  135 17760.0000 17180.4010  3.26%     -    1s
+     0     0 17185.4560    0  147 17760.0000 17185.4560  3.24%     -    1s
+     0     0 17188.5714    0  139 17760.0000 17188.5714  3.22%     -    1s
+     0     0 17189.1206    0  145 17760.0000 17189.1206  3.21%     -    2s
+     0     0 17189.2278    0  154 17760.0000 17189.2278  3.21%     -    2s
+     0     0 17190.3108    0  142 17760.0000 17190.3108  3.21%     -    2s
+     0     0 17191.3212    0  139 17760.0000 17191.3212  3.20%     -    2s
+     0     0 17191.3212    0  139 17760.0000 17191.3212  3.20%     -    2s
+     0     0 17191.3212    0  136 17760.0000 17191.3212  3.20%     -    2s
+     0     0 17192.6726    0  144 17760.0000 17192.6726  3.19%     -    2s
+     0     0 17192.6726    0  168 17760.0000 17192.6726  3.19%     -    2s
+H    0     0                    17560.000000 17193.0505  2.09%     -    2s
+     0     0 17193.0505    0  168 17560.0000 17193.0505  2.09%     -    2s
+     0     0 17193.0505    0  160 17560.0000 17193.0505  2.09%     -    2s
+     0     0 17193.0505    0  122 17560.0000 17193.0505  2.09%     -    2s
+     0     2 17198.2230    0  115 17560.0000 17198.2230  2.06%     -    3s
+H  131    88                    17500.000000 17247.0379  1.45%  65.3    4s
+   140    97 17324.6552   21  107 17500.0000 17247.0379  1.45%  65.5    5s
+H  599   287                    17470.000000 17305.0000  0.94%  63.4    8s
+   771   343 17415.9677   29  122 17470.0000 17305.0000  0.94%  62.7   10s
+   798   361 17425.0000   35   54 17470.0000 17396.6649  0.42%  60.6   15s
+
+Cutting planes:
+  Gomory: 70
+  Cover: 2
+  MIR: 6
+  Flow cover: 4
+  GUB cover: 7
+  Inf proof: 1
+  Zero half: 114
+  RLT: 1
+  BQP: 1
+
+Explored 830 nodes (62584 simplex iterations) in 15.68 seconds (20.89 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 8: 17470 17470 17500 ... 17850
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.747000000000e+04, best bound 1.747000000000e+04, gap 0.0000%
+c is 1    0.01
+2    0.01
+3    0.01
+4    0.01
+5    0.01
+6    0.01
+7    0.01
+8    0.01
+dtype: float64
+alpha is 1    0.85
+2    0.85
+3    0.85
+4    0.85
+5    0.85
+6    0.85
+7    0.85
+8    0.85
+dtype: float64
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8       <gurobi.Var q[8] (value 800.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 315.0)>
+20     <gurobi.Var q[20] (value 450.0)>
+21     <gurobi.Var q[21] (value 450.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 450.0)>
+24    <gurobi.Var q[24] (value 2100.0)>
+25    <gurobi.Var q[25] (value 2100.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+===============================
+sub network 1 includes nodes [3, 4, 5]
+optimal ens for node 3 is <gurobi.Var q[3] (value 450.0)>
+optimal ens for node 4 is <gurobi.Var q[4] (value 420.0)>
+optimal ens for node 5 is <gurobi.Var q[5] (value 300.0)>
+===============================
+===============================
+sub network 2 includes nodes [6, 7, 8, 9]
+optimal ens for node 6 is <gurobi.Var q[6] (value 300.0)>
+optimal ens for node 7 is <gurobi.Var q[7] (value 1000.0)>
+optimal ens for node 8 is <gurobi.Var q[8] (value 800.0)>
+optimal ens for node 9 is <gurobi.Var q[9] (value 300.0)>
+===============================
+===============================
+sub network 3 includes nodes [10, 11, 12, 13, 14]
+optimal ens for node 10 is <gurobi.Var q[10] (value 300.0)>
+optimal ens for node 11 is <gurobi.Var q[11] (value 225.0)>
+optimal ens for node 12 is <gurobi.Var q[12] (value 300.0)>
+optimal ens for node 13 is <gurobi.Var q[13] (value 300.0)>
+optimal ens for node 14 is <gurobi.Var q[14] (value 600.0)>
+===============================
+===============================
+sub network 4 includes nodes [15, 16, 17, 18]
+optimal ens for node 15 is <gurobi.Var q[15] (value 300.0)>
+optimal ens for node 16 is <gurobi.Var q[16] (value 300.0)>
+optimal ens for node 17 is <gurobi.Var q[17] (value 300.0)>
+optimal ens for node 18 is <gurobi.Var q[18] (value 450.0)>
+===============================
+===============================
+sub network 5 includes nodes [19, 20, 21, 22]
+optimal ens for node 19 is <gurobi.Var q[19] (value 315.0)>
+optimal ens for node 20 is <gurobi.Var q[20] (value 450.0)>
+optimal ens for node 21 is <gurobi.Var q[21] (value 450.0)>
+optimal ens for node 22 is <gurobi.Var q[22] (value 450.0)>
+===============================
+===============================
+sub network 6 includes nodes [23, 24, 25]
+optimal ens for node 23 is <gurobi.Var q[23] (value 450.0)>
+optimal ens for node 24 is <gurobi.Var q[24] (value 2100.0)>
+optimal ens for node 25 is <gurobi.Var q[25] (value 2100.0)>
+===============================
+===============================
+sub network 7 includes nodes [26, 27, 28, 29, 30]
+optimal ens for node 26 is <gurobi.Var q[26] (value 300.0)>
+optimal ens for node 27 is <gurobi.Var q[27] (value 210.0)>
+optimal ens for node 28 is <gurobi.Var q[28] (value 300.0)>
+optimal ens for node 29 is <gurobi.Var q[29] (value 600.0)>
+optimal ens for node 30 is <gurobi.Var q[30] (value 1000.0)>
+===============================
+===============================
+sub network 8 includes nodes [31, 32, 33]
+optimal ens for node 31 is <gurobi.Var q[31] (value 750.0)>
+optimal ens for node 32 is <gurobi.Var q[32] (value 1050.0)>
+optimal ens for node 33 is <gurobi.Var q[33] (value 300.0)>
+===============================
+1    <gurobi.Var x[1] (value 0.0)>
+2    <gurobi.Var x[2] (value 1.0)>
+3    <gurobi.Var x[3] (value 1.0)>
+4    <gurobi.Var x[4] (value 0.0)>
+5    <gurobi.Var x[5] (value 0.0)>
+6    <gurobi.Var x[6] (value 1.0)>
+dtype: object
+1  28    <gurobi.Var y[1,28] (value 1.0)>
+2  6      <gurobi.Var y[2,6] (value 1.0)>
+3  28    <gurobi.Var y[3,28] (value 1.0)>
+4  28    <gurobi.Var y[4,28] (value 1.0)>
+5  6      <gurobi.Var y[5,6] (value 1.0)>
+6  6      <gurobi.Var y[6,6] (value 1.0)>
+dtype: object
+1  26  u    <gurobi.Var beta[1,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[1,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[1,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[1,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[1,30,u] (value 1.0)>
+2  6   r     <gurobi.Var beta[2,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[2,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[2,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[2,9,r] (value 1.0)>
+3  26  r    <gurobi.Var beta[3,26,r] (value 1.0)>
+   27  r    <gurobi.Var beta[3,27,r] (value 1.0)>
+   28  r    <gurobi.Var beta[3,28,r] (value 1.0)>
+   29  r    <gurobi.Var beta[3,29,r] (value 1.0)>
+   30  r    <gurobi.Var beta[3,30,r] (value 1.0)>
+4  26  u    <gurobi.Var beta[4,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[4,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[4,28,u] (value 1.0)>
+5  6   u     <gurobi.Var beta[5,6,u] (value 1.0)>
+   7   u     <gurobi.Var beta[5,7,u] (value 1.0)>
+   8   u     <gurobi.Var beta[5,8,u] (value 1.0)>
+   9   u     <gurobi.Var beta[5,9,u] (value 1.0)>
+6  6   r     <gurobi.Var beta[6,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[6,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[6,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[6,9,r] (value 1.0)>
+dtype: object
+1  28  26    <gurobi.Var z_a[1,28,26] (value 60.0)>
+       28    <gurobi.Var z_a[1,28,28] (value 60.0)>
+2  6   6       <gurobi.Var z_a[2,6,6] (value 60.0)>
+       7      <gurobi.Var z_a[2,6,7] (value 140.0)>
+       8      <gurobi.Var z_a[2,6,8] (value 200.0)>
+       9       <gurobi.Var z_a[2,6,9] (value 60.0)>
+3  28  26    <gurobi.Var z_a[3,28,26] (value 60.0)>
+       27    <gurobi.Var z_a[3,28,27] (value 60.0)>
+       28    <gurobi.Var z_a[3,28,28] (value 60.0)>
+4  28  26    <gurobi.Var z_a[4,28,26] (value 60.0)>
+       27    <gurobi.Var z_a[4,28,27] (value 60.0)>
+       28    <gurobi.Var z_a[4,28,28] (value 60.0)>
+       30    <gurobi.Var z_a[4,28,30] (value 20.0)>
+5  6   6       <gurobi.Var z_a[5,6,6] (value 60.0)>
+dtype: object
+1  28  26    <gurobi.Var z_r[1,28,26] (value 18.0)>
+       28    <gurobi.Var z_r[1,28,28] (value 18.0)>
+2  6   6       <gurobi.Var z_r[2,6,6] (value 18.0)>
+       7       <gurobi.Var z_r[2,6,7] (value 42.0)>
+       8       <gurobi.Var z_r[2,6,8] (value 60.0)>
+       9       <gurobi.Var z_r[2,6,9] (value 18.0)>
+3  28  26    <gurobi.Var z_r[3,28,26] (value 18.0)>
+       27    <gurobi.Var z_r[3,28,27] (value 18.0)>
+       28    <gurobi.Var z_r[3,28,28] (value 18.0)>
+4  28  26    <gurobi.Var z_r[4,28,26] (value 18.0)>
+       27    <gurobi.Var z_r[4,28,27] (value 18.0)>
+       28    <gurobi.Var z_r[4,28,28] (value 18.0)>
+       30     <gurobi.Var z_r[4,28,30] (value 6.0)>
+5  6   6       <gurobi.Var z_r[5,6,6] (value 18.0)>
+dtype: object
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_a[0] (value 0.0)>, <gurobi.Var f_a[1] (value 0.0)>,
+       <gurobi.Var f_a[2] (value 0.0)>, <gurobi.Var f_a[3] (value 0.0)>,
+       <gurobi.Var f_a[4] (value 0.0)>, <gurobi.Var f_a[5] (value 400.0)>,
+       <gurobi.Var f_a[6] (value 260.0)>,
+       <gurobi.Var f_a[7] (value 60.0)>, <gurobi.Var f_a[8] (value 0.0)>,
+       <gurobi.Var f_a[9] (value 0.0)>, <gurobi.Var f_a[10] (value 0.0)>,
+       <gurobi.Var f_a[11] (value 0.0)>, <gurobi.Var f_a[12] (value 0.0)>,
+       <gurobi.Var f_a[13] (value 0.0)>, <gurobi.Var f_a[14] (value 0.0)>,
+       <gurobi.Var f_a[15] (value 0.0)>, <gurobi.Var f_a[16] (value 0.0)>,
+       <gurobi.Var f_a[17] (value 0.0)>, <gurobi.Var f_a[18] (value 0.0)>,
+       <gurobi.Var f_a[19] (value 0.0)>, <gurobi.Var f_a[20] (value 0.0)>,
+       <gurobi.Var f_a[21] (value 0.0)>, <gurobi.Var f_a[22] (value 0.0)>,
+       <gurobi.Var f_a[23] (value 0.0)>, <gurobi.Var f_a[24] (value 0.0)>,
+       <gurobi.Var f_a[25] (value -180.0)>,
+       <gurobi.Var f_a[26] (value -300.0)>,
+       <gurobi.Var f_a[27] (value 20.0)>,
+       <gurobi.Var f_a[28] (value 20.0)>,
+       <gurobi.Var f_a[29] (value 0.0)>, <gurobi.Var f_a[30] (value 0.0)>,
+       <gurobi.Var f_a[31] (value 0.0)>])
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_r[0] (value 0.0)>, <gurobi.Var f_r[1] (value 0.0)>,
+       <gurobi.Var f_r[2] (value 0.0)>, <gurobi.Var f_r[3] (value 0.0)>,
+       <gurobi.Var f_r[4] (value 0.0)>, <gurobi.Var f_r[5] (value 120.0)>,
+       <gurobi.Var f_r[6] (value 78.0)>, <gurobi.Var f_r[7] (value 18.0)>,
+       <gurobi.Var f_r[8] (value 0.0)>, <gurobi.Var f_r[9] (value 0.0)>,
+       <gurobi.Var f_r[10] (value 0.0)>, <gurobi.Var f_r[11] (value 0.0)>,
+       <gurobi.Var f_r[12] (value 0.0)>, <gurobi.Var f_r[13] (value 0.0)>,
+       <gurobi.Var f_r[14] (value 0.0)>, <gurobi.Var f_r[15] (value 0.0)>,
+       <gurobi.Var f_r[16] (value 0.0)>, <gurobi.Var f_r[17] (value 0.0)>,
+       <gurobi.Var f_r[18] (value 0.0)>, <gurobi.Var f_r[19] (value 0.0)>,
+       <gurobi.Var f_r[20] (value 0.0)>, <gurobi.Var f_r[21] (value 0.0)>,
+       <gurobi.Var f_r[22] (value 0.0)>, <gurobi.Var f_r[23] (value 0.0)>,
+       <gurobi.Var f_r[24] (value 0.0)>,
+       <gurobi.Var f_r[25] (value -54.0)>,
+       <gurobi.Var f_r[26] (value -90.0)>,
+       <gurobi.Var f_r[27] (value 6.0)>, <gurobi.Var f_r[28] (value 6.0)>,
+       <gurobi.Var f_r[29] (value 0.0)>, <gurobi.Var f_r[30] (value 0.0)>,
+       <gurobi.Var f_r[31] (value 0.0)>])
+2    <gurobi.Var gamma[2] (value 1.0)>
+7    <gurobi.Var gamma[7] (value 1.0)>
+dtype: object
+1  28    <gurobi.Var psi_a[1,28] (value 120.0)>
+2  6      <gurobi.Var psi_a[2,6] (value 460.0)>
+3  28    <gurobi.Var psi_a[3,28] (value 180.0)>
+4  28    <gurobi.Var psi_a[4,28] (value 200.0)>
+5  6       <gurobi.Var psi_a[5,6] (value 60.0)>
+dtype: object
+1  28    <gurobi.Var psi_r[1,28] (value 36.0)>
+2  6     <gurobi.Var psi_r[2,6] (value 138.0)>
+3  28    <gurobi.Var psi_r[3,28] (value 54.0)>
+4  28    <gurobi.Var psi_r[4,28] (value 60.0)>
+5  6      <gurobi.Var psi_r[5,6] (value 18.0)>
+dtype: object
+2    <gurobi.Var phi[2] (value 20.0)>
+7    <gurobi.Var phi[7] (value 18.0)>
+dtype: object
+1      <gurobi.Var v[1] (value 148.11201699999998)>
+2      <gurobi.Var v[2] (value 148.11201699999998)>
+3      <gurobi.Var v[3] (value 148.11201699999998)>
+4      <gurobi.Var v[4] (value 148.11201699999998)>
+5      <gurobi.Var v[5] (value 148.11201699999998)>
+6      <gurobi.Var v[6] (value 148.11201699999998)>
+7              <gurobi.Var v[7] (value 146.522257)>
+8              <gurobi.Var v[8] (value 145.060329)>
+9              <gurobi.Var v[9] (value 144.648729)>
+10            <gurobi.Var v[10] (value 144.648729)>
+11            <gurobi.Var v[11] (value 144.648729)>
+12            <gurobi.Var v[12] (value 144.648729)>
+13            <gurobi.Var v[13] (value 144.648729)>
+14            <gurobi.Var v[14] (value 144.648729)>
+15            <gurobi.Var v[15] (value 144.648729)>
+16            <gurobi.Var v[16] (value 144.648729)>
+17            <gurobi.Var v[17] (value 144.648729)>
+18            <gurobi.Var v[18] (value 144.648729)>
+19    <gurobi.Var v[19] (value 148.11201699999998)>
+20    <gurobi.Var v[20] (value 148.11201699999998)>
+21    <gurobi.Var v[21] (value 148.11201699999998)>
+22    <gurobi.Var v[22] (value 148.11201699999998)>
+23    <gurobi.Var v[23] (value 148.11201699999998)>
+24    <gurobi.Var v[24] (value 148.11201699999998)>
+25    <gurobi.Var v[25] (value 148.11201699999998)>
+26    <gurobi.Var v[26] (value 148.11201699999998)>
+27    <gurobi.Var v[27] (value 151.02232899999998)>
+28    <gurobi.Var v[28] (value 156.51772899999997)>
+29    <gurobi.Var v[29] (value 156.14956099999998)>
+30    <gurobi.Var v[30] (value 155.78126099999997)>
+31    <gurobi.Var v[31] (value 155.78126099999997)>
+32    <gurobi.Var v[32] (value 155.78126099999997)>
+33    <gurobi.Var v[33] (value 155.78126099999997)>
+dtype: object
+1  0      <gurobi.Var theta[1,0] (value 1.0)>
+2  20    <gurobi.Var theta[2,20] (value 1.0)>
+3  0      <gurobi.Var theta[3,0] (value 1.0)>
+4  0      <gurobi.Var theta[4,0] (value 1.0)>
+5  0      <gurobi.Var theta[5,0] (value 1.0)>
+6  0      <gurobi.Var theta[6,0] (value 1.0)>
+7  18    <gurobi.Var theta[7,18] (value 1.0)>
+8  0      <gurobi.Var theta[8,0] (value 1.0)>
+dtype: object
+1  0.0     <gurobi.Var nu[1,0.0] (value 1.0)>
+2  20.0     <gurobi.Var nu[2,20] (value 1.0)>
+3  0.0     <gurobi.Var nu[3,0.0] (value 1.0)>
+4  0.0     <gurobi.Var nu[4,0.0] (value 1.0)>
+5  0.0     <gurobi.Var nu[5,0.0] (value 1.0)>
+6  0.0     <gurobi.Var nu[6,0.0] (value 1.0)>
+7  18.0     <gurobi.Var nu[7,18] (value 1.0)>
+8  0.0     <gurobi.Var nu[8,0.0] (value 1.0)>
+dtype: object
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+Set parameter TimeLimit to value 3600
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 38765 rows, 3933 columns and 84124 nonzeros
+Model fingerprint: 0x74a2bea1
+Variable types: 762 continuous, 3171 integer (3163 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-01, 5e+03]
+Presolve removed 20479 rows and 1363 columns
+Presolve time: 0.49s
+Presolved: 18286 rows, 2570 columns, 42942 nonzeros
+Variable types: 612 continuous, 1958 integer (1958 binary)
+Found heuristic solution: objective 17850.000000
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.615666e+04, 639 iterations, 0.05 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 16156.6628    0  150 17850.0000 16156.6628  9.49%     -    0s
+H    0     0                    17760.000000 16156.6628  9.03%     -    0s
+     0     0 16456.9796    0   76 17760.0000 16456.9796  7.34%     -    1s
+     0     0 16582.0000    0  135 17760.0000 16582.0000  6.63%     -    1s
+     0     0 16665.0893    0  122 17760.0000 16665.0893  6.17%     -    1s
+     0     0 16840.0000    0   57 17760.0000 16840.0000  5.18%     -    1s
+     0     0 16921.0000    0   73 17760.0000 16921.0000  4.72%     -    1s
+     0     0 16947.5000    0   89 17760.0000 16947.5000  4.57%     -    1s
+     0     0 17015.0000    0   88 17760.0000 17015.0000  4.19%     -    1s
+     0     0 17021.6667    0   98 17760.0000 17021.6667  4.16%     -    1s
+     0     0 17021.6667    0  105 17760.0000 17021.6667  4.16%     -    1s
+     0     0 17039.6946    0  133 17760.0000 17039.6946  4.06%     -    1s
+     0     0 17041.0953    0  138 17760.0000 17041.0953  4.05%     -    1s
+     0     0 17041.7765    0  152 17760.0000 17041.7765  4.04%     -    1s
+     0     0 17041.8136    0  141 17760.0000 17041.8136  4.04%     -    1s
+     0     0 17058.6538    0  136 17760.0000 17058.6538  3.95%     -    1s
+     0     0 17070.5949    0  122 17760.0000 17070.5949  3.88%     -    2s
+     0     0 17089.7132    0  145 17760.0000 17089.7132  3.77%     -    2s
+     0     0 17099.4342    0  152 17760.0000 17099.4342  3.72%     -    2s
+     0     0 17099.5002    0  147 17760.0000 17099.5002  3.72%     -    2s
+     0     0 17109.6667    0  112 17760.0000 17109.6667  3.66%     -    2s
+     0     0 17113.6992    0  115 17760.0000 17113.6992  3.64%     -    2s
+     0     0 17137.5000    0  116 17760.0000 17137.5000  3.51%     -    2s
+H    0     0                    17560.000000 17142.5000  2.38%     -    2s
+     0     0 17145.0556    0  127 17560.0000 17145.0556  2.36%     -    2s
+     0     0 17146.2033    0  143 17560.0000 17146.2033  2.36%     -    2s
+     0     0 17146.2361    0  146 17560.0000 17146.2361  2.36%     -    2s
+     0     0 17163.0000    0   62 17560.0000 17163.0000  2.26%     -    2s
+     0     0 17172.0933    0  155 17560.0000 17172.0933  2.21%     -    3s
+     0     0 17172.0933    0  149 17560.0000 17172.0933  2.21%     -    3s
+     0     0 17172.0933    0  149 17560.0000 17172.0933  2.21%     -    3s
+     0     0 17172.0933    0  140 17560.0000 17172.0933  2.21%     -    3s
+     0     0 17172.5000    0  119 17560.0000 17172.5000  2.21%     -    3s
+     0     0 17172.5000    0  128 17560.0000 17172.5000  2.21%     -    3s
+     0     0 17172.5000    0  138 17560.0000 17172.5000  2.21%     -    3s
+     0     0 17172.5000    0  162 17560.0000 17172.5000  2.21%     -    3s
+     0     0 17172.5000    0  170 17560.0000 17172.5000  2.21%     -    3s
+     0     0 17180.7200    0  143 17560.0000 17180.7200  2.16%     -    3s
+     0     0 17181.3000    0  145 17560.0000 17181.3000  2.16%     -    3s
+     0     0 17181.5390    0  133 17560.0000 17181.5390  2.16%     -    4s
+     0     0 17182.6917    0  184 17560.0000 17182.6917  2.15%     -    4s
+     0     0 17182.6917    0  182 17560.0000 17182.6917  2.15%     -    4s
+     0     0 17183.0615    0  153 17560.0000 17183.0615  2.15%     -    4s
+     0     0 17183.6667    0  124 17560.0000 17183.6667  2.14%     -    4s
+     0     2 17184.2000    0  124 17560.0000 17184.2000  2.14%     -    4s
+     5     7 17216.4583    5  145 17560.0000 17185.8750  2.13%   141    5s
+H  625   324                    17500.000000 17260.4167  1.37%  33.3    9s
+   635   335 17492.5000   18  124 17500.0000 17260.4167  1.37%  33.5   11s
+   657   350 17483.5714   25   66 17500.0000 17395.3704  0.60%  32.4   15s
+*  689   331              33    17470.000000 17395.3704  0.43%  41.5   16s
+
+Cutting planes:
+  Gomory: 60
+  Cover: 8
+  Implied bound: 2
+  MIR: 4
+  Flow cover: 10
+  GUB cover: 8
+  Zero half: 88
+  RLT: 5
+  Relax-and-lift: 1
+  BQP: 1
+
+Explored 798 nodes (36935 simplex iterations) in 18.31 seconds (21.04 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 7: 17470 17500 17500 ... 17850
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.747000000000e+04, best bound 1.747000000000e+04, gap 0.0000%
+c is 1    0.01
+2    0.01
+3    0.01
+4    0.01
+5    0.01
+6    0.01
+7    0.01
+8    0.01
+dtype: float64
+alpha is 1    0.85
+2    0.85
+3    0.85
+4    0.85
+5    0.85
+6    0.85
+7    0.85
+8    0.85
+dtype: float64
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8       <gurobi.Var q[8] (value 800.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 450.0)>
+21     <gurobi.Var q[21] (value 315.0)>
+22     <gurobi.Var q[22] (value 450.0)>
+23     <gurobi.Var q[23] (value 450.0)>
+24    <gurobi.Var q[24] (value 2100.0)>
+25    <gurobi.Var q[25] (value 2100.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+===============================
+sub network 1 includes nodes [3, 4, 5]
+optimal ens for node 3 is <gurobi.Var q[3] (value 450.0)>
+optimal ens for node 4 is <gurobi.Var q[4] (value 420.0)>
+optimal ens for node 5 is <gurobi.Var q[5] (value 300.0)>
+===============================
+===============================
+sub network 2 includes nodes [6, 7, 8, 9]
+optimal ens for node 6 is <gurobi.Var q[6] (value 300.0)>
+optimal ens for node 7 is <gurobi.Var q[7] (value 1000.0)>
+optimal ens for node 8 is <gurobi.Var q[8] (value 800.0)>
+optimal ens for node 9 is <gurobi.Var q[9] (value 300.0)>
+===============================
+===============================
+sub network 3 includes nodes [10, 11, 12, 13, 14]
+optimal ens for node 10 is <gurobi.Var q[10] (value 300.0)>
+optimal ens for node 11 is <gurobi.Var q[11] (value 225.0)>
+optimal ens for node 12 is <gurobi.Var q[12] (value 300.0)>
+optimal ens for node 13 is <gurobi.Var q[13] (value 300.0)>
+optimal ens for node 14 is <gurobi.Var q[14] (value 600.0)>
+===============================
+===============================
+sub network 4 includes nodes [15, 16, 17, 18]
+optimal ens for node 15 is <gurobi.Var q[15] (value 300.0)>
+optimal ens for node 16 is <gurobi.Var q[16] (value 300.0)>
+optimal ens for node 17 is <gurobi.Var q[17] (value 300.0)>
+optimal ens for node 18 is <gurobi.Var q[18] (value 450.0)>
+===============================
+===============================
+sub network 5 includes nodes [19, 20, 21, 22]
+optimal ens for node 19 is <gurobi.Var q[19] (value 450.0)>
+optimal ens for node 20 is <gurobi.Var q[20] (value 450.0)>
+optimal ens for node 21 is <gurobi.Var q[21] (value 315.0)>
+optimal ens for node 22 is <gurobi.Var q[22] (value 450.0)>
+===============================
+===============================
+sub network 6 includes nodes [23, 24, 25]
+optimal ens for node 23 is <gurobi.Var q[23] (value 450.0)>
+optimal ens for node 24 is <gurobi.Var q[24] (value 2100.0)>
+optimal ens for node 25 is <gurobi.Var q[25] (value 2100.0)>
+===============================
+===============================
+sub network 7 includes nodes [26, 27, 28, 29, 30]
+optimal ens for node 26 is <gurobi.Var q[26] (value 300.0)>
+optimal ens for node 27 is <gurobi.Var q[27] (value 210.0)>
+optimal ens for node 28 is <gurobi.Var q[28] (value 300.0)>
+optimal ens for node 29 is <gurobi.Var q[29] (value 600.0)>
+optimal ens for node 30 is <gurobi.Var q[30] (value 1000.0)>
+===============================
+===============================
+sub network 8 includes nodes [31, 32, 33]
+optimal ens for node 31 is <gurobi.Var q[31] (value 750.0)>
+optimal ens for node 32 is <gurobi.Var q[32] (value 1050.0)>
+optimal ens for node 33 is <gurobi.Var q[33] (value 300.0)>
+===============================
+1    <gurobi.Var x[1] (value 0.0)>
+2    <gurobi.Var x[2] (value 1.0)>
+3    <gurobi.Var x[3] (value 1.0)>
+4    <gurobi.Var x[4] (value 0.0)>
+5    <gurobi.Var x[5] (value 0.0)>
+6    <gurobi.Var x[6] (value 1.0)>
+dtype: object
+1  6      <gurobi.Var y[1,6] (value 1.0)>
+2  6      <gurobi.Var y[2,6] (value 1.0)>
+3  6      <gurobi.Var y[3,6] (value 1.0)>
+4  28    <gurobi.Var y[4,28] (value 1.0)>
+5  28    <gurobi.Var y[5,28] (value 1.0)>
+6  28    <gurobi.Var y[6,28] (value 1.0)>
+dtype: object
+1  6   u     <gurobi.Var beta[1,6,u] (value 1.0)>
+   7   u     <gurobi.Var beta[1,7,u] (value 1.0)>
+   8   u     <gurobi.Var beta[1,8,u] (value 1.0)>
+   9   u     <gurobi.Var beta[1,9,u] (value 1.0)>
+2  6   r     <gurobi.Var beta[2,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[2,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[2,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[2,9,r] (value 1.0)>
+3  6   r     <gurobi.Var beta[3,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[3,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[3,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[3,9,r] (value 1.0)>
+4  26  u    <gurobi.Var beta[4,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[4,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[4,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[4,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[4,30,u] (value 1.0)>
+5  26  u    <gurobi.Var beta[5,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[5,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[5,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[5,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[5,30,u] (value 1.0)>
+6  26  r    <gurobi.Var beta[6,26,r] (value 1.0)>
+   27  r    <gurobi.Var beta[6,27,r] (value 1.0)>
+   28  r    <gurobi.Var beta[6,28,r] (value 1.0)>
+   29  r    <gurobi.Var beta[6,29,r] (value 1.0)>
+   30  r    <gurobi.Var beta[6,30,r] (value 1.0)>
+dtype: object
+1  6   7                 <gurobi.Var z_a[1,6,7] (value 200.0)>
+2  6   7     <gurobi.Var z_a[2,6,7] (value 100.000000000200...
+3  6   7                 <gurobi.Var z_a[3,6,7] (value 200.0)>
+4  28  30              <gurobi.Var z_a[4,28,30] (value 120.0)>
+5  28  29              <gurobi.Var z_a[5,28,29] (value 120.0)>
+6  28  27               <gurobi.Var z_a[6,28,27] (value 60.0)>
+       30              <gurobi.Var z_a[6,28,30] (value 200.0)>
+dtype: object
+1  6   7                  <gurobi.Var z_r[1,6,7] (value 60.0)>
+2  6   7     <gurobi.Var z_r[2,6,7] (value 70.00000000014049)>
+3  6   7                  <gurobi.Var z_r[3,6,7] (value 60.0)>
+4  28  30               <gurobi.Var z_r[4,28,30] (value 84.0)>
+5  28  29               <gurobi.Var z_r[5,28,29] (value 70.0)>
+6  28  27               <gurobi.Var z_r[6,28,27] (value 18.0)>
+       30              <gurobi.Var z_r[6,28,30] (value 140.0)>
+dtype: object
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_a[0] (value 0.0)>, <gurobi.Var f_a[1] (value 0.0)>,
+       <gurobi.Var f_a[2] (value 0.0)>, <gurobi.Var f_a[3] (value 0.0)>,
+       <gurobi.Var f_a[4] (value 0.0)>,
+       <gurobi.Var f_a[5] (value 500.0000000002007)>,
+       <gurobi.Var f_a[6] (value 0.0)>, <gurobi.Var f_a[7] (value 0.0)>,
+       <gurobi.Var f_a[8] (value 0.0)>, <gurobi.Var f_a[9] (value 0.0)>,
+       <gurobi.Var f_a[10] (value 0.0)>, <gurobi.Var f_a[11] (value 0.0)>,
+       <gurobi.Var f_a[12] (value 0.0)>, <gurobi.Var f_a[13] (value 0.0)>,
+       <gurobi.Var f_a[14] (value 0.0)>, <gurobi.Var f_a[15] (value 0.0)>,
+       <gurobi.Var f_a[16] (value 0.0)>, <gurobi.Var f_a[17] (value 0.0)>,
+       <gurobi.Var f_a[18] (value 0.0)>, <gurobi.Var f_a[19] (value 0.0)>,
+       <gurobi.Var f_a[20] (value 0.0)>, <gurobi.Var f_a[21] (value 0.0)>,
+       <gurobi.Var f_a[22] (value 0.0)>, <gurobi.Var f_a[23] (value 0.0)>,
+       <gurobi.Var f_a[24] (value 0.0)>, <gurobi.Var f_a[25] (value 0.0)>,
+       <gurobi.Var f_a[26] (value -60.0)>,
+       <gurobi.Var f_a[27] (value 440.0)>,
+       <gurobi.Var f_a[28] (value 320.0)>,
+       <gurobi.Var f_a[29] (value 0.0)>, <gurobi.Var f_a[30] (value 0.0)>,
+       <gurobi.Var f_a[31] (value 0.0)>])
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_r[0] (value 0.0)>, <gurobi.Var f_r[1] (value 0.0)>,
+       <gurobi.Var f_r[2] (value 0.0)>, <gurobi.Var f_r[3] (value 0.0)>,
+       <gurobi.Var f_r[4] (value 0.0)>,
+       <gurobi.Var f_r[5] (value 190.0000000001405)>,
+       <gurobi.Var f_r[6] (value 0.0)>, <gurobi.Var f_r[7] (value 0.0)>,
+       <gurobi.Var f_r[8] (value 0.0)>, <gurobi.Var f_r[9] (value 0.0)>,
+       <gurobi.Var f_r[10] (value 0.0)>, <gurobi.Var f_r[11] (value 0.0)>,
+       <gurobi.Var f_r[12] (value 0.0)>, <gurobi.Var f_r[13] (value 0.0)>,
+       <gurobi.Var f_r[14] (value 0.0)>, <gurobi.Var f_r[15] (value 0.0)>,
+       <gurobi.Var f_r[16] (value 0.0)>, <gurobi.Var f_r[17] (value 0.0)>,
+       <gurobi.Var f_r[18] (value 0.0)>, <gurobi.Var f_r[19] (value 0.0)>,
+       <gurobi.Var f_r[20] (value 0.0)>, <gurobi.Var f_r[21] (value 0.0)>,
+       <gurobi.Var f_r[22] (value 0.0)>, <gurobi.Var f_r[23] (value 0.0)>,
+       <gurobi.Var f_r[24] (value 0.0)>, <gurobi.Var f_r[25] (value 0.0)>,
+       <gurobi.Var f_r[26] (value -18.0)>,
+       <gurobi.Var f_r[27] (value 294.0)>,
+       <gurobi.Var f_r[28] (value 224.0)>,
+       <gurobi.Var f_r[29] (value 0.0)>, <gurobi.Var f_r[30] (value 0.0)>,
+       <gurobi.Var f_r[31] (value 0.0)>])
+2    <gurobi.Var gamma[2] (value 0.9615384615388475)>
+7                   <gurobi.Var gamma[7] (value 1.0)>
+dtype: object
+1  6                 <gurobi.Var psi_a[1,6] (value 200.0)>
+2  6     <gurobi.Var psi_a[2,6] (value 100.000000000200...
+3  6                 <gurobi.Var psi_a[3,6] (value 200.0)>
+4  28               <gurobi.Var psi_a[4,28] (value 120.0)>
+5  28               <gurobi.Var psi_a[5,28] (value 120.0)>
+6  28               <gurobi.Var psi_a[6,28] (value 260.0)>
+dtype: object
+1  6                  <gurobi.Var psi_r[1,6] (value 60.0)>
+2  6     <gurobi.Var psi_r[2,6] (value 70.00000000014049)>
+3  6                  <gurobi.Var psi_r[3,6] (value 60.0)>
+4  28                <gurobi.Var psi_r[4,28] (value 84.0)>
+5  28                <gurobi.Var psi_r[5,28] (value 70.0)>
+6  28               <gurobi.Var psi_r[6,28] (value 158.0)>
+dtype: object
+2    <gurobi.Var phi[2] (value 20.0)>
+7    <gurobi.Var phi[7] (value 20.0)>
+dtype: object
+1              <gurobi.Var v[1] (value 175.604769)>
+2              <gurobi.Var v[2] (value 175.604769)>
+3              <gurobi.Var v[3] (value 175.604769)>
+4              <gurobi.Var v[4] (value 175.604769)>
+5              <gurobi.Var v[5] (value 175.604769)>
+6              <gurobi.Var v[6] (value 175.604769)>
+7      <gurobi.Var v[7] (value 173.13756899999825)>
+8      <gurobi.Var v[8] (value 173.13756899999825)>
+9      <gurobi.Var v[9] (value 173.13756899999825)>
+10    <gurobi.Var v[10] (value 173.13756899999825)>
+11    <gurobi.Var v[11] (value 173.13756899999825)>
+12     <gurobi.Var v[12] (value 173.1375689999983)>
+13    <gurobi.Var v[13] (value 173.13756899999834)>
+14    <gurobi.Var v[14] (value 173.13756899999834)>
+15    <gurobi.Var v[15] (value 173.13756899999834)>
+16    <gurobi.Var v[16] (value 173.13756899999834)>
+17    <gurobi.Var v[17] (value 173.13756899999834)>
+18    <gurobi.Var v[18] (value 173.13756899999834)>
+19            <gurobi.Var v[19] (value 175.604769)>
+20            <gurobi.Var v[20] (value 175.604769)>
+21            <gurobi.Var v[21] (value 175.604769)>
+22            <gurobi.Var v[22] (value 175.604769)>
+23            <gurobi.Var v[23] (value 175.604769)>
+24            <gurobi.Var v[24] (value 175.604769)>
+25            <gurobi.Var v[25] (value 175.604769)>
+26    <gurobi.Var v[26] (value 175.60476899999998)>
+27    <gurobi.Var v[27] (value 175.60476899999998)>
+28            <gurobi.Var v[28] (value 176.703849)>
+29    <gurobi.Var v[29] (value 159.53215299999997)>
+30    <gurobi.Var v[30] (value 146.21535299999996)>
+31    <gurobi.Var v[31] (value 146.21535299999996)>
+32            <gurobi.Var v[32] (value 146.215353)>
+33            <gurobi.Var v[33] (value 146.215353)>
+dtype: object
+1  0      <gurobi.Var theta[1,0] (value 1.0)>
+2  20    <gurobi.Var theta[2,20] (value 1.0)>
+3  0      <gurobi.Var theta[3,0] (value 1.0)>
+4  0      <gurobi.Var theta[4,0] (value 1.0)>
+5  0      <gurobi.Var theta[5,0] (value 1.0)>
+6  0      <gurobi.Var theta[6,0] (value 1.0)>
+7  20    <gurobi.Var theta[7,20] (value 1.0)>
+8  0      <gurobi.Var theta[8,0] (value 1.0)>
+dtype: object
+1  0.000000                   <gurobi.Var nu[1,0.0] (value 1.0)>
+2  19.230769    <gurobi.Var nu[2,19.23076923076923] (value 1.0)>
+3  0.000000                   <gurobi.Var nu[3,0.0] (value 1.0)>
+4  0.000000                   <gurobi.Var nu[4,0.0] (value 1.0)>
+5  0.000000                   <gurobi.Var nu[5,0.0] (value 1.0)>
+6  0.000000                   <gurobi.Var nu[6,0.0] (value 1.0)>
+7  20.000000                   <gurobi.Var nu[7,20] (value 1.0)>
+8  0.000000                   <gurobi.Var nu[8,0.0] (value 1.0)>
+dtype: object
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 1
+tuple
+(0, 0, 0)          0.298
+(108, 144, 72)     0.329
+(315, 144, 72)     0.369
+(108, 420, 72)     0.371
+(108, 144, 210)    0.373
+(450, 144, 72)     0.385
+(108, 600, 72)     0.386
+(108, 144, 300)    0.393
+(315, 144, 210)    0.456
+(108, 420, 210)    0.464
+(315, 420, 72)     0.465
+(450, 144, 210)    0.490
+(108, 600, 210)    0.498
+(315, 144, 300)    0.498
+(315, 600, 72)     0.502
+(450, 420, 72)     0.506
+(108, 420, 300)    0.509
+(450, 144, 300)    0.540
+(108, 600, 300)    0.548
+(450, 600, 72)     0.554
+(315, 420, 210)    0.659
+(450, 420, 210)    0.745
+(315, 600, 210)    0.748
+(315, 420, 300)    0.760
+(450, 600, 210)    0.857
+(450, 420, 300)    0.864
+(315, 600, 300)    0.868
+(450, 600, 300)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 2
+tuple
+(0, 0, 0, 0)              0.122
+(90, 300, 300, 90)        0.139
+(90, 300, 300, 240)       0.147
+(90, 800, 300, 90)        0.152
+(90, 300, 300, 300)       0.154
+                          ...  
+(300, 1000, 800, 240)     0.700
+(300, 800, 1000, 300)     0.822
+(300, 1000, 800, 300)     0.828
+(300, 1000, 1000, 240)    0.840
+(300, 1000, 1000, 300)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 3
+tuple
+(0, 0.0, 0, 0, 0)              0.048
+(120, 90.0, 120, 120, 240)     0.054
+(120, 157.5, 120, 120, 240)    0.058
+(120, 90.0, 120, 120, 420)     0.059
+(120, 90.0, 120, 120, 600)     0.060
+                               ...  
+(300, 225.0, 210, 210, 600)    0.653
+(300, 157.5, 300, 300, 420)    0.659
+(300, 225.0, 210, 300, 420)    0.660
+(300, 157.5, 210, 300, 600)    0.666
+(210, 225.0, 300, 300, 600)    0.782
+Name: cum_prob, Length: 216, dtype: float64
+cumulative prob for sub network 4
+tuple
+(0, 0, 0, 0)            0.029
+(120, 120, 120, 180)    0.044
+(120, 120, 120, 315)    0.059
+(120, 210, 120, 180)    0.060
+(210, 120, 120, 180)    0.063
+                        ...  
+(300, 300, 210, 450)    0.802
+(210, 300, 300, 450)    0.806
+(300, 210, 300, 450)    0.807
+(300, 300, 300, 315)    0.809
+(300, 300, 300, 450)    1.000
+Name: cum_prob, Length: 81, dtype: float64
+cumulative prob for sub network 5
+tuple
+(0, 0, 0, 0)            0.352
+(108, 108, 108, 108)    0.362
+(108, 108, 108, 315)    0.372
+(108, 108, 315, 108)    0.372
+(108, 315, 108, 108)    0.372
+                        ...  
+(450, 315, 315, 450)    0.786
+(450, 450, 450, 315)    0.882
+(450, 315, 450, 450)    0.883
+(450, 450, 315, 450)    0.883
+(450, 450, 450, 450)    1.000
+Name: cum_prob, Length: 80, dtype: float64
+cumulative prob for sub network 6
+tuple
+(0, 0, 0)            0.110
+(108, 504, 504)      0.153
+(108, 1890, 504)     0.196
+(108, 504, 1890)     0.197
+(405, 504, 504)      0.201
+(108, 504, 2100)     0.217
+(450, 504, 504)      0.225
+(108, 2100, 504)     0.236
+(108, 1890, 1890)    0.297
+(405, 1890, 504)     0.299
+(405, 504, 1890)     0.304
+(108, 1890, 2100)    0.343
+(405, 504, 2100)     0.346
+(450, 1890, 504)     0.360
+(108, 2100, 1890)    0.366
+(450, 504, 1890)     0.366
+(405, 2100, 504)     0.369
+(450, 504, 2100)     0.422
+(108, 2100, 2100)    0.425
+(450, 2100, 504)     0.441
+(405, 1890, 1890)    0.533
+(405, 1890, 2100)    0.636
+(405, 2100, 1890)    0.671
+(450, 1890, 1890)    0.671
+(405, 2100, 2100)    0.805
+(450, 1890, 2100)    0.805
+(450, 2100, 1890)    0.833
+(450, 2100, 2100)    1.000
+Name: cum_prob, dtype: float64
+cumulative prob for sub network 7
+tuple
+(0, 0, 0, 0, 0)               0.044
+(90, 90, 90, 180, 300)        0.051
+(90, 210, 90, 180, 300)       0.056
+(90, 90, 90, 180, 800)        0.057
+(210, 90, 90, 180, 300)       0.060
+                              ...  
+(300, 300, 210, 480, 1000)    0.673
+(300, 210, 300, 480, 1000)    0.676
+(300, 210, 210, 600, 1000)    0.683
+(210, 300, 300, 600, 1000)    0.806
+(300, 300, 210, 600, 1000)    0.822
+Name: cum_prob, Length: 210, dtype: float64
+cumulative prob for sub network 8
+tuple
+(0, 0, 0)           0.026
+(300, 420, 120)     0.072
+(300, 840, 120)     0.114
+(600, 420, 120)     0.122
+(300, 420, 240)     0.128
+(300, 1050, 120)    0.136
+(300, 420, 300)     0.145
+(750, 420, 120)     0.149
+(300, 840, 240)     0.236
+(600, 420, 240)     0.239
+(600, 840, 120)     0.243
+(300, 840, 300)     0.282
+(600, 420, 300)     0.286
+(300, 1050, 240)    0.290
+(600, 1050, 120)    0.291
+(750, 420, 240)     0.303
+(750, 840, 120)     0.303
+(300, 1050, 300)    0.352
+(750, 420, 300)     0.358
+(750, 1050, 120)    0.369
+(600, 840, 240)     0.516
+(600, 1050, 240)    0.633
+(600, 840, 300)     0.634
+(750, 840, 240)     0.663
+(600, 1050, 300)    0.785
+(750, 840, 300)     0.806
+(750, 1050, 240)    0.814
+(750, 1050, 300)    1.000
+Name: cum_prob, dtype: float64
+Set parameter TimeLimit to value 3600
+Set parameter Threads to value 1
+Set parameter LogFile to value "mps"
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (linux64 - "CentOS Linux 7 (Core)")
+
+CPU model: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 6 physical cores, 12 logical processors, using up to 1 threads
+
+Optimize a model with 38765 rows, 3933 columns and 84124 nonzeros
+Model fingerprint: 0x3b642536
+Variable types: 762 continuous, 3171 integer (3163 binary)
+Coefficient statistics:
+  Matrix range     [2e-04, 2e+03]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [9e-01, 5e+03]
+Presolve removed 20479 rows and 1363 columns
+Presolve time: 0.30s
+Presolved: 18286 rows, 2570 columns, 42942 nonzeros
+Variable types: 612 continuous, 1958 integer (1958 binary)
+Found heuristic solution: objective 17850.000000
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 1.615666e+04, 627 iterations, 0.03 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 16156.6628    0  145 17850.0000 16156.6628  9.49%     -    0s
+H    0     0                    17760.000000 16156.6628  9.03%     -    0s
+     0     0 16451.0189    0  123 17760.0000 16451.0189  7.37%     -    0s
+     0     0 16547.6340    0  121 17760.0000 16547.6340  6.83%     -    0s
+     0     0 16606.3866    0  117 17760.0000 16606.3866  6.50%     -    0s
+     0     0 16755.1429    0   86 17760.0000 16755.1429  5.66%     -    0s
+     0     0 16764.6305    0   90 17760.0000 16764.6305  5.60%     -    0s
+     0     0 16788.6538    0  107 17760.0000 16788.6538  5.47%     -    0s
+     0     0 16857.0000    0   84 17760.0000 16857.0000  5.08%     -    0s
+     0     0 16863.6667    0  126 17760.0000 16863.6667  5.05%     -    0s
+     0     0 16863.6667    0  126 17760.0000 16863.6667  5.05%     -    0s
+     0     0 16887.2987    0  135 17760.0000 16887.2987  4.91%     -    1s
+     0     0 16979.2901    0  136 17760.0000 16979.2901  4.40%     -    1s
+     0     0 16979.2901    0  138 17760.0000 16979.2901  4.40%     -    1s
+     0     0 16979.2901    0  114 17760.0000 16979.2901  4.40%     -    1s
+     0     0 17016.0034    0  111 17760.0000 17016.0034  4.19%     -    1s
+     0     0 17016.0034    0  116 17760.0000 17016.0034  4.19%     -    1s
+     0     0 17016.0034    0  116 17760.0000 17016.0034  4.19%     -    1s
+     0     0 17027.5819    0  136 17760.0000 17027.5819  4.12%     -    1s
+     0     0 17035.6812    0  153 17760.0000 17035.6812  4.08%     -    1s
+     0     0 17041.3863    0  139 17760.0000 17041.3863  4.05%     -    1s
+     0     0 17041.3863    0  139 17760.0000 17041.3863  4.05%     -    1s
+     0     0 17075.9656    0  121 17760.0000 17075.9656  3.85%     -    1s
+H    0     0                    17730.000000 17091.0212  3.60%     -    1s
+H    0     0                    17560.000000 17091.0212  2.67%     -    1s
+     0     0 17091.0212    0  123 17560.0000 17091.0212  2.67%     -    1s
+     0     0 17091.0212    0  125 17560.0000 17091.0212  2.67%     -    1s
+     0     0 17095.9704    0  126 17560.0000 17095.9704  2.64%     -    1s
+     0     0 17098.2941    0  146 17560.0000 17098.2941  2.63%     -    1s
+     0     0 17104.2209    0  139 17560.0000 17104.2209  2.60%     -    1s
+     0     0 17104.2209    0  145 17560.0000 17104.2209  2.60%     -    1s
+     0     0 17104.4165    0  119 17560.0000 17104.4165  2.59%     -    2s
+     0     0 17114.8832    0  133 17560.0000 17114.8832  2.53%     -    2s
+     0     0 17114.8832    0  121 17560.0000 17114.8832  2.53%     -    2s
+     0     0 17114.9209    0  122 17560.0000 17114.9209  2.53%     -    2s
+     0     0 17114.9209    0  149 17560.0000 17114.9209  2.53%     -    2s
+     0     0 17114.9209    0  136 17560.0000 17114.9209  2.53%     -    2s
+     0     0 17114.9209    0  151 17560.0000 17114.9209  2.53%     -    2s
+     0     0 17114.9209    0  117 17560.0000 17114.9209  2.53%     -    2s
+     0     2 17141.0733    0  106 17560.0000 17141.0733  2.39%     -    2s
+H  130    91                    17500.000000 17195.1717  1.74%  48.2    4s
+   168   123 17414.9615   32   75 17500.0000 17204.8339  1.69%  53.0    5s
+   689   414 17377.5000   25  117 17500.0000 17242.0000  1.47%  70.3   10s
+   715   431 17400.0000   18   67 17500.0000 17400.0000  0.57%  67.8   15s
+*  735   413              24    17492.500000 17401.3175  0.52%  81.1   16s
+H  749   388                    17490.000000 17403.7500  0.49%  80.3   17s
+*  760   362              21    17470.000000 17412.6522  0.33%  79.9   17s
+
+Cutting planes:
+  Gomory: 41
+  Cover: 2
+  MIR: 2
+  StrongCG: 2
+  Flow cover: 6
+  GUB cover: 7
+  Zero half: 115
+  RLT: 1
+
+Explored 781 nodes (67399 simplex iterations) in 17.57 seconds (22.85 work units)
+Thread count was 1 (of 12 available processors)
+
+Solution count 10: 17470 17490 17492.5 ... 17760
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.747000000000e+04, best bound 1.747000000000e+04, gap 0.0000%
+c is 1    0.01
+2    0.01
+3    0.01
+4    0.01
+5    0.01
+6    0.01
+7    0.01
+8    0.01
+dtype: float64
+alpha is 1    0.85
+2    0.85
+3    0.85
+4    0.85
+5    0.85
+6    0.85
+7    0.85
+8    0.85
+dtype: float64
+1         <gurobi.Var q[1] (value 0.0)>
+2         <gurobi.Var q[2] (value 0.0)>
+3       <gurobi.Var q[3] (value 450.0)>
+4       <gurobi.Var q[4] (value 420.0)>
+5       <gurobi.Var q[5] (value 300.0)>
+6       <gurobi.Var q[6] (value 300.0)>
+7      <gurobi.Var q[7] (value 1000.0)>
+8       <gurobi.Var q[8] (value 800.0)>
+9       <gurobi.Var q[9] (value 300.0)>
+10     <gurobi.Var q[10] (value 300.0)>
+11     <gurobi.Var q[11] (value 225.0)>
+12     <gurobi.Var q[12] (value 300.0)>
+13     <gurobi.Var q[13] (value 300.0)>
+14     <gurobi.Var q[14] (value 600.0)>
+15     <gurobi.Var q[15] (value 300.0)>
+16     <gurobi.Var q[16] (value 300.0)>
+17     <gurobi.Var q[17] (value 300.0)>
+18     <gurobi.Var q[18] (value 450.0)>
+19     <gurobi.Var q[19] (value 450.0)>
+20     <gurobi.Var q[20] (value 450.0)>
+21     <gurobi.Var q[21] (value 450.0)>
+22     <gurobi.Var q[22] (value 315.0)>
+23     <gurobi.Var q[23] (value 450.0)>
+24    <gurobi.Var q[24] (value 2100.0)>
+25    <gurobi.Var q[25] (value 2100.0)>
+26     <gurobi.Var q[26] (value 300.0)>
+27     <gurobi.Var q[27] (value 210.0)>
+28     <gurobi.Var q[28] (value 300.0)>
+29     <gurobi.Var q[29] (value 600.0)>
+30    <gurobi.Var q[30] (value 1000.0)>
+31     <gurobi.Var q[31] (value 750.0)>
+32    <gurobi.Var q[32] (value 1050.0)>
+33     <gurobi.Var q[33] (value 300.0)>
+dtype: object
+===============================
+sub network 1 includes nodes [3, 4, 5]
+optimal ens for node 3 is <gurobi.Var q[3] (value 450.0)>
+optimal ens for node 4 is <gurobi.Var q[4] (value 420.0)>
+optimal ens for node 5 is <gurobi.Var q[5] (value 300.0)>
+===============================
+===============================
+sub network 2 includes nodes [6, 7, 8, 9]
+optimal ens for node 6 is <gurobi.Var q[6] (value 300.0)>
+optimal ens for node 7 is <gurobi.Var q[7] (value 1000.0)>
+optimal ens for node 8 is <gurobi.Var q[8] (value 800.0)>
+optimal ens for node 9 is <gurobi.Var q[9] (value 300.0)>
+===============================
+===============================
+sub network 3 includes nodes [10, 11, 12, 13, 14]
+optimal ens for node 10 is <gurobi.Var q[10] (value 300.0)>
+optimal ens for node 11 is <gurobi.Var q[11] (value 225.0)>
+optimal ens for node 12 is <gurobi.Var q[12] (value 300.0)>
+optimal ens for node 13 is <gurobi.Var q[13] (value 300.0)>
+optimal ens for node 14 is <gurobi.Var q[14] (value 600.0)>
+===============================
+===============================
+sub network 4 includes nodes [15, 16, 17, 18]
+optimal ens for node 15 is <gurobi.Var q[15] (value 300.0)>
+optimal ens for node 16 is <gurobi.Var q[16] (value 300.0)>
+optimal ens for node 17 is <gurobi.Var q[17] (value 300.0)>
+optimal ens for node 18 is <gurobi.Var q[18] (value 450.0)>
+===============================
+===============================
+sub network 5 includes nodes [19, 20, 21, 22]
+optimal ens for node 19 is <gurobi.Var q[19] (value 450.0)>
+optimal ens for node 20 is <gurobi.Var q[20] (value 450.0)>
+optimal ens for node 21 is <gurobi.Var q[21] (value 450.0)>
+optimal ens for node 22 is <gurobi.Var q[22] (value 315.0)>
+===============================
+===============================
+sub network 6 includes nodes [23, 24, 25]
+optimal ens for node 23 is <gurobi.Var q[23] (value 450.0)>
+optimal ens for node 24 is <gurobi.Var q[24] (value 2100.0)>
+optimal ens for node 25 is <gurobi.Var q[25] (value 2100.0)>
+===============================
+===============================
+sub network 7 includes nodes [26, 27, 28, 29, 30]
+optimal ens for node 26 is <gurobi.Var q[26] (value 300.0)>
+optimal ens for node 27 is <gurobi.Var q[27] (value 210.0)>
+optimal ens for node 28 is <gurobi.Var q[28] (value 300.0)>
+optimal ens for node 29 is <gurobi.Var q[29] (value 600.0)>
+optimal ens for node 30 is <gurobi.Var q[30] (value 1000.0)>
+===============================
+===============================
+sub network 8 includes nodes [31, 32, 33]
+optimal ens for node 31 is <gurobi.Var q[31] (value 750.0)>
+optimal ens for node 32 is <gurobi.Var q[32] (value 1050.0)>
+optimal ens for node 33 is <gurobi.Var q[33] (value 300.0)>
+===============================
+1    <gurobi.Var x[1] (value 0.0)>
+2    <gurobi.Var x[2] (value 1.0)>
+3    <gurobi.Var x[3] (value 0.0)>
+4    <gurobi.Var x[4] (value 1.0)>
+5    <gurobi.Var x[5] (value 0.0)>
+6    <gurobi.Var x[6] (value 1.0)>
+dtype: object
+1  28    <gurobi.Var y[1,28] (value 1.0)>
+2  28    <gurobi.Var y[2,28] (value 1.0)>
+3  28    <gurobi.Var y[3,28] (value 1.0)>
+4  6      <gurobi.Var y[4,6] (value 1.0)>
+5  6      <gurobi.Var y[5,6] (value 1.0)>
+6  6      <gurobi.Var y[6,6] (value 1.0)>
+dtype: object
+1  26  u    <gurobi.Var beta[1,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[1,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[1,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[1,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[1,30,u] (value 1.0)>
+2  26  r    <gurobi.Var beta[2,26,r] (value 1.0)>
+   27  r    <gurobi.Var beta[2,27,r] (value 1.0)>
+   28  r    <gurobi.Var beta[2,28,r] (value 1.0)>
+   29  r    <gurobi.Var beta[2,29,r] (value 1.0)>
+   30  r    <gurobi.Var beta[2,30,r] (value 1.0)>
+3  26  u    <gurobi.Var beta[3,26,u] (value 1.0)>
+   27  u    <gurobi.Var beta[3,27,u] (value 1.0)>
+   28  u    <gurobi.Var beta[3,28,u] (value 1.0)>
+   29  u    <gurobi.Var beta[3,29,u] (value 1.0)>
+   30  u    <gurobi.Var beta[3,30,u] (value 1.0)>
+4  6   r     <gurobi.Var beta[4,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[4,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[4,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[4,9,r] (value 1.0)>
+5  6   u     <gurobi.Var beta[5,6,u] (value 1.0)>
+   7   u     <gurobi.Var beta[5,7,u] (value 1.0)>
+   8   u     <gurobi.Var beta[5,8,u] (value 1.0)>
+   9   u     <gurobi.Var beta[5,9,u] (value 1.0)>
+6  6   r     <gurobi.Var beta[6,6,r] (value 1.0)>
+   7   r     <gurobi.Var beta[6,7,r] (value 1.0)>
+   8   r     <gurobi.Var beta[6,8,r] (value 1.0)>
+   9   r     <gurobi.Var beta[6,9,r] (value 1.0)>
+dtype: object
+1  28  29    <gurobi.Var z_a[1,28,29] (value 110.3146693064...
+       30              <gurobi.Var z_a[1,28,30] (value 200.0)>
+2  28  30    <gurobi.Var z_a[2,28,30] (value 89.68533069355...
+3  28  29              <gurobi.Var z_a[3,28,29] (value 100.0)>
+5  6   8                  <gurobi.Var z_a[5,6,8] (value 20.0)>
+6  6   6                  <gurobi.Var z_a[6,6,6] (value 60.0)>
+       7                 <gurobi.Var z_a[6,6,7] (value 200.0)>
+       8                 <gurobi.Var z_a[6,6,8] (value 180.0)>
+       9                  <gurobi.Var z_a[6,6,9] (value 60.0)>
+dtype: object
+1  28  29               <gurobi.Var z_r[1,28,29] (value 70.0)>
+       30              <gurobi.Var z_r[1,28,30] (value 140.0)>
+2  28  30    <gurobi.Var z_r[2,28,30] (value 62.77973148549...
+3  28  29               <gurobi.Var z_r[3,28,29] (value 70.0)>
+5  6   8                   <gurobi.Var z_r[5,6,8] (value 6.0)>
+6  6   6                  <gurobi.Var z_r[6,6,6] (value 20.0)>
+       7                 <gurobi.Var z_r[6,6,7] (value 100.0)>
+       8                  <gurobi.Var z_r[6,6,8] (value 54.0)>
+       9                  <gurobi.Var z_r[6,6,9] (value 18.0)>
+dtype: object
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_a[0] (value 0.0)>, <gurobi.Var f_a[1] (value 0.0)>,
+       <gurobi.Var f_a[2] (value 0.0)>, <gurobi.Var f_a[3] (value 0.0)>,
+       <gurobi.Var f_a[4] (value 0.0)>, <gurobi.Var f_a[5] (value 460.0)>,
+       <gurobi.Var f_a[6] (value 260.0)>,
+       <gurobi.Var f_a[7] (value 60.0)>, <gurobi.Var f_a[8] (value 0.0)>,
+       <gurobi.Var f_a[9] (value 0.0)>, <gurobi.Var f_a[10] (value 0.0)>,
+       <gurobi.Var f_a[11] (value 0.0)>, <gurobi.Var f_a[12] (value 0.0)>,
+       <gurobi.Var f_a[13] (value 0.0)>, <gurobi.Var f_a[14] (value 0.0)>,
+       <gurobi.Var f_a[15] (value 0.0)>, <gurobi.Var f_a[16] (value 0.0)>,
+       <gurobi.Var f_a[17] (value 0.0)>, <gurobi.Var f_a[18] (value 0.0)>,
+       <gurobi.Var f_a[19] (value 0.0)>, <gurobi.Var f_a[20] (value 0.0)>,
+       <gurobi.Var f_a[21] (value 0.0)>, <gurobi.Var f_a[22] (value 0.0)>,
+       <gurobi.Var f_a[23] (value 0.0)>, <gurobi.Var f_a[24] (value 0.0)>,
+       <gurobi.Var f_a[25] (value 0.0)>, <gurobi.Var f_a[26] (value 0.0)>,
+       <gurobi.Var f_a[27] (value 500.0)>,
+       <gurobi.Var f_a[28] (value 289.68533069355857)>,
+       <gurobi.Var f_a[29] (value 0.0)>, <gurobi.Var f_a[30] (value 0.0)>,
+       <gurobi.Var f_a[31] (value 0.0)>])
+The index of f starts from 0 in Python result for this project
+So f[0] here corresponds to f[1] in overleaf
+<MVar (32,)>
+array([<gurobi.Var f_r[0] (value 0.0)>, <gurobi.Var f_r[1] (value 0.0)>,
+       <gurobi.Var f_r[2] (value 0.0)>, <gurobi.Var f_r[3] (value 0.0)>,
+       <gurobi.Var f_r[4] (value 0.0)>, <gurobi.Var f_r[5] (value 178.0)>,
+       <gurobi.Var f_r[6] (value 78.0)>, <gurobi.Var f_r[7] (value 18.0)>,
+       <gurobi.Var f_r[8] (value 0.0)>, <gurobi.Var f_r[9] (value 0.0)>,
+       <gurobi.Var f_r[10] (value 0.0)>, <gurobi.Var f_r[11] (value 0.0)>,
+       <gurobi.Var f_r[12] (value 0.0)>, <gurobi.Var f_r[13] (value 0.0)>,
+       <gurobi.Var f_r[14] (value 0.0)>, <gurobi.Var f_r[15] (value 0.0)>,
+       <gurobi.Var f_r[16] (value 0.0)>, <gurobi.Var f_r[17] (value 0.0)>,
+       <gurobi.Var f_r[18] (value 0.0)>, <gurobi.Var f_r[19] (value 0.0)>,
+       <gurobi.Var f_r[20] (value 0.0)>, <gurobi.Var f_r[21] (value 0.0)>,
+       <gurobi.Var f_r[22] (value 0.0)>, <gurobi.Var f_r[23] (value 0.0)>,
+       <gurobi.Var f_r[24] (value 0.0)>, <gurobi.Var f_r[25] (value 0.0)>,
+       <gurobi.Var f_r[26] (value 0.0)>,
+       <gurobi.Var f_r[27] (value 342.77973148549177)>,
+       <gurobi.Var f_r[28] (value 202.779731485491)>,
+       <gurobi.Var f_r[29] (value 0.0)>, <gurobi.Var f_r[30] (value 0.0)>,
+       <gurobi.Var f_r[31] (value 0.0)>])
+2    <gurobi.Var gamma[2] (value 1.0)>
+7    <gurobi.Var gamma[7] (value 1.0)>
+dtype: object
+1  28    <gurobi.Var psi_a[1,28] (value 310.31466930644...
+2  28    <gurobi.Var psi_a[2,28] (value 89.685330693558...
+3  28               <gurobi.Var psi_a[3,28] (value 100.0)>
+5  6                  <gurobi.Var psi_a[5,6] (value 20.0)>
+6  6                 <gurobi.Var psi_a[6,6] (value 500.0)>
+dtype: object
+1  28               <gurobi.Var psi_r[1,28] (value 210.0)>
+2  28    <gurobi.Var psi_r[2,28] (value 62.779731485490...
+3  28                <gurobi.Var psi_r[3,28] (value 70.0)>
+5  6                   <gurobi.Var psi_r[5,6] (value 6.0)>
+6  6                 <gurobi.Var psi_r[6,6] (value 192.0)>
+dtype: object
+2    <gurobi.Var phi[2] (value 20.0)>
+7    <gurobi.Var phi[7] (value 20.0)>
+dtype: object
+1              <gurobi.Var v[1] (value 176.703849)>
+2              <gurobi.Var v[2] (value 176.703849)>
+3              <gurobi.Var v[3] (value 176.703849)>
+4              <gurobi.Var v[4] (value 176.703849)>
+5              <gurobi.Var v[5] (value 176.703849)>
+6              <gurobi.Var v[6] (value 176.703849)>
+7              <gurobi.Var v[7] (value 174.395625)>
+8              <gurobi.Var v[8] (value 172.933697)>
+9      <gurobi.Var v[9] (value 172.52209699999997)>
+10    <gurobi.Var v[10] (value 172.52209699999997)>
+11    <gurobi.Var v[11] (value 172.52209699999995)>
+12            <gurobi.Var v[12] (value 172.522097)>
+13            <gurobi.Var v[13] (value 172.522097)>
+14            <gurobi.Var v[14] (value 172.522097)>
+15            <gurobi.Var v[15] (value 172.522097)>
+16            <gurobi.Var v[16] (value 172.522097)>
+17            <gurobi.Var v[17] (value 172.522097)>
+18            <gurobi.Var v[18] (value 172.522097)>
+19            <gurobi.Var v[19] (value 176.703849)>
+20            <gurobi.Var v[20] (value 176.703849)>
+21            <gurobi.Var v[21] (value 176.703849)>
+22            <gurobi.Var v[22] (value 176.703849)>
+23            <gurobi.Var v[23] (value 176.703849)>
+24            <gurobi.Var v[24] (value 176.703849)>
+25            <gurobi.Var v[25] (value 176.703849)>
+26            <gurobi.Var v[26] (value 176.703849)>
+27            <gurobi.Var v[27] (value 176.703849)>
+28    <gurobi.Var v[28] (value 176.70384899999996)>
+29    <gurobi.Var v[29] (value 156.70398403681241)>
+30            <gurobi.Var v[30] (value 144.648729)>
+31            <gurobi.Var v[31] (value 144.648729)>
+32            <gurobi.Var v[32] (value 144.648729)>
+33            <gurobi.Var v[33] (value 144.648729)>
+dtype: object
+1  0      <gurobi.Var theta[1,0] (value 1.0)>
+2  20    <gurobi.Var theta[2,20] (value 1.0)>
+3  0      <gurobi.Var theta[3,0] (value 1.0)>
+4  0      <gurobi.Var theta[4,0] (value 1.0)>
+5  0      <gurobi.Var theta[5,0] (value 1.0)>
+6  0      <gurobi.Var theta[6,0] (value 1.0)>
+7  20    <gurobi.Var theta[7,20] (value 1.0)>
+8  0      <gurobi.Var theta[8,0] (value 1.0)>
+dtype: object
+1  0.0     <gurobi.Var nu[1,0.0] (value 1.0)>
+2  20.0     <gurobi.Var nu[2,20] (value 1.0)>
+3  0.0     <gurobi.Var nu[3,0.0] (value 1.0)>
+4  0.0     <gurobi.Var nu[4,0.0] (value 1.0)>
+5  0.0     <gurobi.Var nu[5,0.0] (value 1.0)>
+6  0.0     <gurobi.Var nu[6,0.0] (value 1.0)>
+7  20.0     <gurobi.Var nu[7,20] (value 1.0)>
+8  0.0     <gurobi.Var nu[8,0.0] (value 1.0)>
+dtype: object
