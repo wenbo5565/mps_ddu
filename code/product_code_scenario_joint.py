@@ -80,7 +80,7 @@ other_params.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 0.1
+frac = 0.025
 
 #for rnd in random_state:
 print(f'number of samples is {frac * scen_xi_csv.shape[0]}')
