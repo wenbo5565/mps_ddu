@@ -115,7 +115,7 @@ other_params.index += 1
 
 ########## re-sample scenario for computational efficiency test
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 5
+frac = 10
 print(f'number of scenarios is {frac * 1000}')
 
 for rnd in random_state:
