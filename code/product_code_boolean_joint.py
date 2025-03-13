@@ -169,7 +169,7 @@ scen_sub_csv.index += 1
 
 ### Adding function to resample the scenarios
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 0.025
+frac = 0.05
 
 """
 rnd = 2010
