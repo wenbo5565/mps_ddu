@@ -323,7 +323,7 @@ for rnd in random_state:
 # =============================================================================
         
         
-    alpha_L = 0.90
+    alpha_L = 0.85
     
     eta_B = pd.concat((eta, eta), axis = 1) # large eta to include active and reactive pwer
     quant_eta_B = eta_B.quantile(alpha_L)
@@ -387,8 +387,7 @@ for rnd in random_state:
                                                                          sub_network = sub_network, alpha = alpha, q_thresh = low_quant)
     g_ind = {(s, e, j): np.arange(1, len(cuts[s, e, j]) + 1) for s in S for e in E[s] for j in sub_network[s]}
     k_ind = {(s, e): np.arange(1, len(p_insuff_recombs[s, e]) + 1) for s in S for e in E[s]}
-    
-    # theta_ind = [(s, phi_enum) for s in S for phi_enum in pre_phi[s]]
+    theta_ind = [(s, phi_enum) for s in S for phi_enum in pre_phi[s]]
     
     
     ### init model
@@ -436,11 +435,8 @@ for rnd in random_state:
     gamma = m.addVars(S, vtype = GRB.CONTINUOUS, name = 'gamma')
     for s in gamma:
         gamma[s].ub = 1
-        
-    
-    epsilon_ind_dict = {s: list(np.arange(0, len(sub_network[s]) * (b + len(M)) + 1 )) for s in S}
-    epsilon_ind = [(s, n) for s in epsilon_ind_dict.keys() for n in epsilon_ind_dict[s]]
-    epsilon = m.addVars(epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
+    # epsilon_ind = np.arange(0, num_subs * (b + num_mps) + 1)
+    # epsilon = m.addVars(S, epsilon_ind, vtype = GRB.BINARY, name = 'epsilon')
     
     # h_ind = [(s, k) for s in S for k in K if k in Omega_ind[s]['up'] or k in Omega_ind[s]['down']] # index set for Mccormick variable h. Index 1, 2 corresponds to up and down scenarios?
     # h = m.addVars(h_ind, vtype = GRB.CONTINUOUS, name = 'h_mccormick') # h is bounded between 0 and 1?
@@ -453,10 +449,8 @@ for rnd in random_state:
     mu_ind = [(s, e, j, g) for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]]
     mu = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'mu')
     zeta = m.addVars(mu_ind, vtype = GRB.BINARY, name = 'zeta')
-    
-    # theta = m.addVars(theta_ind, vtype = GRB.BINARY, name = 'theta')
-    
-    lambda_var = m.addVars(epsilon_ind, vtype = GRB.CONTINUOUS, name = 'lambda')
+    theta = m.addVars(theta_ind, vtype = GRB.BINARY, name = 'theta')
+    lambda_var = m.addVars(theta_ind, vtype = GRB.CONTINUOUS, name = 'lambda')
     # ? V_s_ind = [(s, j) for s in S for j in sub_network[s]]
     # ? v_s = m.addVars(V_s_ind, vtype = GRB.CONTINUOUS, name = 'v^S')
     
@@ -566,7 +560,7 @@ for rnd in random_state:
     m.addConstrs((sum(beta_hat[s, e, j, k, g] * zeta[s, e, j, g] for j in sub_network[s] for g in g_ind[s, e, j]) <= len(sub_network[s]) - 1 for s in S for e in E[s] for k in k_ind[s, e]), name = 'sum_nu_beta_mu<|J|-1') # g - 1 for position index
     
     # this set is infeasible
-    # m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
+    m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
     
     m.addConstrs((sum(mu[s, e, j, g] for e in E[s] for g in g_ind[s, e, j])  == 1 for s in S for j in sub_network[s]), name = 'sum_mu=1')
     m.addConstrs((sum(nu[s, e] for e in E[s]) == 1 for s in S), name = 'sum_nu=1')
@@ -575,19 +569,19 @@ for rnd in random_state:
     m.addConstrs((mu[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mu<=nu')
     # end of infeasible set
     
-    m.addConstrs((phi[s] == sum(n * epsilon[s, n] for n in epsilon_ind_dict[s]) for s in S) , name = 'phi=n*epsilon')
-    m.addConstrs((sum(epsilon[s, n] for n in epsilon_ind_dict[s]) == 1 for s in S), name = 'sum=epsilon=1')
-    m.addConstrs((sum(e * nu[s, e] for e in E[s]) == sum(n * lambda_var[s, n] for n in epsilon_ind_dict[s]) for s in S), name = 'sum_e_nu=n*lambda')
+    m.addConstrs((phi[s] == sum(phi_enum * theta[s, phi_enum] for phi_enum in pre_phi[s]) for s in S), name = 'phi=sum_theta')
+    m.addConstrs((sum(theta[s, phi_enum] for phi_enum in pre_phi[s]) == 1 for s in S), name = 'sum=theta=1')
+    m.addConstrs((sum(e * nu[s, e] for e in E[s]) == sum(phi_enum * lambda_var[s, phi_enum] for phi_enum in pre_phi[s]) for s in S), name = 'sum_e_nu=sum_phi_enum*lambda')
     
     m.addConstrs((zeta[s, e, j, g] >= 0 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_1')
     m.addConstrs((zeta[s, e, j, g] >= mu[s, e, j, g] + nu[s, e] - 1 for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_2')
     m.addConstrs((zeta[s, e, j, g] <= mu[s, e, j, g] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_3')
     m.addConstrs((zeta[s, e, j, g] <= nu[s, e] for s in S for e in E[s] for j in sub_network[s] for g in g_ind[s, e, j]), name = 'mc_zeta_4')
     
-    m.addConstrs((lambda_var[s, n] >= gamma_lb * epsilon[s, n] for s in S for n in epsilon_ind_dict[s]), name = 'mc_lambda_1')
-    m.addConstrs((lambda_var[s, n] >= gamma_ub * (epsilon[s, n] - 1) + gamma[s] for s in S for n in epsilon_ind_dict[s]), name = 'mc_lambda_2')
-    m.addConstrs((lambda_var[s, n] <= gamma_ub * epsilon[s, n] for s in S for n in epsilon_ind_dict[s]), name = 'mc_lambda_3')
-    m.addConstrs((lambda_var[s, n] <= gamma_lb * (epsilon[s, n] - 1) + gamma[s] for s in S for n in epsilon_ind_dict[s]), name = 'mc_lambda_4')
+    m.addConstrs((lambda_var[s, phi_enum] >= gamma_lb * theta[s, phi_enum] for s, phi_enum in theta_ind), name = 'mc_lambda_1')
+    m.addConstrs((lambda_var[s, phi_enum] >= gamma_ub * (theta[s, phi_enum] - 1) + gamma[s] for s, phi_enum in theta_ind), name = 'mc_lambda_2')
+    m.addConstrs((lambda_var[s, phi_enum] <= gamma_ub * theta[s, phi_enum] for s, phi_enum in theta_ind), name = 'mc_lambda_3')
+    m.addConstrs((lambda_var[s, phi_enum] <= gamma_lb * (theta[s, phi_enum] - 1) + gamma[s] for s, phi_enum in theta_ind), name = 'mc_lambda_4')
     
     ### setting objective functions
     m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
@@ -789,11 +783,9 @@ for rnd in random_state:
     v_nz_ind = [True if row.X != 0 else False for row in v_sol]
     print(v_sol[v_nz_ind])
     
-# =============================================================================
-#     theta_sol = pd.Series(theta.values(), index = theta.keys())
-#     theta_nz_ind = [True if row.X != 0 else False for row in theta_sol]
-#     print(theta_sol[theta_nz_ind])
-# =============================================================================
+    theta_sol = pd.Series(theta.values(), index = theta.keys())
+    theta_nz_ind = [True if row.X != 0 else False for row in theta_sol]
+    print(theta_sol[theta_nz_ind])
     
     nu_sol = pd.Series(nu.values(), index = nu.keys())
     nu_nz_ind = [True if row.X != 0 else False for row in nu_sol]
