@@ -381,13 +381,16 @@ for rnd in random_state:
     m.addConstrs((beta[m, j, 'r'] <= x[m] for m in M for j in I_mps), name = 'beta_mjr<x_m' )
     m.addConstrs((beta[m, j, 'u'] <= 1 - x[m] for m in M for j in I_mps), name = 'beta_mju<1-x_m' )
     m.addConstrs((beta[m, j, 'u'] + beta[m, j, 'r'] <= sum(y[m, i] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_mju<sum_y_mi') # need a constraint to ensure beta_mju cannot be 1 if m is not connected to i where i and j are connected
+    
     m.addConstrs((sum(y[m, i] for m in M) <= h_hat for i in I_c), name = 'y_mi<h')
     m.addConstr((sum(y[m, i] for i in I_c for m in M) <= num_mps), name = 'y_mi<M_for')
     m.addConstrs((sum(y[m, i] for i in I_c) <= 1 for m in M), name = 'one_i_per_m')
+    
     m.addConstrs((z_a[m, i, j] <= min(Psi_a[m], D_a[j]) * y[m, i] for m in M for i in I_c for j in I_i[i]), name = 'z<min(phi,D)_a')
     m.addConstrs((z_r[m, i, j] <= min(Psi_r[m], D_r[j]) * y[m, i] for m in M for i in I_c for j in I_i[i]), name = 'z<min(phi,D)_r')
     m.addConstrs((sum(z_a[m, i, j] for i in I_c for j in I_i[i]) <= Psi_a[m] for m in M), name = 'sum_z_a<phi_a')
     m.addConstrs((sum(z_r[m, i, j] for i in I_c for j in I_i[i]) <= Psi_r[m] for m in M), name = 'sum_z_r<phi_r')
+    
     m.addConstrs((sum(z_a[m, i, j] for m in M for i in I_c if j in I_i[i]) == D_a[j] * gamma[j] for j in I_mps), name = 'gamma_def')
     m.addConstrs((sum(2 * beta[m, j, 'r'] + beta[m, j, 'u'] for m in M) == phi[j] for j in I_mps), name = 'phi_def')
     
@@ -407,8 +410,8 @@ for rnd in random_state:
     
     m.addConstrs((v[Gamma[l]] - v[Lambda[l]] == 2 * (f_a[l - 1] * R[l] + f_r[l - 1] * X[l]) / 1000 for l in L), name = 'square_voltage')
     
-    m.addConstrs((beta[m, j, 'r'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_r_z')
-    m.addConstrs((beta[m, j, 'u'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_u_z')
+    # m.addConstrs((beta[m, j, 'r'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_r_z')
+    # m.addConstrs((beta[m, j, 'u'] <= sum(z_a[m, i, j] for i in I_c if j in I_i[i]) for m in M for j in I_mps), name = 'beta_u_z')
     
     m.addConstrs((v[j] >= V_under[j]  for j in I), name = 'V_under<v')
     m.addConstrs((v[j] <= V_over[j] for j in I), name = 'v<V_over')
