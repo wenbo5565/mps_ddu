@@ -103,8 +103,8 @@ def return_cum_p_d(scen_xi, Omega_up_ind, Omega_down_ind, C_B, tau, epsilon_ind)
 
 ########## import data
 
-# data_folder = r'D:\Research\gw_ddu_mps'
-data_folder = os.path.dirname(os.getcwd())
+data_folder = r'D:\Research\gw_ddu_mps'
+# data_folder = os.path.dirname(os.getcwd())
 scen_xi = pd.read_csv(os.path.join(data_folder, "data", "xi_info_v6.csv"))
 scen_eta = pd.read_csv(os.path.join(data_folder, "data", "eta_info_v6.csv"))
 scen_sub = pd.read_csv(os.path.join(data_folder, "data", "SubNet_Info_v6.csv"))
@@ -115,8 +115,9 @@ other_params.index += 1
 
 ########## re-sample scenario for computational efficiency test
 random_state = [2010, 2020, 2030, 2040, 2050]
-frac = 10
+frac = 1
 print(f'number of scenarios is {frac * 1000}')
+rnd = 2010
 
 for rnd in random_state:
     print('==========================================')
@@ -126,8 +127,8 @@ for rnd in random_state:
     # scen_xi_sampled = scen_xi.copy()
     # scen_eta_sampled = scen_eta.copy()
     
-    scen_xi_sampled = scen_xi.sample(frac = frac, random_state = rnd, ignore_index = True, replace = True)
-    scen_eta_sampled = scen_eta.sample(frac = frac, random_state = rnd, ignore_index = True, replace = True)
+    scen_xi_sampled = scen_xi.sample(frac = frac, random_state = rnd, ignore_index = True, replace = False)
+    scen_eta_sampled = scen_eta.sample(frac = frac, random_state = rnd, ignore_index = True, replace = False)
     
     if (scen_xi_sampled.index != scen_eta_sampled.index).any():
         print('sample index for node and line are not the same...')
@@ -197,13 +198,28 @@ for rnd in random_state:
     num_mps = 6
     b = 3 # maximal MPS pre-disposed at rural locations
     # N_ind = np.arange(1, num_mps + b + 1) # index for ???
-    mps_cap_a = 500 # active power capacity for mps
-    mps_cap_r = 500 # reactive power capacity for mps
+    mps_cap_a = 300 # active power capacity for mps
+    mps_cap_r = 300 # reactive power capacity for mps
     
     M = np.arange(1, num_mps + 1) # set for MPS
+    
+    
+# =============================================================================
+#     Psi_a_list = [300, 300, 300, 500, 500, 500]
+#     Psi_r_list = Psi_a_list.copy()
+#     
+#     Psi_a = pd.Series(Psi_a_list, index = np.arange(1, num_mps + 1))
+#     Psi_r = pd.Series(Psi_r_list, index = np.arange(1, num_mps + 1))
+# =============================================================================
+
+
     Psi_a = pd.Series(mps_cap_a * np.ones(num_mps), index = np.arange(1, num_mps + 1))
     Psi_r = pd.Series(mps_cap_r * np.ones(num_mps), index = np.arange(1, num_mps + 1))
     
+    # user defined
+    node_alpha_scalar = 0.7
+    c_scalar = 0.18 # 0.03; 0.06; 0.09; 0.12; 0.15; 0.18
+    alpha_L = 0.7
     
     ### parameters for nodes
     D_a = other_params['D_a']
@@ -212,14 +228,21 @@ for rnd in random_state:
     V_over = other_params['V_over']
     tan_theta_up = other_params['tan_theta_up']
     tan_theta_low = other_params['tan_theta_low']
-    alpha = pd.Series(0.9 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
-    phi_ub = b + num_mps
-    phi_lb = 0
+    alpha = pd.Series(node_alpha_scalar * np.ones(num_nodes), index = np.arange(1, num_nodes + 1))
+# =============================================================================
+#     phi_ub = b + num_mps
+#     phi_lb = 0
+# =============================================================================
     gamma_ub = 1
     gamma_lb = 0
+    
+    phi_ub = 2 * b + num_mps - b # maximal phi when every mps connects to j with b being from rural and M-b from urban
+    phi_lb = 0
+    
+    
     h_ub = 1
     h_lb = 0
-    c = pd.Series(0.3 * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
+    c = pd.Series(c_scalar * np.ones(num_nodes), index = np.arange(1, num_nodes + 1)) # 1： 0.1; 
     p_b = pd.Series(np.ones(num_scen) / num_scen, index = np.arange(1, num_scen + 1)) # baseline probability for each scenario
     
     # create indicator if candidate node and node are connected
@@ -247,12 +270,14 @@ for rnd in random_state:
     Omega_up_ind = {j: Omega_ind[j][1] for j in Omega_ind.keys()}
     Omega_down_ind = {j: Omega_ind[j][2] for j in Omega_ind.keys()}
     
+    
+    c_max = [((1 - sum(p_b[k] for k in Omega_0_ind[j])) / (sum(p_b[k] for k in Omega_up_ind[j])) - 1) / (phi_ub * gamma_ub)  for j in I_mps]
+    
     # calculate maximal "post-decision" probability
-    phi_max = 2 * b + num_mps - b # maximal phi when every mps connects to j with b being from rural and M-b from urban
-    gamma_max = 1
+    # gamma_max = 1
     C_B = return_p_sufficient_ind(zero_ind = Omega_0_ind, up_ind = Omega_up_ind, 
                                   down_ind = Omega_down_ind, sample = scen_xi_sampled, 
-                                  phi_max = phi_max, gamma_max = gamma_max, 
+                                  phi_max = phi_ub, gamma_max = gamma_ub, 
                                   c = c, alpha = alpha)
     C_B = {key: pd.Series(sorted(value, reverse = True), index = np.arange(1, len(value) + 1)) for key, value in C_B.items()}
     n_B = {key: len(value) for key, value in C_B.items()}
@@ -263,7 +288,7 @@ for rnd in random_state:
     
     ### parameters for boolean reformulation
     # parameters for decision-independent
-    alpha_L = 0.90
+    
     
     eta_B = pd.concat((eta, eta), axis = 1) # large eta to include active and reactive pwer
     quant_eta_B = eta_B.quantile(alpha_L)
@@ -297,8 +322,8 @@ for rnd in random_state:
     for row in np.arange(T_B.shape[0]):
         T_B[row, row // 2] = (-1) ** row
     
-    M_a = np.ones(2 * num_L_hat) * 500
-    M_r = np.ones(2 * num_L_hat) * 500
+    # M_a = np.ones(2 * num_L_hat) * 500
+    # M_r = np.ones(2 * num_L_hat) * 500
     K = np.arange(1, num_scen + 1)
     loc = ['r', 'u']
     h_hat = 3 # upper limit for mps at rural locations
@@ -428,35 +453,7 @@ for rnd in random_state:
     
     ### setting objective functions
     m.setObjective(sum(q[j] for j in I), GRB.MINIMIZE)
-    
-    ### testing
-    # =============================================================================
-    # gamma[30].lb = 1.0
-    # gamma[30].ub = 1.0
-    # 
-    # =============================================================================
-    # =============================================================================
-    # q[30].lb = 800
-    # q[30].ub = 800
-    # 
-    # gamma[30].lb = 0.9891
-    # gamma[30].ub = 0.9891
-    # 
-    # phi[30].lb = 3
-    # phi[30].ub = 3
-    # 
-    # =============================================================================
-    ###
-    ### solving the model
     m.optimize()
-    
-    # =============================================================================
-    # m.computeIIS()
-    # 
-    # for constr in m.getConstrs():
-    #     if constr.IISConstr:
-    #         print(f"Violated Constraint: {constr.constrName}")
-    # =============================================================================
     
     m.ObjVal
     
